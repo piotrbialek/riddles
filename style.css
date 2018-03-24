@@ -1,0 +1,257 @@
+html,body
+{
+	background-color: #001f34 !important;
+	color: #AAA !important;
+    height: 100%;
+
+}
+
+.container
+{
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+
+#title
+{
+	font-size: 46px;
+	border: outset;
+	border-radius: 5px;
+}
+
+.category
+{
+	font-size: 34px;
+	margin-bottom:5px;
+}
+
+#description
+{
+    font-size: 20px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#input
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+	width:40px;
+	height:40px;
+	text-align: center;
+	color: white;
+    font-size:30px;
+}
+
+#input, textarea {
+
+  background-color : #000a21;
+
+}
+
+/*
+#button
+{
+    margin-top: 5px;
+	margin-bottom:5px;
+	display: inline-block;
+    text-transform: uppercase;
+}
+*/
+
+
+/*
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+*/
+
+.guesses
+{
+	text-align:left;
+	display: inline-block;
+    height: 40px;
+	min-width:250px;
+	margin-top:5px;
+	margin-bottom:5px;
+
+}
+
+#wrongGuesses
+{
+	padding: 5px;
+	font-size:15px;
+}
+
+#rightGuesses
+{
+	padding: 5px;
+	font-size:15px;
+}
+
+.green
+{
+    color: #41BF1A;
+}
+
+.red
+{
+    color: #E81A1A;
+}
+
+.gray
+{
+    color: #AAA;
+}
+
+#sentence
+{
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 46px;
+	min-height: 60px;
+    letter-spacing: 5px;
+    font-family: monospace;        
+}
+
+#image
+{
+
+    margin: 10px;
+    text-align: center;
+    min-height: 60px;
+
+}
+
+
+#info
+{
+	min-height: 20px;
+}
+
+/*
+#wrap
+{
+	margin:5px;
+	padding:10px;
+	margin-left:auto;
+	margin-right:auto;
+	width:900px;
+	border: outset;
+	border-radius: 5px;
+}
+*/
+
+#user
+{
+	margin-right:5px;
+	text-align:right;
+	font-size:12px;
+	height:0px;
+}
+
+#header
+{
+    margin-left:auto;
+	margin-right:auto;
+	margin-top:5px;
+	margin-bottom:10px;
+	font-size: 32px;
+	border: outset;
+	border-radius: 5px;
+	width: 400px;
+    background-color: #001f43;
+}
+
+.sendForm
+{
+	margin-left:auto;
+	margin-right:auto;
+	background-color: #001f43;
+	width: 400px;
+	border: outset;
+	border-radius: 5px;
+	padding:20px;
+}
+
+.input
+{
+	margin-top:5px;
+	margin-bottom:5px;
+	text-align: left;
+	width: 240px;
+}
+
+.txtArea
+{
+	min-height: 60px;
+}
+
+textarea
+{
+	resize: none;
+}
+
+.input, textarea {
+
+  background-color : #000a21;
+  color: white;
+
+}
+
+.button
+{
+	margin: 5px;
+}
+
+.buttons_group
+{
+    margin-bottom: 10px;
+}
+
+.button-confirm
+{
+    color:#fff;
+    text-decoration: none; 
+    background-color: none;
+}
+
+.alert
+{
+    margin-top: 5px;
+}
+
+
+/*znak na koncu z typedjs*/
+.typed-cursor
+{
+    display: none; 
+}
+
+.notAccepted
+{
+    color:black;
+    background-color: #E81A1A;
+}
+
+#sort_select
+{
+    margin:5px 0;
+    max-width:200px;
+    min-height:50px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.table_header
+{
+    background-color: #1F1D66;
+}
+
+.table_content
+{
+    margin-top:60px;
+}
