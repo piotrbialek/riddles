@@ -67,75 +67,12 @@
 						echo $_SESSION['lvl_info'];
 						unset($_SESSION['lvl_info']);
 					}
-                if (isset($_POST['value']))
-					{
-                        $sort= $_POST['value'];
-						if ($sort=="id") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id";
-                        elseif ($sort=="idD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id DESC";
-                    
-                        elseif ($sort=="category") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.category";
-                        elseif ($sort=="categoryD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.category DESC";
-                    
-                        elseif ($sort=="description") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.description";
-                        elseif ($sort=="descriptionD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.description DESC";
-                    
-                        elseif ($sort=="riddle") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle";
-                        elseif ($sort=="riddleD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle DESC";
-                    
-                        elseif ($sort=="level") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddleLevel";
-                        elseif ($sort=="levelD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddleLevel DESC";
-                    
-                        elseif ($sort=="author") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.author_id";
-                        elseif ($sort=="authorD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.author_id DESC";
-                    
-                        elseif ($sort=="accepted") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id WHERE accepted=1 order by r.accepted";
-                        elseif ($sort=="NOTaccepted") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id WHERE accepted=0 order by r.accepted";
-                        
-					}
-                    else $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id"
+                $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id"
                 
 ?>
-<!--
-            <form class="text-center" method="post" id="form">
-                    <select class="form-control pull-right" id="sort_select" name="value" onchange="this.form.submit()">
-                        <option value="id" name="sort" disabled="disabled">Sort</option>
-                        <option value="id" name="sort">id</option>
-                        <option value="idD" name="sort">id(desc)</option>
-                        <option value="category" name="sort">category</option>
-                        <option value="categoryD" name="sort">category(Z-A)</option>
-                        <option value="description" name="sort">description</option>
-                        <option value="descriptionD" name="sort">description(Z-A)</option>
-                        <option value="riddle" name="sort">riddle</option>
-                        <option value="riddleD" name="sort">riddle(Z-A)</option>
-                        <option value="level" name="sort">level</option>
-                        <option value="levelD" name="sort">level(desc)</option>
-                        <option value="author" name="sort">author</option>
-                        <option value="authorD" name="sort">author(desc)</option>
-                        <option value="accepted" name="sort">accepted</option>
-                        <option value="NOTaccepted" name="sort">NOT accepted</option>
-                    </select>
-                </form>
--->
+
 			<div>
-                <form class="text-center" method="post" id="form">
-                    <select class="form-control pull-right" id="sort_select" name="value" onchange="this.form.submit()">
-                        <option value="id" name="sort" disabled="disabled">Sort</option>
-                        <option value="id" name="sort">id</option>
-                        <option value="idD" name="sort">id(desc)</option>
-                        <option value="category" name="sort">category</option>
-                        <option value="categoryD" name="sort">category(Z-A)</option>
-                        <option value="description" name="sort">description</option>
-                        <option value="descriptionD" name="sort">description(Z-A)</option>
-                        <option value="riddle" name="sort">riddle</option>
-                        <option value="riddleD" name="sort">riddle(Z-A)</option>
-                        <option value="level" name="sort">level</option>
-                        <option value="levelD" name="sort">level(desc)</option>
-                        <option value="author" name="sort">author</option>
-                        <option value="authorD" name="sort">author(desc)</option>
-                        <option value="accepted" name="sort">accepted</option>
-                        <option value="NOTaccepted" name="sort">NOT accepted</option>
-                    </select>
-                </form>
+                
             </div>
             <div class="table_content">
                 
@@ -163,7 +100,7 @@
 					{
                         
                         echo "
-						<table id='users_table' class='table table-condensed table-bordered'>
+						<table id='example' class='table table-bordered' cellspacing='0' width='100%'>
                         <thead class='table_header'>
                         <th>Id</th><th>Category</th><th>Description</th><th>Riddle</th><th><span class='glyphicon glyphicon-minus'></span></th><th>Level</th><th><span class='glyphicon glyphicon-plus'></span></th><th>Author(id)</th><th>Accepted</th><th>Accept</th><th>Delete</th>
 						</thead>
@@ -230,10 +167,23 @@ EOT;
                 
 			</div>
         <?php include ('buttons.php') ?>
+            
+            
     
 
 
 		</div>
+        
+        <script>
+        $(document).ready(function() {
+    $('#example').DataTable( {
+        responsive: true,
+        "pageLength": 20,
+        "pagingType":"numbers",
+        "order": [[ 0, "desc" ]]
+    } );
+} );
+        </script>
 
         
 	</body>
