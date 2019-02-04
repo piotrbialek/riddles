@@ -1,0 +1,45 @@
+.formHeader {
+  @extend .border;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  width: $formWidth;
+  background-color: $blueColor;
+}
+
+.sendForm {
+  @extend .border;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $blueColor;
+  width: $formWidth;
+  padding: 20px;
+}
+
+.input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 2*$formWidth/3;
+}
+
+.txtArea {
+  min-height: 60px;
+}
+
+textarea {
+  resize: none;
+}
+
+.input, textarea {
+
+  background-color: #000a21;
+  color: #fff;
+
+}
+
+.g-recaptcha {
+  display: inline-block;
+}

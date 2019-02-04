@@ -1,0 +1,184 @@
+$lightGrayColor: #AAA;
+$blueColor: #001f34;
+$greenColour: #41BF1A;
+$redColour: #E81A1A;
+
+$formWidth: 400px;
+
+// nie wiem czy import nie powinien być po mixinie i klasie border ktorych tam uzywam
+@import "form";
+@import "table";
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+html, body {
+  background-color: $blueColor !important;
+  color: $lightGrayColor !important;
+  height: 100%;
+
+}
+
+.container {
+  background-color: darken($blueColor, 0.5);
+  height: 100%;
+}
+
+.not_display {
+  display: none;
+}
+
+.border{
+  border: outset;
+  @include border-radius(5px);
+}
+
+.title {
+  @extend .border;
+  font-size: 46px;
+}
+
+.category {
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+
+#description {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  @include border-radius(999px);
+}
+
+#input, textarea {
+  background-color: darken($blueColor, 90);
+}
+
+#input:focus {
+  background-color: lighten(darken($blueColor, 90), 5);
+  outline: none;
+}
+
+.guessesBox {
+  text-align: left;
+  display: inline-block;
+  height: 40px;
+  min-width: 250px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.guesses {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.green {
+  color: $greenColour;
+}
+
+.red {
+  color: $redColour;
+}
+
+.gray {
+  color: $lightGrayColor;
+}
+
+.redBlink {
+  border-color: $redColour;
+}
+
+.greenBlink {
+  border-color: $greenColour;
+}
+
+.blueBlink {
+  border-color: lighten($blueColor, 50);
+}
+
+#sentence {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 46px;
+  min-height: 60px;
+  letter-spacing: 5px;
+  font-family: monospace;
+}
+
+#image {
+  margin: 10px;
+  text-align: center;
+  min-height: 60px;
+}
+
+#info {
+  min-height: 20px;
+}
+
+#user {
+  margin-right: 5px;
+  text-align: right;
+  font-size: 12px;
+  height: 0;
+}
+
+.button {
+  margin: 5px;
+}
+
+/*znak na koncu z typedjs*/
+.typed-cursor {
+  display: none;
+}
+
+.hideLetter {
+  visibility: hidden;
+}
+
+// ------------------ z allRiddles
+//#sort_select {
+//  margin: 5px 0;
+//  max-width: 200px;
+//  min-height: 50px;
+//  text-transform: uppercase;
+//  font-size: 16px;
+//  background-color: yellow;
+//}
+
+/*
+#button
+{
+    margin-top: 5px;
+	margin-bottom:5px;
+	display: inline-block;
+    text-transform: uppercase;
+}
+*/
+
+/*
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+*/
+
+
+
+
+

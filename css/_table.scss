@@ -1,0 +1,28 @@
+.buttons_group {
+  margin-bottom: 10px;
+}
+
+.button-confirm {
+  color: #fff;
+  text-decoration: none;
+  //background-color: none;
+}
+
+.alert {
+  margin-top: 5px;
+}
+
+.notAccepted {
+  color: lighten($lightGrayColor,20);
+  background-color: darken($redColour,30);
+}
+
+.table_header {
+  //background-color: darken($blueColor, 0.5);
+  background-color: darken($blueColor, 30);
+  cursor: pointer;
+}
+
+.table_content {
+  margin-top: 60px;
+}
