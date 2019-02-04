@@ -8,7 +8,7 @@
 		exit();
 	}
 	
-	require_once "DBconnect.php";
+	require_once "../DBconnect.php";
 
 ?>
 
@@ -18,14 +18,14 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>Riddles - All Users</title>
-		<link rel="stylesheet" href="style.css" type="text/css" />
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="../css/main.css" type="text/css" />
+		<link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
 	</head>
 
 	<body>
 		<div class="container" id="container">
 
-            <?php include ('title.php') ?>
+            <?php include('../includes/title.php') ?>
 
           
 			<div>
@@ -61,11 +61,12 @@
 					if($admin==1)
 					{
 						echo "Administrator manages all the users";
-						echo "
+echo <<< EOT
 						<table class='table table-condensed table-bordered' id='table'>
 						<thead class='table_header'>
 						<th>Id</th><th>Login</th><th>E-mail</th><th>Level</th><th>User type</th><th></th><th>Riddles added</th>
-						</thead>";
+						</thead>
+EOT;
 //                        "select r.id, r.kategoria, r.opis, r.haslo, r.poziom, r.autor_id, u.login, r.accepted from `riddles` r join `users` u on r.autor_id = u.id"
 							if ($sql = $con->prepare("SELECT us.id, us.login, us.email, us.level, us.admin, count(ri.author_id) from `riddles` ri join `users` us on ri.author_id = us.id GROUP by ri.author_id"))//WHERE us.id not like $user
 									{        
@@ -114,7 +115,7 @@ EOT;
 ?>
 
 			</div>
-			<?php include ('buttons.php') ?>
+			<?php include('../includes/buttons.php') ?>
 
 		</div>
 

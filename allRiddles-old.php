@@ -18,7 +18,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>Riddles - All riddles</title>
-		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
 		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -55,7 +55,7 @@
 
 	<body>
 		<div class="container" id="container">
-            <?php include ('title.php') ?>
+            <?php include('includes/title.php') ?>
 
 <?php           if (isset($_SESSION['accept_info']))
 					{
@@ -229,7 +229,7 @@ EOT;
 			
                 
 			</div>
-        <?php include ('buttons.php') ?>
+        <?php include('includes/buttons.php') ?>
     
 
 

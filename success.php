@@ -25,14 +25,14 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>Riddles - Succesful registration</title>
-		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
 		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 	</head>
 
 	<body>
 		<div class="container text-center">
-			<div id="title">Riddles</div>
-			<div id="header">Succesful registration</div>
+			<header class="title text-center">Riddles</header>
+			<div class="formHeader">Succesful registration</div>
 			
 			<div class="sendForm">
 				</br>

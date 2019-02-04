@@ -20,16 +20,14 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Riddles - Log in!</title>
-	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 </head>
 
 <body>
 	<div class="container text-center">
-		<div id="title">Riddles</div>
-		<div id="header" class="text-center">
-		Log in!
-		</div>
+		<header class="title text-center">Riddles</header>
+		<div class="formHeader">Log in!</div>
 	
 	<form class="sendForm" action="login.php" method="post">
 		<br>

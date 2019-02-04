@@ -59,6 +59,19 @@
 			$validation=false;
 			$_SESSION['info_pass']="The passwords are not identical!";
 		}	
+        
+//        ------------------------------------------------------------------------reCAPTCHA
+        $secret="6LcTpmQUAAAAANqO3aGJdZ7_IJM2mp1UgcjC4VsB";
+        $checkSecret=file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+        
+        $recaptcha=json_decode($checkSecret);
+        
+        if(!($recaptcha->success))
+        {
+            $validation=false;
+            $_SESSION['info_recaptcha']="Confirm that you are not a robot!";
+		}	
+        
 
 		$pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
 		
@@ -139,9 +152,10 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Riddles - registration</title>
-	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-	
+<!--    reCaptcha-->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 
@@ -156,8 +170,8 @@
 					}
 				?>
 			</span>
-			<div id="title">Riddles</div>
-			<div id="header">Registration</div>
+			<header class="title text-center">Riddles</header>
+			<div class="formHeader">Registration</div>
 
 					<form class="sendForm" method="post"> 
 <!--                        nie ma action to plik POSTem wysle do samego siebie?-->
@@ -221,6 +235,21 @@
 								{
 									echo $_SESSION['info_pass'];
 									unset($_SESSION['info_pass']);
+								}
+							?>
+						</span>	
+						<br>
+                        
+                        <div class="text-center">
+                            <div class="g-recaptcha" data-sitekey="6LcTpmQUAAAAAD4zaNCr8luA_JabqWKlWAN-0KTL"></div>
+                        </div>
+                        
+                        <span class="red">
+							<?php
+								if (isset($_SESSION['info_recaptcha']))
+								{
+									echo $_SESSION['info_recaptcha'];
+									unset($_SESSION['info_recaptcha']);
 								}
 							?>
 						</span>	

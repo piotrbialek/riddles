@@ -23,10 +23,10 @@
 		$login = $_POST['login'];
 		$pass = $_POST['pass'];
         
-        
-        
-		
+
 		$login = htmlentities($login, ENT_QUOTES, "UTF-8");
+		$pass = htmlentities($pass, ENT_QUOTES, "UTF-8");
+        
         $validation=true;
         
         if (ctype_alnum($login)==false)
