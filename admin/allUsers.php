@@ -1,123 +1,120 @@
 <?php
 
-	session_start();
-	
-	if (!isset($_SESSION['logged']))
-	{
-		header('Location: index.php');
-		exit();
-	}
-	
-	require_once "../DBconnect.php";
+session_start();
+
+include ("../../projekt/notLoggedRedirect.php");
+
+require_once "../DBconnect.php";
 
 ?>
 
 <!DOCTYPE HTML>
 <html lang="pl">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>Riddles - All Users</title>
-		<link rel="stylesheet" href="../css/main.css" type="text/css" />
-		<link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
-	</head>
+<head>
+    <?php include('../includes/base_head.php') ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="../js/setAdmin.js"></script>
+    <title>Riddles - All Users</title>
+</head>
 
-	<body>
-		<div class="container" id="container">
+<body>
+<div class="container">
 
-            <?php include('../includes/title.php') ?>
+    <?php include('../includes/title.php') ?>
 
-          
-			<div>
-                <div>
-                
-<?php           if (isset($_SESSION['admin_info']))
-					{
-						echo $_SESSION['admin_info'];
-						unset($_SESSION['admin_info']);
-					}
-?>
-                </div>
+    <main>
+        <div class="subtitle text-center">All users</div>
+        <?php if (isset($_SESSION['admin_info'])) {
+            echo $_SESSION['admin_info'];
+            unset($_SESSION['admin_info']);
+        }
+        ?>
 
-				<?php
-				$con = @new mysqli($host, $db_user, $db_password, $db_name);
-		
-		
-				if ($con->connect_errno!=0)
-				{
-					echo "Error: ".$con->connect_errno;
-				}
-				else
-				{
-		
-					$user=$_SESSION['id'];
-					$adminLogin=$_SESSION['login'];
-					$adminEmail=$_SESSION['email'];
-					$adminLevel=$_SESSION['playerLevel'];
-					$admin=$_SESSION['admin'];
 
-					$con ->set_charset("utf8");
+        <?php
+        $con = @new mysqli($host, $db_user, $db_password, $db_name);
 
-					if($admin==1)
-					{
-						echo "Administrator manages all the users";
-echo <<< EOT
+
+        if ($con->connect_errno != 0) {
+            echo "Error: " . $con->connect_errno;
+        } else {
+
+            $user = $_SESSION['id'];
+            $adminLogin = $_SESSION['login'];
+            $adminEmail = $_SESSION['email'];
+            $adminLevel = $_SESSION['playerLevel'];
+            $admin = $_SESSION['admin'];
+
+            $con->set_charset("utf8");
+
+            if ($admin == 1) {
+
+                echo <<< EOT
 						<table class='table table-condensed table-bordered' id='table'>
 						<thead class='table_header'>
-						<th>Id</th><th>Login</th><th>E-mail</th><th>Level</th><th>User type</th><th></th><th>Riddles added</th>
+						    <th>Id</th>
+						    <th>Login</th>
+						    <th>E-mail</th>
+						    <th>Level</th>
+						    <th>User type</th>
+						    <th>Riddles added</th>
 						</thead>
 EOT;
+
+                $query = "SELECT u.id, u.login, u.email, u.level, u.admin, count(r.author_id) 
+from `users` u join`riddles` r on
+ r.author_id = u.id GROUP BY u.id";
+//GROUP BY r.author_id";
+
+                $q="SELECT id, login, email, level, admin from users";
+
 //                        "select r.id, r.kategoria, r.opis, r.haslo, r.poziom, r.autor_id, u.login, r.accepted from `riddles` r join `users` u on r.autor_id = u.id"
-							if ($sql = $con->prepare("SELECT us.id, us.login, us.email, us.level, us.admin, count(ri.author_id) from `riddles` ri join `users` us on ri.author_id = us.id GROUP by ri.author_id"))//WHERE us.id not like $user
-									{        
-										$sql->execute();
-										$sql->bind_result($id, $login, $email, $level, $admin, $count);
+                if ($sql = $con->prepare($query))//WHERE us.id not like $user
+                {
+                    $sql->execute();
+                    $sql->bind_result($id, $login, $email, $level, $admin, $count);
+//                    $sql->bind_result($id, $login, $email, $level, $admin);
 
-										while ($sql->fetch())
-										{
-											if($admin==1)
-											{
-												$temp_admin="<span class='glyphicon glyphicon-star-empty'></span>";
-                                                $user_type="<span class='glyphicon glyphicon-user button-confirm'></span>";
-											}
-											else
-											{
-												$temp_admin="<span class='glyphicon glyphicon-user'></span>";
-                                                $user_type="<span class='glyphicon glyphicon-star-empty button-confirm'></span>";
-											}
-											echo <<< EOT
-												<tr>
-												<td>$id</td>
-												<td class="col-lg-4">$login</td>
-												<td class="col-lg-5">$email</td>
-												<td class="text-center col-lg-1">$level</td>                      
-												<td class="text-center col-lg-1">$temp_admin</td>                                           
-												<td class="text-center class="col-lg-1""><a href='setAdmin.php?setAdmin=$id&admin=$admin' onclick="return confirm('Are you sure you want to change the administrator rights of the user $login?');"><button class="btn-primary">$user_type</a></td> 
-                                                <td class="text-right">$count</td>
-												</tr>
-                                               
-EOT;
-										}
-										$sql->close();
-									}
-									else
-									{
-										throw new Exception($con->error);
-									}
-                        echo "</table>";
-					}
-					else
-					{
-						echo "You do not have sufficient permissions";
-					}
-					 $con->close();
-				}
-?>
 
-			</div>
-			<?php include('../includes/buttons.php') ?>
+                    while ($sql->fetch()) {
+                        if ($admin == 1) {
+                            $user_type = "<span class='glyphicon glyphicon-star button-confirm yellow'></span>";
+                            $admin_class = "admin";
+                        } else {
+                            $user_type = "<span class='glyphicon glyphicon-user button-confirm gray'></span>";
+                            $admin_class = "";
+                        }
+                        ?>
 
-		</div>
+                        <tr class="<?php echo $admin_class ?>" id="<?php echo $id ?>">
+                            <td><?php echo $id ?></td>
+                            <td class="col-lg-4"><?php echo $login ?></td>
+                            <td class="col-lg-5"><?php echo $email ?></td>
+                            <td class="text-center col-lg-1"><?php echo $level ?></td>
+                            <td data-target="user_type" class="set text-center" class="col-lg-1">
+                                <button id="<?php echo $id ?>" class="btn-primary"><?php echo $user_type ?></td>
+                            <td class="text-right"><?php echo $count ?></td>
+                        </tr>
 
-	</body>
+                        <?php
+                    }
+                    $sql->close();
+                } else {
+                    throw new Exception($con->error);
+                }
+                echo "</table>";
+            } else {
+                echo "You do not have sufficient permissions";
+            }
+            $con->close();
+        }
+        ?>
+
+    </main>
+    <?php include('../includes/buttons.php') ?>
+
+</div>
+
+</body>
 </html>

@@ -63,8 +63,9 @@ textarea {
   cursor: pointer;
 }
 
-.table_content {
-  margin-top: 60px;
+.admin {
+  font-weight: bold;
+  color: #dddddd;
 }
 
 html, body {
@@ -92,6 +93,12 @@ html, body {
 
 .title {
   font-size: 46px;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .category {
@@ -152,6 +159,10 @@ html, body {
 
 .gray {
   color: #AAA;
+}
+
+.yellow {
+  color: #dbe800;
 }
 
 .redBlink {

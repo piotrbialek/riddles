@@ -2,10 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['logged'])) {
-    header('Location: index.php');
-    exit();
-}
+include ("../../projekt/notLoggedRedirect.php");
 
 require_once "../../projekt/DBconnect.php";
 
@@ -15,16 +12,16 @@ $con = @new mysqli($host, $db_user, $db_password, $db_name);
 if ($con->connect_errno != 0) {
     echo "Error: " . $con->connect_errno;
 } else {
-    if (isset($_GET['accept'])) {
-        $id = $_GET['accept'];
+    if (isset($_POST['id'])) {
+        $id = $_POST['id'];
+    } else {
+        header('Location: ../../projekt/riddle.php');
+        exit();
     }
 
-    if (isset($_GET['accepted'])) {
-        $ifAccepted = $_GET['accepted'];
-    }
 
-    if (isset($_GET['accepted'])) {
-        $ifAccepted = $_GET['accepted'];
+    if (isset($_POST['accepted'])) {
+        $ifAccepted = $_POST['accepted'];
         if ($ifAccepted == 1) {
             $ifAccepted = 0;
 
@@ -32,6 +29,7 @@ if ($con->connect_errno != 0) {
             $ifAccepted = 1;
         }
     }
+
 
     $user = $_SESSION['id'];
     $admin = $_SESSION['admin'];
@@ -43,10 +41,10 @@ if ($con->connect_errno != 0) {
         if ($sql = $con->prepare("UPDATE riddles SET accepted=$ifAccepted WHERE id=$id")) {
             $sql->execute();
             $sql->close();
-            if ($ifAccepted == 0) $info = "NOT";
-            else $info = "accepted";
-            $_SESSION['accept_info'] = "<div class='alert alert-success'>You have changed riddle (id=$id): Accepted=$info</div>";
+            echo $ifAccepted;
+            exit;
         } else {
+            echo 3;
             throw new Exception($con->error);
         }
     } else echo "You do not have sufficient permissions.";

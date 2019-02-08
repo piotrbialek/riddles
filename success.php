@@ -22,11 +22,8 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>Riddles - Succesful registration</title>
-		<link rel="stylesheet" href="css/main.css" type="text/css" />
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <?php include ('includes/base_head.php') ?>
+        <title>Riddles - Successful registration</title>
 	</head>
 
 	<body>
@@ -34,7 +31,7 @@
 			<header class="title text-center">Riddles</header>
 			<div class="formHeader">Succesful registration</div>
 			
-			<div class="sendForm">
+			<main class="sendForm">
 				</br>
 				Thank you for registering!
 				</br>		
@@ -43,7 +40,7 @@
 				now you can <a href="index.php">log in</a>.
 				</br>
 				</br>	
-			</div>
+			</main>
 		</div>
 	</body>
 </html>

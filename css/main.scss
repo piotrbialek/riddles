@@ -2,6 +2,7 @@ $lightGrayColor: #AAA;
 $blueColor: #001f34;
 $greenColour: #41BF1A;
 $redColour: #E81A1A;
+$yellowColour: #dbe800;
 
 $formWidth: 400px;
 
@@ -41,6 +42,12 @@ html, body {
 .title {
   @extend .border;
   font-size: 46px;
+}
+
+.subtitle{
+  font-size: 30px;
+  margin-top:20px;
+  margin-bottom: 10px;
 }
 
 .category {
@@ -100,6 +107,10 @@ html, body {
   color: $lightGrayColor;
 }
 
+.yellow{
+  color: $yellowColour;
+}
+
 .redBlink {
   border-color: $redColour;
 }
@@ -150,6 +161,8 @@ html, body {
 .hideLetter {
   visibility: hidden;
 }
+
+
 
 // ------------------ z allRiddles
 //#sort_select {

@@ -2,6 +2,8 @@
 
 session_start();
 
+include ("../projekt/notLoggedRedirect.php");
+
 //$levelCompleted=$_SESSION['levelCompleted'];
 
 //    $levelCompleted=$_SESSION['levelCompleted'];

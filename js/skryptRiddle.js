@@ -65,7 +65,7 @@ function gameWon(result) {
 
         var typed3 = new Typed("#info", {
             strings: ["", info, "Click button or press enter to continue."],
-            startDelay: 300,
+            startDelay: 100,
             typeSpeed: 20,
             backSpeed: 10,
             loop: false,
@@ -73,7 +73,6 @@ function gameWon(result) {
                 $("#buttons").removeClass("not_display");
                 $("#buttonPlay").fadeIn("slow");
             }
-
         });
     });
 }
@@ -87,7 +86,7 @@ function checkWin() {
             $("#buttonPlay").hide();
 
             levelCompleted = true;
-            ajaxUpdateLevel();
+            increaseLevel();
             $("#buttonPlay").val("Next level");
 
             gameWon(true);
@@ -112,16 +111,17 @@ function checkLetterInSentence(inputLetter) {
         if (sentenceLetter === inputLetter) {
             tempSentence = tempSentence.setLetter(i, inputLetter);
             displayedSentence = tempSentence;
-            displayedSentence = displayedSentence.replace(new RegExp(sentenceLetter, "g"), '<span class="l green hideLetter correctLetter">' + sentenceLetter + '</span>');
+            displayedSentence = displayedSentence.replace(
+                new RegExp(sentenceLetter, "g"),
+                '<span class="l green hideLetter correctLetter">' + sentenceLetter + '</span>'
+            );
             setTimeout(function () {
                 $(".l").fadeOut("fast", function () {
                     $(".l").removeClass("hideLetter").fadeIn("fast");
                 });
             }, 100);
             correctLetter++;
-            console.log("correct: " + correctLetter);
         }
-
     }
 
 
@@ -229,29 +229,6 @@ function checkLetter() {
         }
         checkWin();
     }
-}
-
-function ajaxUpdateLevel() {
-    // Create our XMLHttpRequest object
-    var hr = new XMLHttpRequest();
-    // Create some variables we need to send to our PHP file
-    var url = "ajax/increaseLvl.php";
-    var lvlCompleted = true;
-    var vars = "levelCompleted=" + lvlCompleted;
-    hr.open("POST", url, true);
-    // Set content type header information for sending url encoded variables in the request
-    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    // Access the onreadystatechange event for the XMLHttpRequest object
-    hr.onreadystatechange = function () {
-        if (hr.readyState == 4 && hr.status == 200) {
-            var return_data = hr.responseText;
-            document.getElementById("status").innerHTML = return_data;
-        }
-    }
-    // Send the data to PHP now... and wait for response to update the status div
-    hr.send(vars); // Actually execute the request
-    document.getElementById("status").innerHTML = "processing...";
-
 }
 
 function start() {

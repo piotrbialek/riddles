@@ -57,11 +57,7 @@
 		<div class="container" id="container">
             <?php include('includes/title.php') ?>
 
-<?php           if (isset($_SESSION['accept_info']))
-					{
-						echo $_SESSION['accept_info'];
-						unset($_SESSION['accept_info']);
-					}
+<?php
                 if (isset($_SESSION['lvl_info']))
 					{
 						echo $_SESSION['lvl_info'];

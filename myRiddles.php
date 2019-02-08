@@ -2,10 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['logged'])) {
-    header('Location: index.php');
-    exit();
-}
+include ("../projekt/notLoggedRedirect.php");
 
 require_once "DBconnect.php";
 
@@ -14,18 +11,15 @@ require_once "DBconnect.php";
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <?php include ('includes/base_head.php') ?>
     <title>Riddles - my Riddles</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 </head>
 
 <body>
-<div class="container" id="container">
+<div class="container">
     <?php include('../projekt/includes/title.php') ?>
 
-    <div>
+    <main>
         <?php
         $con = @new mysqli($host, $db_user, $db_password, $db_name);
 
@@ -81,7 +75,7 @@ EOT;
         }
         ?>
 
-    </div>
+    </main>
     <?php include('../projekt/includes/buttons.php') ?>
 
 </div>

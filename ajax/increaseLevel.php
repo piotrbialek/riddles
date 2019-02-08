@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include ("../../projekt/notLoggedRedirect.php");
+
 if ((isset($_POST['levelCompleted'])) && (($_POST['levelCompleted']) == true)) {
     $_SESSION["playerLevel"] = $_SESSION["playerLevel"] + 1;
 } else {
@@ -8,7 +10,6 @@ if ((isset($_POST['levelCompleted'])) && (($_POST['levelCompleted']) == true)) {
     header("Location: ../../projekt/riddle.php");
 }
 
-$levelCompleted = $_POST['levelCompleted'];
 
 require_once "../DBconnect.php";
 
