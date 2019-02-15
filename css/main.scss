@@ -6,9 +6,12 @@ $yellowColour: #dbe800;
 
 $formWidth: 400px;
 
+$navbarHeight: 50px;
+
 // nie wiem czy import nie powinien być po mixinie i klasie border ktorych tam uzywam
 @import "form";
 @import "table";
+@import "navbar";
 
 @mixin border-radius($radius){
   -webkit-border-radius: $radius;
@@ -21,13 +24,8 @@ $formWidth: 400px;
 html, body {
   background-color: $blueColor !important;
   color: $lightGrayColor !important;
-  height: 100%;
+  //height: 100%;
 
-}
-
-.container {
-  background-color: darken($blueColor, 0.5);
-  height: 100%;
 }
 
 .not_display {
@@ -46,7 +44,6 @@ html, body {
 
 .subtitle{
   font-size: 30px;
-  margin-top:20px;
   margin-bottom: 10px;
 }
 

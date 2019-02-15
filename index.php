@@ -6,7 +6,7 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
     header('Location: myRiddles.php');
     exit();
 } else {
-    $_SESSION['playerLevel'] = 0;
+    $_SESSION['player_level'] = 0;
 }
 
 ?>
@@ -19,8 +19,8 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
 </head>
 
 <body>
+<?php include('includes/navbar.php') ?>
 <div class="container text-center">
-    <header class="title text-center">Riddles</header>
     <main>
         <div class="formHeader">Log in!</div>
 
@@ -46,18 +46,18 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
             <br><br>
             <span class="red">
 		<?php
-        if (isset($_SESSION['loginError'])) echo $_SESSION['loginError'];
-        unset($_SESSION['loginError']);
+        if (isset($_SESSION['login_error'])) echo $_SESSION['login_error'];
+        unset($_SESSION['login_error']);
         ?>
 		</span>
             <br><br>
             <a href="registration.php">Don't have an account? Sign up!</a>
             <br>
-            <button type="submit" class="btn btn-primary button">Log in <span class="glyphicon glyphicon-log-in"></span>
+            <button type="submit" name="submit" class="btn btn-primary button">Log in <span class="glyphicon glyphicon-log-in"></span>
             </button>
             <br>
             <br>
-            <a href="notLogged.php">Continue without account</a>
+            <a href="notLoggedGame.php">Continue without account</a>
 
         </form>
     </main>

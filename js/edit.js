@@ -1,21 +1,26 @@
 $(document).ready(function () {
 
-    $(document).on('click', 'a[data-role=update]', function () {
+    $('.edit').click(function () {
 
-        var riddleId = $(this).data('id');
+        var riddleId = this.id;
         var category = $('#' + riddleId).children('td[data-target=category]').text();
         var description = $('#' + riddleId).children('td[data-target=description]').text();
         var riddle = $('#' + riddleId).children('td[data-target=riddle]').text();
-        var riddleLevel = $('#' + riddleId).children('td[data-target=riddleLevel]').text();
-
+        var riddle_level = $('#' + riddleId).children('td[data-target=riddle_level]').text();
 
         $('#categoryModal').val(category);
         $('#descriptionModal').val(description);
         $('#riddleModal').val(riddle);
-        $('#riddleLevelModal').val(riddleLevel);
+        $('#riddle_levelModal').val(riddle_level);
         $('#riddleIdModal').val(riddleId);
         $('#myModal').modal('toggle');
 
+    });
+
+    $(document).keypress(function (e) {
+        if (e.which === 13) {
+
+        }
     });
 
     $('#save').click(function () {
@@ -23,24 +28,29 @@ $(document).ready(function () {
         var category = $('#categoryModal').val();
         var description = $('#descriptionModal').val();
         var riddle = $('#riddleModal').val();
-        var riddleLevel = $('#riddleLevelModal').val();
+        var riddle_level = $('#riddle_levelModal').val();
         var el = $('#' + riddleId).children('td');
 
 
         $.ajax({
             url: '../../projekt/ajax/edit.php',
             method: 'post',
-            data: {category: category, description: description, riddle: riddle, riddleLevel: riddleLevel, riddleId: riddleId},
+            data: {
+                category: category,
+                description: description,
+                riddle: riddle,
+                riddle_level: riddle_level,
+                riddleId: riddleId
+            },
             success: function (response) {
 
                 if (response == 1) {
-                    // now update user record in table
+
                     $('#' + riddleId).children('td[data-target=category]').text(category);
                     $('#' + riddleId).children('td[data-target=description]').text(description);
                     $('#' + riddleId).children('td[data-target=riddle]').text(riddle);
-                    $('#' + riddleId).children('td[data-target=riddleLevel]').text(riddleLevel);
+                    $('#' + riddleId).children('td[data-target=riddle_level]').text(riddle_level);
                     $('#myModal').modal('toggle');
-
 
                     $(el).closest('tr').fadeOut(250).fadeIn(250);
 

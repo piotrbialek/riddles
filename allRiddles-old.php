@@ -55,7 +55,7 @@
 
 	<body>
 		<div class="container" id="container">
-            <?php include('includes/title.php') ?>
+            <?php include('includes/navbar.php') ?>
 
 <?php
                 if (isset($_SESSION['lvl_info']))
@@ -66,29 +66,29 @@
                 if (isset($_POST['value']))
 					{
                         $sort= $_POST['value'];
-						if ($sort=="id") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id";
-                        elseif ($sort=="idD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id DESC";
+						if ($sort=="id") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id";
+                        elseif ($sort=="idD") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id DESC";
                     
-                        elseif ($sort=="category") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.category";
-                        elseif ($sort=="categoryD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.category DESC";
+                        elseif ($sort=="category") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.category";
+                        elseif ($sort=="categoryD") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.category DESC";
                     
-                        elseif ($sort=="description") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.description";
-                        elseif ($sort=="descriptionD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.description DESC";
+                        elseif ($sort=="description") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.description";
+                        elseif ($sort=="descriptionD") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.description DESC";
                     
-                        elseif ($sort=="riddle") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle";
-                        elseif ($sort=="riddleD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle DESC";
+                        elseif ($sort=="riddle") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle";
+                        elseif ($sort=="riddleD") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle DESC";
                     
-                        elseif ($sort=="level") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddleLevel";
-                        elseif ($sort=="levelD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddleLevel DESC";
+                        elseif ($sort=="level") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle_level";
+                        elseif ($sort=="levelD") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.riddle_level DESC";
                     
-                        elseif ($sort=="author") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.author_id";
-                        elseif ($sort=="authorD") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.author_id DESC";
+                        elseif ($sort=="author") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.author_id";
+                        elseif ($sort=="authorD") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.author_id DESC";
                     
-                        elseif ($sort=="accepted") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id WHERE accepted=1 order by r.accepted";
-                        elseif ($sort=="NOTaccepted") $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id WHERE accepted=0 order by r.accepted";
+                        elseif ($sort=="accepted") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id WHERE accepted=1 order by r.accepted";
+                        elseif ($sort=="NOTaccepted") $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id WHERE accepted=0 order by r.accepted";
                         
 					}
-                    else $query="select r.id, r.category, r.description, r.riddle, r.riddleLevel, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id"
+                    else $query="select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, (SELECT count(author_id) from `riddles` where accepted=1), (SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id"
                 
 ?>
 <!--
@@ -169,7 +169,7 @@
 							if ($sql = $con->prepare($query))
 									{        
 										$sql->execute();
-										$sql->bind_result($id, $category, $description, $riddle, $riddleLevel, $author_id, $login, $accepted, $countAccepted, $countAll);
+										$sql->bind_result($id, $category, $description, $riddle, $riddle_level, $author_id, $login, $accepted, $countAccepted, $countAll);
 
 										while ($sql->fetch())
 										{
@@ -193,9 +193,9 @@
 												<td>$category</td>
 												<td>$description</td>
 												<td>$riddle</td>
-                                                <td class="text-center"><button class="btn-danger" onclick='window.location.href="changeLevel.php?id=$id&lvl=$riddleLevel&lvlDown";'><span class='glyphicon glyphicon-minus'></span></td>
-												<td class="text-center">$riddleLevel</td>
-                                                <td class="text-center"><button class="btn-success" onclick='window.location.href="changeLevel.php?id=$id&lvl=$riddleLevel&lvlUp";'><span class='glyphicon glyphicon-plus'></span></td>        <td class="text-center">$login($author_id)</td>                      
+                                                <td class="text-center"><button class="btn-danger" onclick='window.location.href="changeLevel.php?id=$id&lvl=$riddle_level&lvlDown";'><span class='glyphicon glyphicon-minus'></span></td>
+												<td class="text-center">$riddle_level</td>
+                                                <td class="text-center"><button class="btn-success" onclick='window.location.href="changeLevel.php?id=$id&lvl=$riddle_level&lvlUp";'><span class='glyphicon glyphicon-plus'></span></td>        <td class="text-center">$login($author_id)</td>                      
 												<td class="text-center">$temp_accepted</td>  
 												<td class="text-center"><button class="btn-primary" onclick='window.location.href="accept.php?accept=$id&accepted=$accepted";'>$if_accept</td>         
                                                 <td class="text-center"><a href='delete.php?delete=$id' onclick="return confirm('Are you sure you want to delete this item?');"><button class="btn-warning"><span class="glyphicon glyphicon-remove button-confirm"></span></a></td> 
@@ -225,7 +225,7 @@ EOT;
 			
                 
 			</div>
-        <?php include('includes/buttons.php') ?>
+<!--        --><?php //include('includes/buttons.php') ?>
     
 
 

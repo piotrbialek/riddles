@@ -2,31 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c834550d-2d45-463c-a35e-4d76583900a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/riddles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/navbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/dataTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notLoggedGame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/successRegistration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addRiddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/addRiddle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/accept.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/allRiddles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/allRiddles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/allUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/changeLevel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/setAdmin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/increaseLvl.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/increaseLevel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/allRiddles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/accept.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/accept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/increaseLevel.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/increaseLevel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/allRiddles-old.php" beforeDir="false" afterPath="$PROJECT_DIR$/allRiddles-old.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/_table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_table.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/getData.php" beforeDir="false" afterPath="$PROJECT_DIR$/getData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/title.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/title.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/base_head.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/base_head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/buttons.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/buttons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/title.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/accept.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/accept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/increaseLevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/increaseLevel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/skryptAddRiddle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/skryptAddRiddle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/skryptRiddle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/skryptRiddle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelUp.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myRiddles.php" beforeDir="false" afterPath="$PROJECT_DIR$/myRiddles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/notLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notLogged.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/riddle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/success.php" beforeDir="false" afterPath="$PROJECT_DIR$/success.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/riddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/riddles.sql" beforeDir="false" afterPath="$PROJECT_DIR$/riddles.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/success.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/validateRiddle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validate2.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,51 +67,57 @@
     <session id="-1468659487">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.14" value="2" />
-          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="3" />
-          <entry key="js" value="32" />
-          <entry key="php" value="226" />
-          <entry key="scss" value="16" />
+          <entry key="css" value="7" />
+          <entry key="js" value="54" />
+          <entry key="php" value="291" />
+          <entry key="scss" value="33" />
           <entry key="sql" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="3" />
-          <entry key="JavaScript" value="32" />
-          <entry key="PHP" value="226" />
-          <entry key="SCSS" value="16" />
+          <entry key="CSS" value="7" />
+          <entry key="JavaScript" value="54" />
+          <entry key="PHP" value="291" />
+          <entry key="SCSS" value="33" />
           <entry key="SQL" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2071" />
-          <entry key="php" value="4269" />
-          <entry key="scss" value="1142" />
+          <entry key="css" value="52" />
+          <entry key="js" value="2604" />
+          <entry key="php" value="6186" />
+          <entry key="scss" value="1834" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="29" />
-          <entry key="JavaScript" value="2064" />
-          <entry key="PHP" value="4190" />
-          <entry key="SCSS" value="1142" />
+          <entry key="CSS" value="52" />
+          <entry key="HTML" value="63" />
+          <entry key="JavaScript" value="2597" />
+          <entry key="PHP" value="6073" />
+          <entry key="SCSS" value="1834" />
           <entry key="SQL" value="58" />
         </counts>
       </usages-collector>
@@ -105,91 +126,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validate.php">
+        <entry file="file://$PROJECT_DIR$/admin/riddles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="238">
+              <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/edit.js">
+        <entry file="file://$PROJECT_DIR$/js/accept.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validate2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/allRiddles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myRiddles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notLogged.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riddle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/success.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+            <state relative-caret-position="476">
+              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -205,58 +154,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>guesses</find>
-      <find>write</find>
-      <find>border-rad</find>
-      <find>border-radius</find>
-      <find>&lt;header</find>
-      <find>400px</find>
-      <find>&quot;title</find>
-      <find>&lt;div id=&quot;title&quot;&gt;Riddles&lt;/div&gt;</find>
-      <find>&lt;header id=&quot;title&quot;&gt;</find>
-      <find>&lt;header class=&quot;title&quot;&gt;</find>
-      <find>getData</find>
-      <find>$_SESSION['admin_info']</find>
-      <find>$_SESSION['accept_info']</find>
-      <find>.nota</find>
-      <find>sentence</find>
-      <find>sent</find>
-      <find>style=&quot;color:#F31616;&quot;</find>
+      <find>$playerLvl</find>
       <find>level</find>
-      <find>you have cha</find>
-      <find>You have chang</find>
-      <find>user</find>
-      <find>GET</find>
-      <find>var</find>
-      <find>correct</find>
-      <find>increase</find>
-      <find>increaseLe</find>
-      <find>levelCom</find>
-      <find>$_SESSION['blad']</find>
-      <find>notLogged.php</find>
-      <find>update.php</find>
+      <find>displayedSentence</find>
+      <find>tempSentence</find>
+      <find>wrongGuesses</find>
+      <find>temp_login</find>
+      <find>$_SESSION['loginError']</find>
+      <find>$_SESSION['tempLogin']</find>
+      <find>$_SESSION['playerLevel']</find>
+      <find>$_SESSION['riddleAdded']</find>
+      <find>$_SESSION[&quot;player_level&quot;]</find>
+      <find>$_SESSION[&quot;playerLevel&quot;]</find>
+      <find>$rezultat</find>
+      <find>$_SESSION</find>
+      <find>$_SESSION['registrationOK']</find>
+      <find>$_SESSION['riddleProblem']</find>
+      <find>riddleProblem</find>
+      <find>wrongAtt</find>
+      <find>uusers</find>
+      <find>notLogged</find>
+      <find>EOT</find>
+      <find>margin-top: 100</find>
+      <find>buttons</find>
+      <find>subtit</find>
+      <find>top-nav</find>
+      <find>dropdown-me</find>
+      <find>riddleLevel</find>
+      <find>Location</find>
+      <find>myNavbar</find>
+      <find>table_content</find>
     </findStrings>
     <replaceStrings>
-      <replace>&lt;?php include('includes/title.php')</replace>
-      <replace>&lt;?php include('includes/buttons.php')</replace>
-      <replace />
-      <replace>con</replace>
-      <replace>&quot;formHeader</replace>
-      <replace>id=&quot;formHeader&quot;</replace>
-      <replace>class=&quot;formHeader&quot;</replace>
-      <replace>href=&quot;css/main.css&quot;</replace>
-      <replace>place</replace>
-      <replace>sign</replace>
-      <replace>badAttempts</replace>
-      <replace>inputLetter</replace>
-      <replace>checkLetterInSentence</replace>
-      <replace>ajaxUpdateLevel</replace>
-      <replace>&quot;</replace>
-      <replace>gameWon</replace>
-      <replace>wrongAttempts</replace>
-      <replace>drawLines</replace>
-      <replace>showSentence</replace>
-      <replace>sentenceLetter</replace>
       <replace>&lt;header class=&quot;title&quot;&gt;Riddles&lt;/header&gt;</replace>
       <replace>&lt;header class=&quot;title&quot;&gt;</replace>
       <replace>&lt;header class=&quot;title text-center&quot;&gt;</replace>
@@ -267,6 +196,26 @@
       <replace>riddleLevel</replace>
       <replace>POST</replace>
       <replace>let</replace>
+      <replace>$query</replace>
+      <replace>$queryUserLevel</replace>
+      <replace>$queryRiddle</replace>
+      <replace>$newLevel</replace>
+      <replace>riddleProblem</replace>
+      <replace>info_riddleLevel</replace>
+      <replace>$playerLevel</replace>
+      <replace>$currentLevel</replace>
+      <replace>temporarySentence</replace>
+      <replace>tempLogin</replace>
+      <replace>$_SESSION['login_error']</replace>
+      <replace>$_SESSION['temp_login']</replace>
+      <replace>$_SESSION['player_level']</replace>
+      <replace>$_SESSION['riddle_added']</replace>
+      <replace>$_SESSION[&quot;player_level&quot;]</replace>
+      <replace>$_SESSION['registration_OK']</replace>
+      <replace>$_SESSION['riddle_problem']</replace>
+      <replace>$result</replace>
+      <replace>riddle_level</replace>
+      <replace>navbar-list</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -275,57 +224,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/allUsers.php" />
-        <option value="$PROJECT_DIR$/ajax/my_parse_file.php" />
-        <option value="$PROJECT_DIR$/includes/buttons.php" />
-        <option value="$PROJECT_DIR$/usersRiddles.php" />
-        <option value="$PROJECT_DIR$/allRiddles-old.php" />
-        <option value="$PROJECT_DIR$/ajax/changeRiddleLevel.php" />
-        <option value="$PROJECT_DIR$/css/try.scss" />
-        <option value="$PROJECT_DIR$/css/_form.scss" />
-        <option value="$PROJECT_DIR$/admin/changeLevel.php" />
-        <option value="$PROJECT_DIR$/admin/setAdmin.php" />
-        <option value="$PROJECT_DIR$/DBconnect.php" />
-        <option value="$PROJECT_DIR$/includes/title.php" />
-        <option value="$PROJECT_DIR$/notLogged.php" />
-        <option value="$PROJECT_DIR$/success.php" />
-        <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/base_head.php" />
-        <option value="$PROJECT_DIR$/css/main.scss" />
-        <option value="$PROJECT_DIR$/admin/remove.php" />
-        <option value="$PROJECT_DIR$/admin/accept.php" />
-        <option value="$PROJECT_DIR$/../ajaxUpdate/connection.php" />
-        <option value="$PROJECT_DIR$/admin/delete.php" />
         <option value="$PROJECT_DIR$/../ajaxUpdate/index.php" />
         <option value="$PROJECT_DIR$/admin/update.php" />
-        <option value="$PROJECT_DIR$/addRiddle.php" />
         <option value="$PROJECT_DIR$/unset.php" />
         <option value="$PROJECT_DIR$/validate2.php" />
-        <option value="$PROJECT_DIR$/css/_table.scss" />
         <option value="$PROJECT_DIR$/ajax/remove.php" />
         <option value="$PROJECT_DIR$/js/delete.js" />
-        <option value="$PROJECT_DIR$/js/accept.js" />
         <option value="$PROJECT_DIR$/ajax/increaseLvl.php" />
-        <option value="$PROJECT_DIR$/riddle.php" />
-        <option value="$PROJECT_DIR$/js/increaseLevel.js" />
-        <option value="$PROJECT_DIR$/js/skryptRiddle.js" />
         <option value="$PROJECT_DIR$/js/setAdmin.js" />
         <option value="$PROJECT_DIR$/ajax/update.php" />
-        <option value="$PROJECT_DIR$/js/edit.js" />
-        <option value="$PROJECT_DIR$/notLoggedRedirect.php" />
-        <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/admin/allRiddles.php" />
-        <option value="$PROJECT_DIR$/admin/allUsers.php" />
         <option value="$PROJECT_DIR$/ajax/accept.php" />
         <option value="$PROJECT_DIR$/ajax/delete.php" />
-        <option value="$PROJECT_DIR$/ajax/edit.php" />
-        <option value="$PROJECT_DIR$/ajax/increaseLevel.php" />
         <option value="$PROJECT_DIR$/ajax/setAdmin.php" />
-        <option value="$PROJECT_DIR$/getData.php" />
-        <option value="$PROJECT_DIR$/myRiddles.php" />
-        <option value="$PROJECT_DIR$/registration.php" />
+        <option value="$PROJECT_DIR$/ajax/increaseLevel.php" />
+        <option value="$PROJECT_DIR$/ajax/edit.php" />
+        <option value="$PROJECT_DIR$/js/increaseLevel.js" />
+        <option value="$PROJECT_DIR$/riddle.php" />
+        <option value="$PROJECT_DIR$/admin/allUsers.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/success.php" />
         <option value="$PROJECT_DIR$/validate.php" />
+        <option value="$PROJECT_DIR$/js/skryptRiddle.js" />
+        <option value="$PROJECT_DIR$/js/skryptAddRiddle.js" />
+        <option value="$PROJECT_DIR$/addRiddle.php" />
+        <option value="$PROJECT_DIR$/notLogged.php" />
+        <option value="$PROJECT_DIR$/includes/buttons.php" />
+        <option value="$PROJECT_DIR$/includes/nav.php" />
+        <option value="$PROJECT_DIR$/add.php" />
+        <option value="$PROJECT_DIR$/myRiddles.php" />
+        <option value="$PROJECT_DIR$/css/_table.scss" />
+        <option value="$PROJECT_DIR$/css/_form.scss" />
+        <option value="$PROJECT_DIR$/includes/title.php" />
+        <option value="$PROJECT_DIR$/css/sb-admin.css" />
+        <option value="$PROJECT_DIR$/js/accept2.js" />
+        <option value="$PROJECT_DIR$/js/edit2.js" />
+        <option value="$PROJECT_DIR$/js/edit.js" />
+        <option value="$PROJECT_DIR$/notLoggedRedirect.php" />
+        <option value="$PROJECT_DIR$/notLoggedGame.php" />
+        <option value="$PROJECT_DIR$/getData.php" />
+        <option value="$PROJECT_DIR$/game.php" />
+        <option value="$PROJECT_DIR$/includes/navbar.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/registration.php" />
+        <option value="$PROJECT_DIR$/successRegistration.php" />
+        <option value="$PROJECT_DIR$/css/_navbar.scss" />
+        <option value="$PROJECT_DIR$/css/main.scss" />
+        <option value="$PROJECT_DIR$/includes/base_head.php" />
+        <option value="$PROJECT_DIR$/js/dataTable.js" />
+        <option value="$PROJECT_DIR$/admin/riddles.php" />
+        <option value="$PROJECT_DIR$/admin/users.php" />
+        <option value="$PROJECT_DIR$/js/accept.js" />
       </list>
     </option>
   </component>
@@ -336,10 +285,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1655" />
-    <option name="y" value="-19" />
-    <option name="width" value="883" />
-    <option name="height" value="698" />
+    <option name="x" value="1402" />
+    <option name="y" value="-20" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -384,6 +333,21 @@
               <item name="projekt" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -394,7 +358,7 @@
   <component name="PropertiesComponent">
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/sass.cmd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -409,8 +373,10 @@
       <recent name="C:\xampp\htdocs\projekt\includes" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\projekt\ajax" />
       <recent name="C:\xampp\htdocs\projekt\js" />
+      <recent name="C:\xampp\htdocs\projekt\css" />
+      <recent name="C:\xampp\htdocs\projekt\includes" />
+      <recent name="C:\xampp\htdocs\projekt\ajax" />
       <recent name="C:\xampp\htdocs\projekt" />
     </key>
   </component>
@@ -448,17 +414,25 @@
       <workItem from="1549540411210" duration="9633000" />
       <workItem from="1549616876541" duration="599000" />
       <workItem from="1549652198625" duration="15919000" />
+      <workItem from="1549876071500" duration="9672000" />
+      <workItem from="1549915662634" duration="85000" />
+      <workItem from="1549965954805" duration="22198000" />
+      <workItem from="1550050474750" duration="2436000" />
+      <workItem from="1550147018340" duration="15455000" />
+      <workItem from="1550230729842" duration="193000" />
+      <workItem from="1550231272222" duration="4003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94484000" />
+    <option name="totallyTimeSpent" value="148526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16905445" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1747851" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32950193" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
@@ -506,191 +480,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/skryptAddRiddle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usersRiddles.php" />
-    <entry file="file://$PROJECT_DIR$/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/includes/title.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/buttons.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/example.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/_form.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ajaxUpdate/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ajaxUpdate/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/accept.php" />
-    <entry file="file://$PROJECT_DIR$/includes/base_head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/unset.php" />
-    <entry file="file://$PROJECT_DIR$/css/_table.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="128" column="18" lean-forward="true" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/my_parse_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="93" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/changeRiddleLevel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/changeLevel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/setAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/delete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/accept.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/skryptRiddle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/increaseLevel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/setAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/my_parse_file.php" />
+    <entry file="file://$PROJECT_DIR$/ajax/changeRiddleLevel.php" />
+    <entry file="file://$PROJECT_DIR$/admin/changeLevel.php" />
+    <entry file="file://$PROJECT_DIR$/admin/delete.php" />
+    <entry file="file://$PROJECT_DIR$/admin/setAdmin.php" />
     <entry file="file://$PROJECT_DIR$/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notLoggedRedirect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/allUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/accept.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ajax/delete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/increaseLevel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -701,27 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addRiddle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/allRiddles-old.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="192" column="66" lean-forward="true" selection-start-line="192" selection-start-column="66" selection-end-line="192" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBconnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -729,34 +509,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/levelUp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/levelUp.php" />
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -764,66 +517,247 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myRiddles.php">
+    <entry file="file://$PROJECT_DIR$/validate2.php" />
+    <entry file="file://$PROJECT_DIR$/ajax/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        <state relative-caret-position="459">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notLogged.php">
+    <entry file="file://$PROJECT_DIR$/js/increaseLevel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/increaseLevel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validateRiddle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="12" column="81" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/skryptAddRiddle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/setAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addRiddle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="4" column="2725" lean-forward="true" selection-start-line="4" selection-start-column="2725" selection-end-line="4" selection-end-column="2725" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allRiddles-old.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="188" column="56" lean-forward="true" selection-start-line="188" selection-start-column="56" selection-end-line="188" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/buttons.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="82" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myRiddles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="70" column="113" lean-forward="true" selection-start-line="70" selection-start-column="113" selection-end-line="70" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/accept.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/nav.php" />
+    <entry file="file://$PROJECT_DIR$/includes/top_nav.php" />
+    <entry file="file://$PROJECT_DIR$/css/sb-admin.css" />
+    <entry file="file://$PROJECT_DIR$/css/_form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/accept2.js" />
+    <entry file="file://$PROJECT_DIR$/js/delete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/edit2.js" />
+    <entry file="file://$PROJECT_DIR$/js/skryptRiddle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notLoggedRedirect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notLoggedGame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="28" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/successRegistration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="137" column="19" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="62" lean-forward="true" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/_navbar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registration.php">
+    <entry file="file://$PROJECT_DIR$/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/_table.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/base_head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riddle.php">
+    <entry file="file://$PROJECT_DIR$/admin/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        <state relative-caret-position="238">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/success.php">
+    <entry file="file://$PROJECT_DIR$/js/dataTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validate2.php">
+    <entry file="file://$PROJECT_DIR$/admin/riddles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="238">
+          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validate.php">
+    <entry file="file://$PROJECT_DIR$/js/accept.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/allRiddles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="476">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
         </state>
       </provider>
     </entry>

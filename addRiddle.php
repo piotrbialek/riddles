@@ -1,122 +1,53 @@
 <?php
+header('Content-T: text/html; charset=UTF-8');
 
-include "add.php";
+session_start();
+
+include ("../projekt/notLoggedRedirect.php");
+
+if (isset($_POST['riddle'])) {
 
 
-?>
+    include "validateRiddle.php";
 
-<!DOCTYPE HTML>
-<html lang="pl">
-<head>
-    <?php include('includes/base_head.php') ?>
-    <title>Riddle - add riddle</title>
-</head>
-<body>
-<div class="container text-center">
 
-    <?php include('includes/title.php') ?>
-    <main>
-        <div class="formHeader">Add riddle</div>
+    require_once "DBconnect.php";
+    mysqli_report(MYSQLI_REPORT_STRICT);
 
-        <form class="sendForm text-center" method="post" name="formAddRiddle">
-            <?php
-            if (isset($_SESSION['riddleAdded'])) {
-                echo $_SESSION['riddleAdded'];
-                unset($_SESSION['riddleAdded']);
+    try {
+        $connection = new mysqli($host, $db_user, $db_password, $db_name);
+        if ($connection->connect_errno != 0) {
+            throw new Exception(mysqli_connect_errno());
+        } else {
+            if ($validation) {
+                $category = mb_strtoupper($category, 'UTF-8');
+                $description = mb_strtoupper($description, 'UTF-8');
+                $riddle = mb_strtoupper($riddle, 'UTF-8');
+
+                mysqli_query($connection, "SET NAMES 'utf8'");
+
+                if ($connection->query("INSERT INTO riddles VALUES (NULL, '$category', '$description', '$riddle','$riddle_level','$id',0)")) {
+                    if (isset($_SESSION['category'])) unset($_SESSION['category']);
+                    if (isset($_SESSION['description'])) unset($_SESSION['description']);
+                    if (isset($_SESSION['riddle'])) unset($_SESSION['riddle']);
+                    if (isset($_SESSION['info_category'])) unset($_SESSION['info_category']);
+                    if (isset($_SESSION['info_description'])) unset($_SESSION['info_description']);
+                    if (isset($_SESSION['info_riddle'])) unset($_SESSION['info_riddle']);
+                    if (isset($_SESSION['info_riddle_level'])) unset($_SESSION['info_riddle_level']);
+                    if (isset($_SESSION['temp_category'])) unset($_SESSION['temp_category']);
+                    if (isset($_SESSION['temp_description'])) unset($_SESSION['temp_description']);
+                    if (isset($_SESSION['temp_riddle'])) unset($_SESSION['temp_riddle']);
+                    if (isset($_SESSION['temp_riddle_level'])) unset($_SESSION['temp_riddle_level']);
+                    $_SESSION['riddle_added'] = 'Riddle has been added <span class="glyphicon glyphicon-check green"></span>';
+                } else {
+                    throw new Exception($connection->error);
+                }
+
             }
-            ?>
-            <br>
-
-            <input class="input" type="text" name="category" placeholder="Category" onfocus="this.placeholder=''"
-                   onblur="this.placeholder='Category'"
-                   value="<?php
-                   if (isset($_SESSION['temp_category'])) {
-                       echo $_SESSION['temp_category'];
-                       unset($_SESSION['temp_category']);
-                   }
-                   ?>"/>
-
-            <br>
-            <span class="red">
-				<?php
-                if (isset($_SESSION['info_category'])) {
-                    echo $_SESSION['info_category'];
-                    unset($_SESSION['info_category']);
-                }
-                ?>
-				</span>
-            <br/>
-
-            <textarea class="input txtArea" type="textarea" name="description" placeholder="Description"
-                      onfocus="this.placeholder=''" onblur="this.placeholder='Description'">
-<?php
-if (isset($_SESSION['temp_description'])) {
-    echo $_SESSION['temp_description'];
-    unset($_SESSION['temp_description']);
+            $connection->close();
+        }
+    } catch (Exception $ex) {
+        echo '<span class="red">Something goes wrong..</span>';
+        echo $ex;
+    }
 }
-?></textarea>
-            <br/>
-            <span class="red">
-				<?php
-                if (isset($_SESSION['info_description'])) {
-                    echo $_SESSION['info_description'];
-                    unset($_SESSION['info_description']);
-                }
-                ?>
-				</span>
-            <br>
-
-            <textarea class="input txtArea" type="textarea" name="riddle" placeholder="Riddle"
-                      onfocus="this.placeholder=''" onblur="this.placeholder='Riddle'">
-<?php
-if (isset($_SESSION['temp_riddle'])) {
-    echo $_SESSION['temp_riddle'];
-    unset($_SESSION['temp_riddle']);
-}
-?></textarea>
-            <br/>
-            <span class="red">
-				<?php
-                if (isset($_SESSION['info_riddle'])) {
-                    echo $_SESSION['info_riddle'];
-                    unset($_SESSION['info_riddle']);
-                }
-                ?>
-				</span>
-            <br>
-            <input class="input" type="number" name="riddleLevel" min="0" max="20" placeholder="Level (0-20)"
-                   onfocus="this.placeholder=''" onblur="this.placeholder='Level (0-20)'"
-                   value="<?php
-                   if (isset($_SESSION['temp_riddleLevel'])) {
-                       echo $_SESSION['temp_riddleLevel'];
-                       unset($_SESSION['temp_riddleLevel']);
-                   }
-                   ?>"/>
-
-            <br>
-            <span class="red">
-				<?php
-                if (isset($_SESSION['info_riddleLevel'])) {
-                    echo $_SESSION['info_riddleLevel'];
-                    unset($_SESSION['info_riddleLevel']);
-                }
-                ?>
-				</span>
-            <br>
-            <br>
-            <button class="btn btn-danger button" onclick="reset();" id="resetBtn">Clear the form <span
-                        class="glyphicon glyphicon-remove-circle"></span></button>
-            <button type="submit" class="btn btn-success button">Add riddle <span
-                        class="glyphicon glyphicon-plus-sign"></span></button>
-
-        </form>
-    </main>
-    <br>
-    <?php include('includes/buttons.php') ?>
-
-
-</div>
-
-
-</body>
-</html>

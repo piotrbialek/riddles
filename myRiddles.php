@@ -1,24 +1,24 @@
 <?php
-
 session_start();
-
-include ("../projekt/notLoggedRedirect.php");
-
+include("../projekt/notLoggedRedirect.php");
 require_once "DBconnect.php";
-
 ?>
 
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include ('includes/base_head.php') ?>
+    <?php include('includes/base_head.php') ?>
     <title>Riddles - my Riddles</title>
 </head>
 
 <body>
+<?php include('includes/navbar.php') ?>
 <div class="container">
-    <?php include('../projekt/includes/title.php') ?>
-
+    <?php
+    if (isset($_SESSION['riddle_problem'])) {
+        echo $_SESSION['riddle_problem'];
+        unset($_SESSION['riddle_problem']);
+    } ?>
     <main>
         <?php
         $con = @new mysqli($host, $db_user, $db_password, $db_name);
@@ -31,7 +31,7 @@ require_once "DBconnect.php";
             $user = $_SESSION['id'];
             $admin = $_SESSION['admin'];
 
-            $query = "SELECT id, category, description, riddle, riddleLevel, (
+            $query = "SELECT id, category, description, riddle, riddle_level, (
                     SELECT count(ri.author_id) from `riddles` ri join `users` us on ri.author_id = us.id 
                     where us.id=$user GROUP by ri.author_id), (SELECT count(ri.author_id) 
                     from `riddles` ri join `users` us on ri.author_id = us.id 
@@ -45,12 +45,15 @@ require_once "DBconnect.php";
                 if ($stmt->num_rows > 0) {
                     echo "
 						<table class='table table-bordered table-condensed' id='table'>
-						<tr>
-						<th>Category</th><th>Description</th><th>Riddle</th><th>Level</th>
-						</tr>";
+						<thead class='table_header'>
+						<th>Category</th>
+						<th>Description</th>
+						<th>Riddle</th>
+						<th>Level</th>
+						</thead>";
                     //if ($sql = $con->prepare($query)) {
                     //$sql->execute();
-                    $stmt->bind_result($id, $category, $description, $riddle, $riddleLevel, $myRiddles, $myRiddlesA);
+                    $stmt->bind_result($id, $category, $description, $riddle, $riddle_level, $myRiddles, $myRiddlesA);
 
                     while ($stmt->fetch()) {
                         echo <<< EOT
@@ -59,13 +62,13 @@ require_once "DBconnect.php";
 											<td>$category</td>
 											<td>$description</td>
 											<td>$riddle</td>  													
-											<td class="text-center">$riddleLevel</td>  													
+											<td class="text-center">$riddle_level</td>  													
 											</tr>
 EOT;
                     }
                     $stmt->close();
                     //}
-                    echo "<div class='text-center'>My riddles($myRiddlesA / $myRiddles)</div></table>";
+                    echo "<div class='subtitle text-center'>My riddles ($myRiddlesA / $myRiddles)</div></table>";
                 } else {
                     echo "You have not added any riddles yet";
                 }
@@ -76,7 +79,7 @@ EOT;
         ?>
 
     </main>
-    <?php include('../projekt/includes/buttons.php') ?>
+    <!--    --><?php //include('../projekt/includes/buttons.php') ?>
 
 </div>
 

@@ -11,11 +11,11 @@ if (isset($_POST['riddleId'])) {
 //    $category = $_POST['category'];
 //    $description = $_POST['description'];
 //    $riddle = $_POST['riddle'];
-//    $riddleLevel = $_POST['riddleLevel'];
+//    $riddle_level = $_POST['riddle_level'];
     $riddleId = $_POST['riddleId'];
 
 
-    include "../../projekt/validate2.php";
+    include "../../projekt/validateRiddle.php";
 
     require_once "../../projekt/DBconnect.php";
 
@@ -26,6 +26,17 @@ if (isset($_POST['riddleId'])) {
         if ($connection->connect_errno != 0) {
             throw new Exception(mysqli_connect_errno());
         } else {
+            if (isset($_SESSION['category'])) unset($_SESSION['category']);
+            if (isset($_SESSION['description'])) unset($_SESSION['description']);
+            if (isset($_SESSION['riddle'])) unset($_SESSION['riddle']);
+            if (isset($_SESSION['info_category'])) unset($_SESSION['info_category']);
+            if (isset($_SESSION['info_description'])) unset($_SESSION['info_description']);
+            if (isset($_SESSION['info_riddle'])) unset($_SESSION['info_riddle']);
+            if (isset($_SESSION['info_riddle_level'])) unset($_SESSION['info_riddle_level']);
+            if (isset($_SESSION['temp_category'])) unset($_SESSION['temp_category']);
+            if (isset($_SESSION['temp_description'])) unset($_SESSION['temp_description']);
+            if (isset($_SESSION['temp_riddle'])) unset($_SESSION['temp_riddle']);
+            if (isset($_SESSION['temp_riddle_level'])) unset($_SESSION['temp_riddle_level']);
             if ($validation) {
                 $category = mb_strtoupper($category, 'UTF-8');
                 $description = mb_strtoupper($description, 'UTF-8');
@@ -37,21 +48,10 @@ if (isset($_POST['riddleId'])) {
 SET category='$category' , 
 description='$description' , 
 riddle = '$riddle', 
-riddleLevel = '$riddleLevel' 
+riddle_level = '$riddle_level' 
 WHERE id='$riddleId'";
 
                 if ($connection->query($query)) {
-                    if (isset($_SESSION['category'])) unset($_SESSION['category']);
-                    if (isset($_SESSION['description'])) unset($_SESSION['description']);
-                    if (isset($_SESSION['riddle'])) unset($_SESSION['riddle']);
-                    if (isset($_SESSION['info_category_u'])) unset($_SESSION['info_category_u']);
-                    if (isset($_SESSION['info_description_u'])) unset($_SESSION['info_description_u']);
-                    if (isset($_SESSION['info_riddle_u'])) unset($_SESSION['info_riddle_u']);
-                    if (isset($_SESSION['info_level_u'])) unset($_SESSION['info_level_u']);
-                    if (isset($_SESSION['temp_category_u'])) unset($_SESSION['temp_category_u']);
-                    if (isset($_SESSION['temp_description_u'])) unset($_SESSION['temp_description_u']);
-                    if (isset($_SESSION['temp_riddle_u'])) unset($_SESSION['temp_riddle_u']);
-                    if (isset($_SESSION['temp_level_u'])) unset($_SESSION['temp_level_u']);
                     echo 1;
                     exit;
                 } else {

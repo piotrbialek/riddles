@@ -31,7 +31,7 @@ CREATE TABLE `riddles` (
   `category` text COLLATE utf8_polish_ci NOT NULL,
   `description` text COLLATE utf8_polish_ci NOT NULL,
   `riddle` text COLLATE utf8_polish_ci NOT NULL,
-  `riddleLevel` int(11) NOT NULL,
+  `riddle_level` int(11) NOT NULL,
   `author_id` int(11) NOT NULL,
   `accepted` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
@@ -40,7 +40,7 @@ CREATE TABLE `riddles` (
 -- Zrzut danych tabeli `riddles`
 --
 
-INSERT INTO `riddles` (`id`, `category`, `description`, `riddle`, `riddleLevel`, `author_id`, `accepted`) VALUES
+INSERT INTO `riddles` (`id`, `category`, `description`, `riddle`, `riddle_level`, `author_id`, `accepted`) VALUES
 (122, 'Sport', 'Słynny jamajski lekkoatleta', 'Usain Bolt', 0, 18, 1),
 (123, 'Filmy', 'Tonący statek', 'Titanic', 8, 1, 0),
 (125, 'Przysłowia', 'chwyta się jej tonący', 'brzytwa', 2, 18, 1),

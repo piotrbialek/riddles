@@ -1,0 +1,37 @@
+.navbar-brand {
+  font-size: 40px;
+  padding-left: 25px;
+  color: $lightGrayColor !important;
+}
+
+.navbar-default {
+  background-color: darken($blueColor, 3);
+  border-color: darken($blueColor, 6);
+}
+
+.navbar-nav > li > a {
+  color: $lightGrayColor !important;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  color: darken($blueColor, 3) !important;
+  background-color: $lightGrayColor !important;
+}
+
+.navbar-nav > .open > .dropdown-menu {
+  border: 1px solid $lightGrayColor;
+  background-color: darken($blueColor, 3);
+  color: $lightGrayColor;
+}
+
+.navbar-nav > .open > .dropdown-menu > li > a {
+  color: $lightGrayColor;
+  background-color: darken($blueColor, 3);
+}
+
+.navbar-nav > .open > .dropdown-menu > li > a:hover,
+.navbar-nav > .open > .dropdown-menu > li > a:focus {
+  background-color: $lightGrayColor;
+  color: darken($blueColor, 3);
+}

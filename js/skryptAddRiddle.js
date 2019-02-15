@@ -1,15 +1,11 @@
 window.onload = start;
 
-function reset()
-{
-
-	$('.input').val('');
-	
+function reset() {
+    $('.input').val('');
 }
 
-function start()
-{
-	    $("#resetBtn").bind("click", function() {
+function start() {
+    $("#resetBtn").bind("click", function () {
         reset();
     });
 }

@@ -15,7 +15,7 @@ if ($con->connect_errno != 0) {
     if (isset($_POST['id'])) {
         $id = $_POST['id'];
     } else {
-        header('Location: ../../projekt/riddle.php');
+        header('Location: ../../projekt/game.php');
         exit();
     }
 
@@ -50,5 +50,5 @@ if ($con->connect_errno != 0) {
     } else echo "You do not have sufficient permissions.";
 
     $con->close();
-    header('Location: allRiddles.php');
+    header('Location: riddles.php');
 }

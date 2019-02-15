@@ -4,24 +4,23 @@ var wrongAttempts = 0;
 var wrongGuesses = "";
 var rightGuesses = "";
 var levelCompleted = false;
-var tempSentence = "";
+var temporarySentence = "";
 var displayedSentence = "";
 
 riddle = riddle.toUpperCase();
 description = description.toUpperCase();
 category = category.toUpperCase();
 
-
 function drawLines() {
     for (let i = 0; i < riddle.length; i++) {
         if (riddle.charAt(i) === " ") {
-            tempSentence = tempSentence + " ";
+            temporarySentence = temporarySentence + " ";
         }
         else {
-            tempSentence = tempSentence + "_";
+            temporarySentence = temporarySentence + "_";
         }
     }
-    displayedSentence = tempSentence;
+    displayedSentence = temporarySentence;
     showSentence();
 }
 
@@ -40,12 +39,12 @@ function gameWon(result) {
 
     $(document).keypress(function (e) {
         if (e.which === 13) {
-            window.location.href = "riddle.php";
+            window.location.href = "game.php";
         }
     });
 
     $("#buttonPlay").bind("click", function () {
-        window.location.href = "riddle.php";
+        window.location.href = "game.php";
     });
 
     $("#organize").fadeOut("slow", function () {
@@ -78,7 +77,7 @@ function gameWon(result) {
 }
 
 function checkWin() {
-    if (riddle === tempSentence) {
+    if (riddle === temporarySentence) {
         $("#image").fadeOut("slow", function () {
             $("#organize").fadeOut();
             $("#sentence").fadeOut();
@@ -103,14 +102,13 @@ function checkWin() {
 
 function checkLetterInSentence(inputLetter) {
     let correctLetter = 0;
-    //guesses += inputLetter;
 
     for (let i = 0; i < riddle.length; i++) {
         let sentenceLetter = riddle.charAt(i);
 
         if (sentenceLetter === inputLetter) {
-            tempSentence = tempSentence.setLetter(i, inputLetter);
-            displayedSentence = tempSentence;
+            temporarySentence = temporarySentence.setLetter(i, inputLetter);
+            displayedSentence = temporarySentence;
             displayedSentence = displayedSentence.replace(
                 new RegExp(sentenceLetter, "g"),
                 '<span class="l green hideLetter correctLetter">' + sentenceLetter + '</span>'

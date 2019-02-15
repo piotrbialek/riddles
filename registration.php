@@ -2,8 +2,6 @@
 
 session_start();
 
-include ("../projekt/notLoggedRedirect.php");
-
 
 if (isset($_POST['email'])) {
 
@@ -36,7 +34,6 @@ if (isset($_POST['email'])) {
         $validation = false;
         $_SESSION['info_pass'] = "Password contains invalid characters!";
     }
-
 
     if ((strlen($pass1) < 8) || (strlen($pass1) > 20)) {
         $validation = false;
@@ -101,8 +98,8 @@ if (isset($_POST['email'])) {
             if ($validation == true) {
 
                 if ($connection->query("INSERT INTO users VALUES (NULL, '$login', '$pass_hash', '$email',0,0)")) {
-                    $_SESSION['registrationOK'] = true;
-                    header('Location: success.php');
+                    $_SESSION['registration_OK'] = true;
+                    header('Location: successRegistration.php');
                 } else {
                     throw new Exception($connection->error);
                 }
@@ -128,7 +125,7 @@ if (isset($_POST['email'])) {
     <title>Riddles - registration</title>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-
+<?php include('includes/navbar.php') ?>
 <body>
 <div class="container text-center">
 			<span class="red">
@@ -139,7 +136,6 @@ if (isset($_POST['email'])) {
                 }
                 ?>
 			</span>
-    <header class="title text-center">Riddles</header>
     <main>
         <div class="formHeader">Registration</div>
 

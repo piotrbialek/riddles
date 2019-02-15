@@ -11,14 +11,14 @@ require_once "../../projekt/DBconnect.php";
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
 } else {
-    header('Location: ../../projekt/riddle.php');
+    header('Location: ../../projekt/game.php');
     exit();
 }
 
 if (isset($_POST['columnName'])) {
     $columnName = $_POST['columnName'];
 } else {
-    header('Location: ../../projekt/riddle.php');
+    header('Location: ../../projekt/game.php');
     exit();
 }
 

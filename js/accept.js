@@ -1,13 +1,11 @@
-$(document).ready(function () {
-    $('.accept').click(function () {
+$(document).on('click', '.accept', function(){
         let el = this;
-        let id = (el.parentNode).id;
+        let id = el.id;
         let parent = el.parentNode;
-
-        let rowClass = parent.className;
+        let rowClass = parent.parentNode.className;
         let accepted;
 
-        if (rowClass === "notAccepted") {
+        if (rowClass.includes("notAccepted")) {
             accepted = 0;
         }
         else {
@@ -27,13 +25,15 @@ $(document).ready(function () {
                     let spanClass;
 
                     if (response == 1) {
-                        acceptedBtn = "<button id='" + response + "' class='btn-primary'>" +
+                        // acceptedBtn = "<button id='" + response + "' class='btn-primary'>" +
+                        acceptedBtn = "<button id='" + id + "' class='btn-primary accept'>" +
                             "<span class='glyphicon glyphicon-ban-circle'></span>" +
                             "</button>";
                         $('#' + id).removeClass("notAccepted");
                         spanClass = "green";
                     } else {
-                        acceptedBtn = "<button id='" + response + "' class='btn-primary'>" +
+                        // acceptedBtn = "<button id='" + response + "' class='btn-primary'>" +
+                        acceptedBtn = "<button id='" + id + "' class='btn-primary accept'>" +
                             "<span class='glyphicon glyphicon-ok-circle'></span>" +
                             "</button>";
                         $('#' + id).addClass("notAccepted");
@@ -52,7 +52,5 @@ $(document).ready(function () {
                 }
             }
         });
-
     });
-
-});
+// });

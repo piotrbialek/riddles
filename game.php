@@ -5,14 +5,14 @@ include('getData.php');
     var category = '<?php echo $category;?>';
     var description = <?php echo json_encode($description); ?>;
     var riddle = <?php echo json_encode($riddle); ?>;
-    var level = <?php echo json_encode($current_level); ?>;
 </script>
 
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
+
     <?php include('includes/base_head.php') ?>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script src="js/skryptRiddle.js"></script>
     <script src="js/increaseLevel.js"></script>
     <script src="js/typed.js" type="text/javascript"></script>
@@ -20,21 +20,14 @@ include('getData.php');
 </head>
 <body>
 
+<?php include('includes/navbar.php') ?>
 <div class="container">
     <main>
-        <?php include('includes/title.php') ?>
-        <?php
-        if (isset($_SESSION['blad'])) {
-            echo $_SESSION['blad'];
-            //unset($_SESSION['blad']);
-        } ?>
-
-
         <div class="row">
             <?php
-            if (isset($_SESSION['info_level'])) {
-                echo $_SESSION['info_level'];
-                unset($_SESSION['info_level']);
+            if (isset($_SESSION['info_riddle_level'])) {
+                echo $_SESSION['info_riddle_level'];
+                unset($_SESSION['info_riddle_level']);
             } ?>
             <div class="category text-center" id="category"></div>
         </div>
@@ -70,7 +63,6 @@ include('getData.php');
 
         <div class="row">
             <div class="col-lg-1 col-md-1"></div>
-            <!--                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 text-center" id="sentence"></div>-->
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" id="sentence"></div>
             <div class="col-lg-5 col-md-5" id="image">
                 <img id="imageImg" src="image/transparent/wisielec0.png" class="img-responsive">

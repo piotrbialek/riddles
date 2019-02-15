@@ -1,27 +1,26 @@
 <?php
-
 session_start();
-
 include ("../../projekt/notLoggedRedirect.php");
-
 require_once "../DBconnect.php";
-
 ?>
 
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
     <?php include('../includes/base_head.php') ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="../js/setAdmin.js"></script>
+    <script src="../js/dataTable.js"></script>
     <title>Riddles - All Users</title>
 </head>
 
 <body>
+<?php include('../../projekt/includes/navbar.php') ?>
 <div class="container">
 
-    <?php include('../includes/title.php') ?>
+
 
     <main>
         <div class="subtitle text-center">All users</div>
@@ -43,25 +42,22 @@ require_once "../DBconnect.php";
             $user = $_SESSION['id'];
             $adminLogin = $_SESSION['login'];
             $adminEmail = $_SESSION['email'];
-            $adminLevel = $_SESSION['playerLevel'];
+            $adminLevel = $_SESSION['player_level'];
             $admin = $_SESSION['admin'];
 
             $con->set_charset("utf8");
 
-            if ($admin == 1) {
-
-                echo <<< EOT
-						<table class='table table-condensed table-bordered' id='table'>
+            if ($admin == 1) { ?>
+						<table id='sorted-table' class='table table-condensed table-bordered'>
 						<thead class='table_header'>
 						    <th>Id</th>
 						    <th>Login</th>
 						    <th>E-mail</th>
 						    <th>Level</th>
-						    <th>User type</th>
-						    <th>Riddles added</th>
+						    <th>Type</th>
+						    <th>Riddles</th>
 						</thead>
-EOT;
-
+<?php
                 $query = "SELECT u.id, u.login, u.email, u.level, u.admin, count(r.author_id) 
 from `users` u join`riddles` r on
  r.author_id = u.id GROUP BY u.id";
@@ -69,12 +65,13 @@ from `users` u join`riddles` r on
 
                 $q="SELECT id, login, email, level, admin from users";
 
+
 //                        "select r.id, r.kategoria, r.opis, r.haslo, r.poziom, r.autor_id, u.login, r.accepted from `riddles` r join `users` u on r.autor_id = u.id"
-                if ($sql = $con->prepare($query))//WHERE us.id not like $user
+                if ($sql = $con->prepare($q))//WHERE us.id not like $user
                 {
                     $sql->execute();
-                    $sql->bind_result($id, $login, $email, $level, $admin, $count);
-//                    $sql->bind_result($id, $login, $email, $level, $admin);
+                    //$sql->bind_result($id, $login, $email, $level, $admin, $count);
+                    $sql->bind_result($id, $login, $email, $level, $admin);
 
 
                     while ($sql->fetch()) {
@@ -94,7 +91,13 @@ from `users` u join`riddles` r on
                             <td class="text-center col-lg-1"><?php echo $level ?></td>
                             <td data-target="user_type" class="set text-center" class="col-lg-1">
                                 <button id="<?php echo $id ?>" class="btn-primary"><?php echo $user_type ?></td>
-                            <td class="text-right"><?php echo $count ?></td>
+                            <td class="text-right">
+<!--                                --><?php //echo $count ?>
+                                <?php
+                                echo count($id)."*";
+
+                                ?>
+                            </td>
                         </tr>
 
                         <?php
@@ -112,7 +115,7 @@ from `users` u join`riddles` r on
         ?>
 
     </main>
-    <?php include('../includes/buttons.php') ?>
+<!--    --><?php //include('../includes/buttons.php') ?>
 
 </div>
 

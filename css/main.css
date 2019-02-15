@@ -5,7 +5,7 @@
   margin-bottom: 10px;
   font-size: 32px;
   width: 400px;
-  background-color: #001f34;
+  background-color: #00101b;
 }
 
 .sendForm {
@@ -59,7 +59,7 @@ textarea {
 }
 
 .table_header {
-  background-color: black;
+  background-color: #00101b;
   cursor: pointer;
 }
 
@@ -68,15 +68,47 @@ textarea {
   color: #dddddd;
 }
 
+.navbar-brand {
+  font-size: 40px;
+  padding-left: 25px;
+  color: #AAA !important;
+}
+
+.navbar-default {
+  background-color: #001625;
+  border-color: #000d15;
+}
+
+.navbar-nav > li > a {
+  color: #AAA !important;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  color: #001625 !important;
+  background-color: #AAA !important;
+}
+
+.navbar-nav > .open > .dropdown-menu {
+  border: 1px solid #AAA;
+  background-color: #001625;
+  color: #AAA;
+}
+
+.navbar-nav > .open > .dropdown-menu > li > a {
+  color: #AAA;
+  background-color: #001625;
+}
+
+.navbar-nav > .open > .dropdown-menu > li > a:hover,
+.navbar-nav > .open > .dropdown-menu > li > a:focus {
+  background-color: #AAA;
+  color: #001625;
+}
+
 html, body {
   background-color: #001f34 !important;
   color: #AAA !important;
-  height: 100%;
-}
-
-.container {
-  background-color: #001d31;
-  height: 100%;
 }
 
 .not_display {
@@ -97,7 +129,6 @@ html, body {
 
 .subtitle {
   font-size: 30px;
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
