@@ -9,11 +9,8 @@
 <body>
 <?php include('includes/navbar.php') ?>
 <div class="container">
-
-
     <main class="text-center">
         <div class="formHeader">Add riddle</div>
-
         <form class="sendForm text-center" method="post" name="formAddRiddle">
             <?php
             if (isset($_SESSION['riddle_added'])) {
@@ -80,8 +77,8 @@ if (isset($_SESSION['temp_riddle'])) {
                 ?>
 				</span>
             <br>
-            <input class="input" type="number" name="riddle_level" min="0" max="20" placeholder="Level (0-20)"
-                   onfocus="this.placeholder=''" onblur="this.placeholder='Level (0-20)'"
+            <input class="input" type="number" name="riddle_level" min="0" max="100" placeholder="Level (0-100)"
+                   onfocus="this.placeholder=''" onblur="this.placeholder='Level (0-100)'"
                    value="<?php
                    if (isset($_SESSION['temp_riddle_level'])) {
                        echo $_SESSION['temp_riddle_level'];
@@ -100,19 +97,15 @@ if (isset($_SESSION['temp_riddle'])) {
 				</span>
             <br>
             <br>
-            <button class="btn btn-danger button" id="resetBtn">Clear the form <span
-                        class="glyphicon glyphicon-remove-circle"></span></button>
-            <button type="submit" class="btn btn-success button">Add riddle <span
-                        class="glyphicon glyphicon-plus-sign"></span></button>
+            <button class="btn btn-danger button" id="resetBtn">Clear the form
+                <span class="glyphicon glyphicon-remove-circle"></span>
+            </button>
+            <button type="submit" class="btn btn-success button">Add riddle
+                <span class="glyphicon glyphicon-plus-sign"></span>
+            </button>
 
         </form>
     </main>
-    <br>
-<!--    --><?php //include('includes/buttons.php') ?>
-
-
 </div>
-
-
 </body>
 </html>

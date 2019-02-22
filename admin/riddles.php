@@ -1,7 +1,9 @@
 <?php
 session_start();
 include("../../projekt/notLoggedRedirect.php");
-require_once "../DBconnect.php";
+include("includes/Riddle.php");
+include("includes/User.php");
+$riddles = Riddle::findAll();
 ?>
 
 <!DOCTYPE HTML>
@@ -13,7 +15,8 @@ require_once "../DBconnect.php";
     <!--    datatable styles-->
     <!--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
     <!--    datatable styles-->
-    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+            src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
     <title>Riddles - All riddles</title>
 
@@ -28,99 +31,65 @@ require_once "../DBconnect.php";
 <?php include('../../projekt/includes/navbar.php') ?>
 <div class="container">
 
-
-    <?php
-    if (isset($_SESSION['lvl_info'])) {
-        echo $_SESSION['lvl_info'];
-        unset($_SESSION['lvl_info']);
-    }
-    $query = "select r.id, r.category, r.description, r.riddle, r.riddle_level, r.author_id, u.login, r.accepted, 
-(SELECT count(author_id) from `riddles` where accepted=1), 
-(SELECT count(author_id) from `riddles`) from `riddles` r join `users` u on r.author_id = u.id order by r.id"
-
-    ?>
-
     <main>
+        <div class='subtitle text-center'>All riddles</div>
 
-
-        <?php
-        $con = @new mysqli($host, $db_user, $db_password, $db_name);
-
-
-        if ($con->connect_errno != 0) {
-            echo "Error: " . $con->connect_errno;
-        } else {
-
-        $user = $_SESSION['id'];
-        $admin = $_SESSION['admin'];
-
-        $con->set_charset("utf8");
-
-
-        if ($admin == 1) { ?>
-        <table id='sorted-table' class='table table-bordered' cellspacing='0' width='100%'>
-            <thead class='table_header'>
-            <tr>
-                <th>Id</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Riddle</th>
-                <th>Level</th>
-                <th>Author(ID)</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            if ($sql = $con->prepare($query)) {
-                $sql->execute();
-                $sql->bind_result($id, $category, $description, $riddle, $riddle_level, $author_id, $login, $accepted, $countAccepted, $countAll);
-
-
-                while ($sql->fetch()) {
-                    if ($accepted == 1) {
-                        $temp_accepted = "accepted";
+        <?php if ($admin == 1) { ?>
+            <table id='sorted-table' class='table table-bordered' cellspacing='0' width='100%'>
+                <thead class='table_header'>
+                <tr>
+                    <th>Id</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Riddle</th>
+                    <th>Level</th>
+                    <th>Author(ID)</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($riddles as $riddle) : ?>
+                    <?php
+                    if ($riddle->accepted == 1) {
                         $tr = "";
                         $if_accept = "<span class='glyphicon glyphicon-ban-circle'></span>";
                     } else {
-                        $temp_accepted = "NOT";
                         $tr = "notAccepted";
                         $if_accept = "<span class='glyphicon glyphicon-ok-circle'></span>";
                     }
-
                     ?>
-
-                    <tr class="<?php echo $tr ?>" id="<?php echo $id ?>">
-                        <td><?php echo $id ?></td>
-                        <td data-target="category"><?php echo $category ?></td>
-                        <td data-target="description"><?php echo $description ?></td>
-                        <td data-target="riddle"><?php echo $riddle ?></td>
-                        <td data-target="riddle_level" class="text-center"><?php echo $riddle_level ?></td>
-                        <td class="text-center"><?php echo $login ?> (<?php echo $author_id ?>)</td>
-                        <td data-target="accepted" class="text-center">
-                            <button id="<?php echo $id ?>" class="btn-primary accept"><?php echo $if_accept ?></button>
+                    <tr class="<?php echo $tr ?>" id="<?php echo $riddle->id ?>">
+                        <td><?php echo $riddle->id ?></td>
+                        <td data-target="category"><?php echo $riddle->category ?></td>
+                        <td data-target="description"><?php echo $riddle->description ?></td>
+                        <td data-target="riddle"><?php echo $riddle->riddle ?></td>
+                        <td data-target="riddle_level" class="text-center"><?php echo $riddle->riddle_level ?></td>
+                        <td data-target="author_id">
+                            <?php echo $login = User::getUsernameById($riddle->author_id) ?>(<?php echo $riddle->author_id ?>)
+                        </td>
+                        <td data-target="accepted" id="<?php echo $riddle->accepted ?>" class="text-center">
+                            <button id="<?php echo $riddle->id ?>" class="btn-primary accept">
+                                <?php echo $if_accept ?>
+                            </button>
                         </td>
                         <td class="text-center">
-                            <button class="btn-danger"><span id="<?php echo $id ?>"
-                                                             class="glyphicon glyphicon-trash button-confirm delete"></span>
+                            <button class="btn-danger">
+                                <span id="<?php echo $riddle->id ?>" class="glyphicon glyphicon-trash button-confirm delete"></span>
+                            </button>
                         </td>
                         <td class="text-center">
-                            <button id="<?php echo $id ?>" class="btn-warning edit" data-role="edit"><span
-                                        id="<?php echo $id ?>" class="glyphicon glyphicon-edit"></span>
+                            <button id="<?php echo $riddle->id ?>" class="btn-warning edit" data-role="edit">
+                                <span id="<?php echo $riddle->id ?>" class="glyphicon glyphicon-edit"></span>
+                            </button>
                         </td>
                     </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        <?php } ?>
 
-                <?php }
-            } else throw new Exception($con->error);
-
-            echo "<div class='subtitle text-center'>All riddles ($countAccepted / $countAll)</div></table>";
-            } else echo "You do not have sufficient permissions";
-
-            $con->close();
-            }
-            ?>
     </main>
 </div>
 <!-- Modal -->
@@ -135,25 +104,25 @@ require_once "../DBconnect.php";
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>Category (3-20 characters)</label>
+                    <label for="categoryModal">Category (3-20 characters)</label>
                     <input type="text" id="categoryModal" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <label>Description (3-60 characters)</label>
+                    <label for="descriptionModal">Description (3-60 characters)</label>
                     <input type="text" id="descriptionModal" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <label>Riddle (3-60 characters)</label>
+                    <label for="riddleModal">Riddle (3-60 characters)</label>
                     <input type="text" id="riddleModal" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <label>Level (1-20)</label>
+                    <label for="riddle_levelModal">Level (1-100)</label>
                     <input type="number" id="riddle_levelModal" class="form-control">
                 </div>
-                <input type="hidden" id="riddleIdModal" class="form-control">
+                <input type="hidden" id="riddle_idModal" class="form-control">
             </div>
             <div class="modal-footer">
                 <a href="javascript:;" id="save" class="btn btn-primary pull-right">Update</a>

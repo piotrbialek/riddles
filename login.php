@@ -11,6 +11,7 @@ if ((!isset($_POST['login'])) || (!isset($_POST['pass']))) {
 require_once "DBconnect.php";
 
 $connection = @new mysqli($host, $db_user, $db_password, $db_name);
+$_SESSION['temp_login'] = $login;
 
 if ($connection->connect_errno != 0) {
     echo "Error: " . $connection->connect_errno;
@@ -56,6 +57,9 @@ if ($connection->connect_errno != 0) {
 
                     unset($_SESSION['login_error']);
                     $result->free_result();
+                    if (isset($_SESSION['temp_login'])) unset($_SESSION['temp_login']);
+                    if (isset($_SESSION['pass'])) unset($_SESSION['pass']);
+                    if (isset($_SESSION['email'])) unset($_SESSION['email']);
                     header('Location: game.php');
                 } else {
                     $_SESSION['login_error'] = 'Incorrect login or password!';
@@ -75,8 +79,6 @@ if ($connection->connect_errno != 0) {
     } else {
         $_SESSION['login_error'] = 'Incorrect login or password!';
     }
-    $_SESSION['temp_login'] = $login;
-
     $connection->close();
 }
 

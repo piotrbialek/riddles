@@ -1,12 +1,17 @@
 <?php
 $validation = true;
 
+$id = $_SESSION['id'];
+$login = $_SESSION['login'];
+
 $category = $_POST['category'];
 $description = $_POST['description'];
 $riddle = $_POST['riddle'];
 $riddle_level = $_POST['riddle_level'];
-$login = $_SESSION['login'];
-$id = $_SESSION['id'];
+if (isset($_POST['author_id'])) $author_id = $_POST['author_id']; //add riddle
+if (isset($_POST['accepted'])) $accepted = $_POST['accepted']; // add riddle
+
+
 
 if ((strlen($category) < 3) || (strlen($category) > 20)) {
     $validation = false;
@@ -38,9 +43,9 @@ if (!preg_match("/^[a-zA-ZżźćńółęąśŻŹĆŃÓŁĘĄŚ ]+$/", $riddle) =
     $_SESSION['info_riddle'] = "Riddle can only consist of letters!";
 }
 
-if ($riddle_level > 20 || $riddle_level < 0) {
+if ($riddle_level > 100 || $riddle_level < 0) {
     $validation = false;
-    $_SESSION['info_riddle_level'] = "Level must be between 0 and 20!";
+    $_SESSION['info_riddle_level'] = "Level must be between 0 and 100!";
 }
 
 if ($riddle_level == '' || $riddle_level == ' ') {

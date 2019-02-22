@@ -6,13 +6,13 @@ session_start();
 
 include ("../../projekt/notLoggedRedirect.php");
 
-if (isset($_POST['riddleId'])) {
+if (isset($_POST['riddle_id'])) {
 
 //    $category = $_POST['category'];
 //    $description = $_POST['description'];
 //    $riddle = $_POST['riddle'];
 //    $riddle_level = $_POST['riddle_level'];
-    $riddleId = $_POST['riddleId'];
+    $riddle_id = $_POST['riddle_id'];
 
 
     include "../../projekt/validateRiddle.php";
@@ -49,7 +49,7 @@ SET category='$category' ,
 description='$description' , 
 riddle = '$riddle', 
 riddle_level = '$riddle_level' 
-WHERE id='$riddleId'";
+WHERE id='$riddle_id'";
 
                 if ($connection->query($query)) {
                     echo 1;

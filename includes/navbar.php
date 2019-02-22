@@ -23,7 +23,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="../../projekt/game.php"><span><i
                                                     class="glyphicon glyphicon-play"></i></span> Single-player</a></li>
-                                <li><a href="#"><span><i class="glyphicon glyphicon-globe"></i></span> Multi-player</a>
+                                <li><a href="../../projekt/multiplayer.php"><span><i class="glyphicon glyphicon-globe"></i></span> Multi-player</a>
                                 </li>
                                 <li><a href="../../projekt/myRiddles.php"><i
                                                 class="glyphicon glyphicon-home"></i></span> My riddles</a></li>
