@@ -5,7 +5,7 @@ $(document).ready(function () {
         let row = $(el).closest('tr');
         // AJAX Request
         $.ajax({
-            url: '../../projekt/ajax/delete2.php',
+            url: '../../projekt/ajax/delete.php',
             type: 'POST',
             data: {id: id},
             success: function (response) {

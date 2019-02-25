@@ -3,9 +3,7 @@
 session_start();
 
 include ("../../projekt/notLoggedRedirect.php");
-
-
-require_once "../../projekt/DBconnect.php";
+include("../admin/includes/Riddle.php");
 
 
 if (isset($_POST['id'])) {
@@ -15,27 +13,10 @@ if (isset($_POST['id'])) {
     exit();
 }
 
-if (isset($_POST['columnName'])) {
-    $columnName = $_POST['columnName'];
-} else {
-    header('Location: ../../projekt/game.php');
-    exit();
-}
+$deleteRiddle = new Riddle();
+$deleteRiddle->id=$id;
 
-
-if ($id >= 0) {
-
-    $con = @new mysqli($host, $db_user, $db_password, $db_name);
-    $checkRecord = mysqli_query($con, "SELECT * FROM " . $columnName . " WHERE id=" . $id);
-    $totalRows = mysqli_num_rows($checkRecord);
-
-    if ($totalRows > 0) {
-        $query = "DELETE FROM " . $columnName . " WHERE id=" . $id;
-        mysqli_query($con, $query);
-        echo 1;
-        exit;
-    }
-} else {
-    echo "Invalid ID";
-}
+if ($deleteRiddle->delete()) {
+    echo 1;
+} else echo 0;
 exit;

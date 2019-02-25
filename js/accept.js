@@ -13,7 +13,7 @@ $(document).on('click', '.accept', function () {
     }
 
     $.ajax({
-        url: '../../projekt/ajax/accept2.php',
+        url: '../../projekt/ajax/accept.php',
         type: 'POST',
         data: {id: id, accepted: accepted},
         success: function (response) {

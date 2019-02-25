@@ -44,15 +44,22 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
 
             <br><br>
             <span class="red">
-		<?php
-        if (isset($_SESSION['login_error'])) echo $_SESSION['login_error'];
-        unset($_SESSION['login_error']);
-        ?>
-		</span>
+                <?php
+                if (isset($_SESSION['login_error'])) echo $_SESSION['login_error'];
+                unset($_SESSION['login_error']);
+                ?>
+		    </span>
+            <span class="green">
+                <?php
+                if (isset($_SESSION['successful_registration'])) echo $_SESSION['successful_registration'];
+                unset($_SESSION['successful_registration']);
+                ?>
+            </span>
             <br><br>
             <a href="registration.php">Don't have an account? Sign up!</a>
             <br>
-            <button type="submit" name="submit" class="btn btn-primary button">Log in <span class="glyphicon glyphicon-log-in"></span>
+            <button type="submit" name="submit" class="btn btn-primary button">Log in <span
+                        class="glyphicon glyphicon-log-in"></span>
             </button>
             <br>
             <br>

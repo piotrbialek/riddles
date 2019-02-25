@@ -36,8 +36,7 @@ $(document).ready(function () {
         var accepted = $('#' + riddle_id).children('td[data-target=accepted]').attr('id');
 
         $.ajax({
-            // url: '../../projekt/ajax/edit.php',
-            url: '../../projekt/ajax/edit2.php',
+            url: '../../projekt/ajax/edit.php',
             method: 'post',
             data: {
                 category: category,

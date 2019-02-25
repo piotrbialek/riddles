@@ -198,10 +198,13 @@ function checkGuesses(letter) {
     return inGuesses;
 }
 
+
 function checkLetter() {
 
     let inputField = $("#input");
-    if (inputField.val() === " " || inputField.val().length > 1 || !isNaN(inputField.val())) // || $("#input").val() == "undefined"
+    if (inputField.val() === " "
+        || inputField.val().length > 1
+    || !isNaN(inputField.val())) // || $("#input").val() == "undefined"
     {
         $("#info").text("incorrect input");
         $("#input").val("");

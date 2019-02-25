@@ -15,7 +15,7 @@ if (!isset($_SESSION['logged'])) {
     $playerLevelQuery = "SELECT level FROM users WHERE login='$login'";
 }
 
-$riddle=Riddle::drawRiddle($_SESSION['player_level']);
+$riddle = Riddle::drawRiddle($_SESSION['player_level']);
 
 ?>
 

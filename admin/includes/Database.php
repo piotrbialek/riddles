@@ -1,6 +1,5 @@
 <?php
 
-//require_once ("../../DBconnect.php");
 require_once ($_SERVER['DOCUMENT_ROOT']."/projekt/config.php");
 
 class Database
@@ -21,7 +20,6 @@ class Database
         if ($this->connection->connect_errno) {
             die("conn problem: ".$this->connection->connect_error);
         }
-
         return $this->connection;
     }
 

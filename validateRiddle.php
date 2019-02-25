@@ -4,9 +4,10 @@ $validation = true;
 $id = $_SESSION['id'];
 $login = $_SESSION['login'];
 
-$category = $_POST['category'];
-$description = $_POST['description'];
-$riddle = $_POST['riddle'];
+
+$category = mb_strtoupper($_POST['category'],'UTF-8');
+$description = mb_strtoupper($_POST['description'],'UTF-8');
+$riddle = mb_strtoupper($_POST['riddle'],'UTF-8');
 $riddle_level = $_POST['riddle_level'];
 if (isset($_POST['author_id'])) $author_id = $_POST['author_id']; //add riddle
 if (isset($_POST['accepted'])) $accepted = $_POST['accepted']; // add riddle

@@ -1,5 +1,5 @@
 <?php
-
+include_once('../projekt/admin/includes/User.php');
 session_start();
 
 
@@ -56,63 +56,45 @@ if (isset($_POST['email'])) {
         $_SESSION['info_recaptcha'] = "Confirm that you are not a robot!";
     }
 
-
-    $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
-
-
     $_SESSION['temp_login'] = $login;
     $_SESSION['temp_email'] = $email;
     $_SESSION['temp_pass1'] = $pass1;
     $_SESSION['temp_pass2'] = $pass2;
 
+    if ($validation) {
+        $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
 
-    require_once "DBconnect.php";
-    mysqli_report(MYSQLI_REPORT_STRICT);
+        $newUser = new User();
+        $newUser->login = $login;
+        $newUser->pass = $pass_hash;
+        $newUser->email = $email;
+        $newUser->level = 0;
+        $newUser->admin = 0;
 
-    try {
-        $connection = new mysqli($host, $db_user, $db_password, $db_name);
-        if ($connection->connect_errno != 0) {
-            throw new Exception(mysqli_connect_errno());
-        } else {
-            $result = $connection->query("SELECT id FROM users WHERE email='$email'");
+        $usernameExist = User::checkExist('login', $newUser->login);
+        $emailExist = User::checkExist('email', $newUser->email);
 
-            if (!$result) throw new Exception($connection->error);
-
-            $count_mail = $result->num_rows;
-            if ($count_mail > 0) {
-                $validation = false;
-                $_SESSION['info_email'] = "There is already an account assigned to this email address!";
-            }
-
-
-            $result = $connection->query("SELECT id FROM users WHERE login='$login'");
-
-            if (!$result) throw new Exception($connection->error);
-
-            $count_login = $result->num_rows;
-            if ($count_login > 0) {
-                $validation = false;
-                $_SESSION['info_login'] = "This login already exists! Choose another one.";
-            }
-
-            if ($validation == true) {
-
-                if ($connection->query("INSERT INTO users VALUES (NULL, '$login', '$pass_hash', '$email',0,0)")) {
-                    $_SESSION['registration_OK'] = true;
-                    header('Location: successRegistration.php');
-                } else {
-                    throw new Exception($connection->error);
-                }
-
-            }
-
-            $connection->close();
+        if ($usernameExist) {
+            $_SESSION['info_login'] = "This login already exists! Choose another one.";
         }
 
-    } catch (Exception $e) {
-        $_SESSION['info_server'] = "Server problem, we are very sorry! Development information: '.$e;";
-    }
+        if ($emailExist) {
+            $_SESSION['info_email'] = "There is already an account assigned to this email address!";
+        }
 
+        if (!$emailExist && !$usernameExist) {
+            $newUser->create();
+            $_SESSION['successful_registration'] = "Account created successfully, now you can log in.";
+            if (isset($_SESSION['temp_login'])) unset($_SESSION['temp_login']);
+            if (isset($_SESSION['temp_email'])) unset($_SESSION['temp_email']);
+            if (isset($_SESSION['temp_pass1'])) unset($_SESSION['temp_pass1']);
+            if (isset($_SESSION['temp_pass2'])) unset($_SESSION['temp_pass2']);
+            if (isset($_SESSION['info_login'])) unset($_SESSION['info_login']);
+            if (isset($_SESSION['info_email'])) unset($_SESSION['info_email']);
+            if (isset($_SESSION['info_pass'])) unset($_SESSION['info_pass']);
+            header('Location: index.php');
+        } else $_SESSION['info_recaptcha'] = "There was a problem with creating account.";
+    }
 }
 
 

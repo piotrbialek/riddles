@@ -4,7 +4,7 @@ session_start();
 include("../projekt/notLoggedRedirect.php");
 include("admin/includes/Riddle.php");
 $riddles = Riddle::findMyRiddles($_SESSION["id"]);
-if(!$riddles) $_SESSION['riddle_problem'] = '<span class="red">There was a problem with drawing riddles, sorry!</span>';
+if(!$riddles) $_SESSION['riddle_problem'] = '<span class="red">You have not added any riddles yet.</span>';
 ?>
 
 <!DOCTYPE HTML>

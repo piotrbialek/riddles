@@ -1,20 +1,10 @@
 <?php
-
+include_once('../projekt/admin/includes/User.php');
 session_start();
-
 if ((!isset($_POST['login'])) || (!isset($_POST['pass']))) {
     header('Location: index.php');
     $_SESSION['login_error'] = 'Problem!';
     exit();
-}
-
-require_once "DBconnect.php";
-
-$connection = @new mysqli($host, $db_user, $db_password, $db_name);
-$_SESSION['temp_login'] = $login;
-
-if ($connection->connect_errno != 0) {
-    echo "Error: " . $connection->connect_errno;
 } else {
     $login = trim($_POST['login']);
     $pass = trim($_POST['pass']);
@@ -22,6 +12,8 @@ if ($connection->connect_errno != 0) {
 
     $login = htmlentities($login, ENT_QUOTES, "UTF-8");
     $pass = htmlentities($pass, ENT_QUOTES, "UTF-8");
+
+    $_SESSION['temp_login'] = $login;
 
     // sql injection validation
     $validation = true;
@@ -38,48 +30,31 @@ if ($connection->connect_errno != 0) {
 
 
     if ($validation == true) {
-        if ($result = @$connection->query(
-            sprintf("SELECT * FROM users WHERE login='%s' LIMIT 1",
-                mysqli_real_escape_string($connection, $login)))) {
-            $count_users = $result->num_rows;
-            if ($count_users > 0) {
-                $row = $result->fetch_assoc();
 
-                if (password_verify($pass, $row['pass'])) {
-                    $_SESSION['logged'] = true;
-                    $_SESSION['id'] = $row['id'];
-                    $_SESSION['login'] = $row['login'];
-                    $_SESSION['pass'] = $row['pass'];
-                    $_SESSION['email'] = $row['email'];
-                    $_SESSION['player_level'] = $row['level'];
-                    $_SESSION['admin'] = $row['admin'];
+        $user = User::verifyUser($login, $pass);
 
+        echo "<br>";
+        if ($user) {
+            $_SESSION['logged'] = true;
+            $_SESSION['id'] = $user->id;
+            $_SESSION['login'] = $user->login;
+            $_SESSION['pass'] = $user->pass;
+            $_SESSION['email'] = $user->email;
+            $_SESSION['player_level'] = $user->level;
+            $_SESSION['admin'] = $user->admin;
 
-                    unset($_SESSION['login_error']);
-                    $result->free_result();
-                    if (isset($_SESSION['temp_login'])) unset($_SESSION['temp_login']);
-                    if (isset($_SESSION['pass'])) unset($_SESSION['pass']);
-                    if (isset($_SESSION['email'])) unset($_SESSION['email']);
-                    header('Location: game.php');
-                } else {
-                    $_SESSION['login_error'] = 'Incorrect login or password!';
-
-                    header('Location: index.php');
-                }
-
-            } else {
-
-                $_SESSION['login_error'] = 'Incorrect login or password!';
-
-                header('Location: index.php');
-
-            }
-
+            unset($_SESSION['login_error']);
+            if (isset($_SESSION['temp_login'])) unset($_SESSION['temp_login']);
+            if (isset($_SESSION['pass'])) unset($_SESSION['pass']);
+            if (isset($_SESSION['email'])) unset($_SESSION['email']);
+            header('Location: game.php');
+        } else {
+            $_SESSION['login_error'] = "Incorrect password or username";
+            header('Location: index.php');
         }
+        echo $the_message;
     } else {
         $_SESSION['login_error'] = 'Incorrect login or password!';
     }
-    $connection->close();
-}
 
-?>
+}

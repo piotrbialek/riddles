@@ -15,7 +15,7 @@ $(document).on('click', '.set', function () {
     }
 
     $.ajax({
-        url: '../../projekt/ajax/setAdmin2.php',
+        url: '../../projekt/ajax/setAdmin.php',
         type: 'POST',
         data: {setAdminId: id, setAdminAdmin: admin},
         success: function (response) {

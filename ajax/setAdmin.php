@@ -2,53 +2,37 @@
 
 session_start();
 
-include ("../../projekt/notLoggedRedirect.php");
+include("../../projekt/notLoggedRedirect.php");
+include("../admin/includes/User.php");
 
-require_once "../../projekt/DBconnect.php";
+$user = $_SESSION['id'];
+$admin = $_SESSION['admin'];
 
-$con = @new mysqli($host, $db_user, $db_password, $db_name);
-
-
-if ($con->connect_errno != 0) {
-    echo "Error: " . $con->connect_errno;
+if (!isset($_POST['setAdminId']) || !isset($_POST['setAdminAdmin'])) {
+    header('Location: ../../projekt/game.php');
+    exit();
 } else {
-    if (isset($_POST['setAdminId'])) {
-        $id = $_POST['setAdminId'];
-    }
+    $setAdminId = $_POST['setAdminId'];
+    $setAdminAdmin = $_POST['setAdminAdmin'];
+}
 
-    if (isset($_POST['admin'])) {
-        $ifAdmin = $_POST['admin'];
-        if ($ifAdmin == 1) {
-            $ifAdmin = 0;
+
+if ($admin == 1) {
+    if ($user != $setAdminId) {
+        $setAdmin = new User();
+        $setAdmin->id = $setAdminId;
+        $setAdmin->admin = $setAdminAdmin;
+
+        if ($setAdmin->setAdmin()) {
+            echo $setAdmin->admin;
+            exit;
         } else {
-            $ifAdmin = 1;
-        }
-    }
-
-    $user = $_SESSION['id'];
-    $admin = $_SESSION['admin'];
-
-    $con->set_charset("utf8");
-
-    if ($admin == 1) {
-
-        if ($user != $id) {
-            if ($sql = $con->prepare("UPDATE users SET admin=$ifAdmin WHERE id=$id")) {
-                $sql->execute();
-                $sql->close();
-                echo $ifAdmin;
-                exit;
-            } else {
-                throw new Exception($con->error);
-                echo 3;
-                exit;
-            }
-        } else {
-            echo "You can not change your own admin type";
+            echo 3;
+            exit;
         }
     } else {
-        echo "You do not have sufficient permissions";
+        echo "You can not change your own admin type";
     }
-
-    $con->close();
+} else {
+    echo "You do not have sufficient permissions";
 }

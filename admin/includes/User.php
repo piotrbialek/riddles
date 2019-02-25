@@ -76,6 +76,54 @@ class User extends DbObject
 
     public function levelUp()
     {
-        return $this->level=$this->level++;
+        return $this->level = $this->level++;
     }
+
+    public static function verifyUser($username, $password)
+    {
+        global $database;
+        $username = $database->escapeString($username);
+        $password = $database->escapeString($password);
+
+        $verify = password_verify($password, self::getHashPassword($username));
+
+        $sql = "SELECT * FROM " . self::$db_table . " WHERE ";
+        $sql .= "login='{$username}' ";
+        $sql .= "LIMIT 1";
+
+        $the_result_array = self::findByQuery($sql);
+        return (!empty($the_result_array) && $verify) ? array_shift($the_result_array) : false;
+
+    }
+
+    public static function getHashPassword($username)
+    {
+        global $database;
+        $username = $database->escapeString($username);
+
+        $sql = "SELECT pass FROM " . self::$db_table . " WHERE ";
+        $sql .= "login='{$username}' ";
+        $sql .= "LIMIT 1";
+
+        $result = $database->query($sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row['pass'];
+    }
+
+
+    public static function checkExist($column, $value)
+    {
+        global $database;
+        $value = $database->escapeString($value);
+
+        $sql = "SELECT ".$column." FROM " . self::$db_table . " WHERE ";
+        $sql .= $column."='{$value}' ";
+        $sql .= "LIMIT 1";
+
+        $result = $database->query($sql);
+
+        $user_count = mysqli_num_rows($result);
+        return (($user_count>0)) ? true : false;
+    }
+
 }
