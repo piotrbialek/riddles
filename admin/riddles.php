@@ -1,8 +1,8 @@
 <?php
 session_start();
 include("../../projekt/notLoggedRedirect.php");
-include("includes/Riddle.php");
-include("includes/User.php");
+include_once("includes/Riddle.php");
+include_once("includes/User.php");
 $riddles = Riddle::findAll();
 ?>
 
@@ -44,6 +44,8 @@ $riddles = Riddle::findAll();
                     <th>Riddle</th>
                     <th>Level</th>
                     <th>Author(ID)</th>
+                    <th>Solved</th>
+                    <th>In match</th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -69,6 +71,8 @@ $riddles = Riddle::findAll();
                         <td data-target="author_id">
                             <?php echo $login = User::getUsernameById($riddle->author_id) ?>(<?php echo $riddle->author_id ?>)
                         </td>
+                        <td><?php echo $riddle->solved ?></td>
+                        <td><?php echo $riddle->in_match ?></td>
                         <td data-target="accepted" id="<?php echo $riddle->accepted ?>" class="text-center">
                             <button id="<?php echo $riddle->id ?>" class="btn-primary accept">
                                 <?php echo $if_accept ?>

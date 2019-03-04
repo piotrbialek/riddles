@@ -48,7 +48,6 @@ class DbObject
         $sql = "INSERT INTO " . static::$db_table . " (" . implode(",", array_keys($properties)) . ")";
         $sql .= "VALUES ('" . implode("','", array_values($properties)) . "')";
 
-
         if ($database->query($sql)) {
             $this->id = $database->theInsertId();
             return true;
@@ -76,7 +75,7 @@ class DbObject
         $sql .= " WHERE id= " . $database->escapeString($this->id);
 
         $database->query($sql);
-
+//        var_dump(mysqli_affected_rows($database->connection));
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 

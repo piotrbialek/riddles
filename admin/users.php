@@ -47,7 +47,7 @@ $users = User::findAll();
                         <td class="col-lg-4"><?php echo $user->login ?></td>
                         <td class="col-lg-5"><?php echo $user->email ?></td>
                         <td class="text-center col-lg-1"><?php echo $user->level ?></td>
-                        <td data-target="user_type" class="text-center" class="col-lg-1">
+                        <td data-target="user_type" class="text-center">
                             <button id="<?php echo $user->id ?>" class="btn-primary set">
                             <?php echo $user_type ?></td>
                         <td class="text-right">

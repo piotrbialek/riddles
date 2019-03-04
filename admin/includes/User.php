@@ -20,6 +20,21 @@ class User extends DbObject
         return $the_object_array;
     }
 
+    public static function findById($id)
+    {
+        $query = "SELECT * FROM " . self::$db_table . " WHERE id=".$id." LIMIT 1";
+        return static::findOneByQuery($query);
+    }
+
+    public static function findOneByQuery($sql)
+    {
+        global $database;
+        $result_set = $database->query($sql);
+        $row = mysqli_fetch_array($result_set);
+        $object = static::instantiation($row);
+        return $object;
+    }
+
     public static function instantiation($the_record)
     {
 

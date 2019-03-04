@@ -12,6 +12,16 @@
     <main class="text-center">
         <div class="formHeader">Add riddle</div>
         <form class="sendForm text-center" method="post" name="formAddRiddle">
+            <input type="hidden" name="in_match" value="<?php
+            if (isset($_POST['in_match'])) {
+                echo $_POST['in_match'];
+            }
+            ?>"/>
+            <input type="hidden" name="matchId" value="<?php
+            if (isset($_POST['matchId'])) {
+                echo $_POST['matchId'];
+            }
+            ?>"/>
             <?php
             if (isset($_SESSION['riddle_added'])) {
                 echo $_SESSION['riddle_added'];
@@ -103,8 +113,15 @@ if (isset($_SESSION['temp_riddle'])) {
             <button type="submit" class="btn btn-success button">Add riddle
                 <span class="glyphicon glyphicon-plus-sign"></span>
             </button>
-
         </form>
+        <?php
+        if (isset($_POST['in_match'])) { ?>
+            <button class="btn btn-warning button" id="back" onclick="window.location.href='multiplayer.php';">Back to challenge
+                <span class="glyphicon "></span>
+            </button>
+            <?php
+        }
+        ?>
     </main>
 </div>
 </body>

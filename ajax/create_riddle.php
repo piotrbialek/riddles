@@ -1,5 +1,6 @@
 <?php
 include("../admin/includes/Riddle.php");
+include("../admin/includes/Move.php");
 session_start();
 if (isset($_POST['riddle'])) {
 
@@ -7,6 +8,8 @@ if (isset($_POST['riddle'])) {
 
 
     include "../../projekt/validateRiddle.php";
+
+    $author_id=$_SESSION['id'];
 
     if (isset($_SESSION['category'])) unset($_SESSION['category']);
     if (isset($_SESSION['description'])) unset($_SESSION['description']);
@@ -21,20 +24,29 @@ if (isset($_POST['riddle'])) {
     if (isset($_SESSION['temp_riddle_level'])) unset($_SESSION['temp_riddle_level']);
 
     if ($validation) {
-        $updateRiddle = new Riddle();
+        $createRiddle = new Riddle();
         if(isset($_POST['riddle_id'])) {
             $riddle_id = $_POST['riddle_id'];
-            $updateRiddle->id = $riddle_id;
+            $createRiddle->id = $riddle_id;
         }
-        $updateRiddle->category = $category;
-        $updateRiddle->description = $description;
-        $updateRiddle->riddle = $riddle;
-        $updateRiddle->riddle_level = $riddle_level;
-        $updateRiddle->author_id = $author_id;
-        $updateRiddle->accepted = $accepted;
+        $createRiddle->category = $category;
+        $createRiddle->description = $description;
+        $createRiddle->riddle = $riddle;
+        $createRiddle->riddle_level = $riddle_level;
+        $createRiddle->author_id = $author_id;
+        $createRiddle->accepted = $accepted;
+        $createRiddle->in_match = 1;
 
-        if ($updateRiddle->save()) {
-            echo 1;
-        }else echo 2;
-    }else echo 0;
+        if ($createRiddle->save()) {
+
+            $move=new Move();
+            $move->game_id=$_POST['game_id'];
+            $move->player_id=$author_id;
+            $move->riddle_id=$createRiddle->id;
+            if($move->save()) echo 1;
+            else echo "There was a problem with saving riddle.";
+
+
+        }else echo "There was a problem with creating riddle.";
+    }else echo "The data entered is not correct.";
 }

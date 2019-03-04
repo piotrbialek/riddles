@@ -9,7 +9,7 @@ include("../admin/includes/Riddle.php");
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
 } else {
-    header('Location: ../../projekt/game.php');
+    header('Location: ../../projekt/singleplayer.php');
     exit();
 }
 

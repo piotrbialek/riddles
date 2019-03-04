@@ -3,7 +3,7 @@ $(document).ready(function () {
         let el = this;
         let id = el.id;
         let row = $(el).closest('tr');
-        // AJAX Request
+
         $.ajax({
             url: '../../projekt/ajax/delete.php',
             type: 'POST',

@@ -21,9 +21,9 @@
                                         class="caret"></span></a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="../../projekt/game.php"><span><i
+                                <li><a href="../../projekt/singleplayer.php"><span><i
                                                     class="glyphicon glyphicon-play"></i></span> Single-player</a></li>
-                                <li><a href="../../projekt/multiplayer.php"><span><i class="glyphicon glyphicon-globe"></i></span> Multi-player</a>
+                                <li><a href="../../projekt/games.php"><span><i class="glyphicon glyphicon-globe"></i></span> Multi-player</a>
                                 </li>
                                 <li><a href="../../projekt/myRiddles.php"><i
                                                 class="glyphicon glyphicon-home"></i></span> My riddles</a></li>

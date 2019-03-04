@@ -5,13 +5,19 @@ include_once('DbObject.php');
 class Riddle extends DbObject
 {
     protected static $db_table = "riddles";
-    protected static $db_table_fields = array('category', 'description', 'riddle', 'riddle_level', 'author_id', 'accepted');
-    public $id, $category, $description, $riddle, $riddle_level, $author_id, $accepted;
+    protected static $db_table_fields = array('category', 'description', 'riddle', 'riddle_level', 'author_id', 'accepted', 'solved', 'in_match');
+    public $id, $category, $description, $riddle, $riddle_level, $author_id, $accepted, $solved, $in_match;
 
 
     public static function drawRiddle($currentLevel)
     {
-        $query = "SELECT * FROM " . Riddle::$db_table . " WHERE accepted=1 and riddle_level=".$currentLevel." ORDER BY RAND() LIMIT 1";
+        $query = "SELECT * FROM " . Riddle::$db_table . " WHERE accepted=1 and riddle_level=" . $currentLevel . " ORDER BY RAND() LIMIT 1";
+        return static::findOneByQuery($query);
+    }
+
+    public static function findById($id)
+    {
+        $query = "SELECT * FROM " . Riddle::$db_table . " WHERE id=" . $id . " LIMIT 1";
         return static::findOneByQuery($query);
     }
 
@@ -50,6 +56,8 @@ class Riddle extends DbObject
         $object->author_id = $the_record["author_id"];
         $object->riddle_level = $the_record["riddle_level"];
         $object->accepted = $the_record["accepted"];
+        $object->solved = $the_record["solved"];
+        $object->in_match = $the_record["in_match"];
 
         return $object;
     }
@@ -77,4 +85,18 @@ class Riddle extends DbObject
     {
         return static::findByQuery("SELECT * FROM " . static::$db_table);
     }
+
+    public function riddleCompleted($result)
+    {
+        $this->solved=$result;
+        $this->in_match=0;
+        return $this->save();
+    }
+
+    public static function findIfSolved($userID)
+    {
+        return static::findOneByQuery("SELECT * FROM " . static::$db_table . " WHERE author_id=" . $userID);
+    }
+
+
 }

@@ -9,7 +9,7 @@ $user = $_SESSION['id'];
 $admin = $_SESSION['admin'];
 
 if (!isset($_POST['setAdminId']) || !isset($_POST['setAdminAdmin'])) {
-    header('Location: ../../projekt/game.php');
+    header('Location: ../../projekt/singleplayer.php');
     exit();
 } else {
     $setAdminId = $_POST['setAdminId'];

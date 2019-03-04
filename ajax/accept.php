@@ -8,7 +8,7 @@ include("../admin/includes/Riddle.php");
 $admin = $_SESSION['admin'];
 
 if (!isset($_POST['id']) || !isset($_POST['accepted'])) {
-    header('Location: ../../projekt/game.php');
+    header('Location: ../../projekt/singleplayer.php');
     exit();
 } else {
     $id = $_POST['id'];

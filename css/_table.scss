@@ -13,8 +13,8 @@
 }
 
 .notAccepted {
-  color: lighten($lightGrayColor,20);
-  background-color: darken($redColour,30);
+  color: lighten($lightGrayColor, 20);
+  background-color: darken($redColour, 30);
 }
 
 .table_header {
@@ -23,7 +23,19 @@
   cursor: pointer;
 }
 
-.admin{
+.admin {
   font-weight: bold;
-  color: lighten($lightGrayColor,20);
+  color: lighten($lightGrayColor, 20);
 }
+
+.disabled,
+.disabled:hover,
+.disabled:active,
+.disabled:focus {
+  background-color: lighten($lightGrayColor, 20);
+  color: darken($lightGrayColor, 20);
+  border-color: darken($lightGrayColor, 20);
+}
+
+
+

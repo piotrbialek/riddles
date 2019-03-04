@@ -5,6 +5,10 @@ session_start();
 
 include("../projekt/notLoggedRedirect.php");
 include_once("admin/includes/Riddle.php");
+include_once("admin/includes/Game.php");
+include_once("admin/includes/Move.php");
+
+
 
 if (isset($_POST['riddle'])) {
 
@@ -35,7 +39,19 @@ if (isset($_POST['riddle'])) {
             if (isset($_SESSION['temp_description'])) unset($_SESSION['temp_description']);
             if (isset($_SESSION['temp_riddle'])) unset($_SESSION['temp_riddle']);
             if (isset($_SESSION['temp_riddle_level'])) unset($_SESSION['temp_riddle_level']);
+
             $_SESSION['riddle_added'] = 'Riddle has been added <span class="glyphicon glyphicon-check green"></span>';
+            if (isset($_SESSION['game_id'])) {
+
+                $move=new Move();
+                $move->game_id=$_SESSION['game_id'];
+                $move->player_id=$_SESSION['id'];
+                $move->riddle_id=$newRiddle->id;
+                if(!$move->save()) $_SESSION['riddle_added'] = 'There was a problem with saving riddle to this game';
+
+
+                unset($_SESSION['game_id']);
+            }
         } else $_SESSION['riddle_added'] = 'There was a problem with adding riddle';
     }
 }

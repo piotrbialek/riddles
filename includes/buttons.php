@@ -1,6 +1,6 @@
 <div class="buttons_group">
 
-    <button class="btn btn-primary button" onclick="window.location.href='../../projekt/game.php';">PLAY</button>
+    <button class="btn btn-primary button" onclick="window.location.href='../../projekt/singleplayer.php';">PLAY</button>
     <button class="btn btn-primary button" onclick="window.location.href='../../projekt/add.php';">ADD RIDDLE</button>
 
 <?php

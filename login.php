@@ -47,7 +47,8 @@ if ((!isset($_POST['login'])) || (!isset($_POST['pass']))) {
             if (isset($_SESSION['temp_login'])) unset($_SESSION['temp_login']);
             if (isset($_SESSION['pass'])) unset($_SESSION['pass']);
             if (isset($_SESSION['email'])) unset($_SESSION['email']);
-            header('Location: game.php');
+//            header('Location: singleplayer.php');
+            header('Location: games.php');
         } else {
             $_SESSION['login_error'] = "Incorrect password or username";
             header('Location: index.php');
