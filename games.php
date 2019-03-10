@@ -15,11 +15,16 @@ $games = Game::findAll();
 <html lang="pl">
 <head>
     <?php include('includes/base_head.php') ?>
-    <script type="text/javascript" charset="utf8"
-            src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/dataTable.js"></script>
     <script src="js/join_game.js"></script>
     <script src="js/create_game.js"></script>
+    <script>
+        $('#myModal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+    </script>
     <title>Riddles - Multi player</title>
 </head>
 
@@ -31,6 +36,7 @@ $games = Game::findAll();
         <div class="subtitle text-center">Available Games</div>
         <button class="create_game" id="<?php echo $_SESSION['id']; ?>">create game</button>
         <button onclick="window.location.href='../../projekt/mygames.php';">my games</button>
+        <button onclick="window.location.href='../../projekt/playedgames.php';">played games</button>
         <table id='sorted-table' class='table table-bordered'>
             <thead class='table_header'>
             <th>Id</th>
@@ -42,10 +48,10 @@ $games = Game::findAll();
                 <?php
 
                 $numberOfPlayers = Player::checkGamePlayers($game->id);
-                $myGames=Player::findMyGames($_SESSION['id']);
+                $myGames = Player::findMyGames($_SESSION['id']);
                 $gameMoves = Move::checkMoveExist($game->id);
 
-                if ((count($numberOfPlayers) < 2)&&($game->player_started_id!=$_SESSION['id'])&&(count($gameMoves))>0) {
+                if ((count($numberOfPlayers) < 2) && ($game->player_started_id != $_SESSION['id']) && (count($gameMoves)) > 0) {
                     ?>
                     <tr id="<?php echo $game->id ?>">
                         <td><?php echo $game->id ?></td>
@@ -70,7 +76,6 @@ $games = Game::findAll();
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Create riddle</h4>
             </div>
             <div class="modal-body">
@@ -97,7 +102,6 @@ $games = Game::findAll();
             </div>
             <div class="modal-footer">
                 <a href="javascript:;" id="save" class="btn btn-primary pull-right">Create</a>
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
             </div>
         </div>
 

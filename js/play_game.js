@@ -17,7 +17,6 @@ $(document).on('click', '.play_game', function () {
                     '</form>');
                 $('body').append(form);
                 form.submit();
-
             } else {
                 alert('Problem: ' + response);
             }

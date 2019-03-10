@@ -11,9 +11,7 @@ function checkWin() {
 
             sendRiddleResult(result);
 
-
             gameWonMultiplayer(true);
-
         });
     }
     else if (wrongAttempts > 2) {

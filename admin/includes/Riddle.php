@@ -88,7 +88,6 @@ class Riddle extends DbObject
 
     public function riddleCompleted($result)
     {
-        $this->solved=$result;
         $this->in_match=0;
         return $this->save();
     }

@@ -8,14 +8,12 @@ $(document).ready(function () {
         var riddle = $('#' + riddle_id).children('td[data-target=riddle]').text();
         var riddle_level = $('#' + riddle_id).children('td[data-target=riddle_level]').text();
 
-
         $('#categoryModal').val(category);
         $('#descriptionModal').val(description);
         $('#riddleModal').val(riddle);
         $('#riddle_levelModal').val(riddle_level);
         $('#riddle_idModal').val(riddle_id);
         $('#myModal').modal('toggle');
-
     });
 
 
@@ -48,7 +46,6 @@ $(document).ready(function () {
                 accepted: accepted
             },
             success: function (response) {
-
                 if (response == 1) {
 
                     $('#' + riddle_id).children('td[data-target=category]').text(category.toUpperCase());
@@ -71,4 +68,5 @@ $(document).ready(function () {
             }
         });
     });
+// });
 });

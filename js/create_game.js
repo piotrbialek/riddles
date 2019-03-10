@@ -1,14 +1,27 @@
 $(document).on('click', '.create_game', function () {
+    $('.form-control').val('');
     let el = this;
-    let user_id = el.id;
+    var user_id = el.id;
     let parent = el.parentNode;
     let game_id;
     let create = true;
     $('#myModal').modal('show');
 
-
     var loaded = false;
-    $('#save').click(function () {
+    var loaded2 = false;
+
+    // $('#myModal').modal({
+    //     backdrop: 'static',
+    //     keyboard: false
+    // });
+
+    $("#myModal").on("hidden.bs.modal", function () {
+        loaded=true;
+        loaded2=true;
+    });
+    // $('#save').click(function () {
+    $('#save').on('click',function () {
+
         var category = $('#categoryModal').val();
         var description = $('#descriptionModal').val();
         var riddle = $('#riddleModal').val();
@@ -16,14 +29,16 @@ $(document).on('click', '.create_game', function () {
 
 
         if (loaded) return;
+        // if (loaded2) return;
         $.ajax({
             url: '../../projekt/ajax/create_game.php',
             type: 'POST',
             data: {create: create},
             success: function (response) {
+                loaded = true;
                 if (response > 0) {
-
                     game_id = response;
+                    if (loaded2) return;
 
                     $.ajax({
                         url: '../../projekt/ajax/create_riddle.php',
@@ -41,17 +56,21 @@ $(document).on('click', '.create_game', function () {
                             if (response == 1) {
                                 $('.form-control').val('');
                                 $('#myModal').modal('hide');
+                                loaded=true;
+                                // loaded2 = true;
                             } else {
                                 alert('Problem: ' + response);
+                                // loaded2 = false;
+                                loaded=false;
                             }
                         }
                     });
+
                 } else {
                     alert('Problem: ' + response);
                 }
             }
         });
-        loaded = true;
-
     });
+
 });

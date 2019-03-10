@@ -16,15 +16,12 @@ if (!isset($_POST['game_id'])) {
 }else {
     $game_id = $_POST['game_id'];
 
-    $move=Move::findOpponentsMove($game_id, $user_id);
+    $player=Player::findGamePlayerId($user_id,$game_id);
+    $move=Move::findOpponentsMove($game_id, $player->id);
 
     if($move){
-        $toggleSolvedRiddle=Riddle::findById($move->riddle_id);
-        $toggleSolvedRiddle->solved=1;
-        if($toggleSolvedRiddle->save()) echo $move->riddle_id;
-        else echo 0;
+        echo $move->riddle_id;
     }else echo 0;
-
 }
 
 

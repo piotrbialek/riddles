@@ -1,22 +1,21 @@
 <?php
+
 session_start();
 
 include("../../projekt/notLoggedRedirect.php");
 include("../admin/includes/Riddle.php");
-include("../admin/includes/Move.php");
-include("../admin/includes/Player.php");
 
+$admin = $_SESSION['admin'];
 
-if (!isset($_POST['userResult']) || !isset($_POST['riddleId'])) {
-    header('Location: ../../projekt/games.php');
+if (!isset($_POST['riddle_id'])) {
+    header('Location: ../../projekt/mygames.php');
     exit();
 } else {
-
+    $riddle_id = $_POST['riddle_id'];
     $user_id = $_SESSION['id'];
-    $riddleId = $_POST['riddleId'];
-    $userResult = $_POST['userResult'];
+    $userResult = 0;
 
-    $riddle = Riddle::findById($riddleId);
+    $riddle = Riddle::findById($riddle_id);
     $move = Move::findByRiddleId($riddle->id);
 
     $opponent=Player::findById($move->player_id);
@@ -41,21 +40,9 @@ if (!isset($_POST['userResult']) || !isset($_POST['riddleId'])) {
     $player->score=$player_score;
     $opponent_player->score=$opponent_score;
 
-//    var_dump($player);
-//    var_dump("<br>");
-//    var_dump("<br>");
-//    var_dump($opponent_player);
-
     if (($opponent_player->save()) &&($player->save())) {
         echo "result saved";
     } else echo "problem with saving: " . $riddle->id;
 
-//    if ($riddle->riddleCompleted($userResult)) {
-//        echo 1;
-//    } else echo 0;
-
 }
-
-
-
 

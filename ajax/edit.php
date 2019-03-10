@@ -21,17 +21,12 @@ if (isset($_POST['riddle'])) {
     if (isset($_SESSION['temp_riddle_level'])) unset($_SESSION['temp_riddle_level']);
 
     if ($validation) {
-        $updateRiddle = new Riddle();
-        if(isset($_POST['riddle_id'])) {
-            $riddle_id = $_POST['riddle_id'];
-            $updateRiddle->id = $riddle_id;
-        }
+        $riddle_id = $_POST['riddle_id'];
+        $updateRiddle = Riddle::findById($riddle_id);
         $updateRiddle->category = $category;
         $updateRiddle->description = $description;
         $updateRiddle->riddle = $riddle;
         $updateRiddle->riddle_level = $riddle_level;
-        $updateRiddle->author_id = $author_id;
-        $updateRiddle->accepted = $accepted;
 
         if ($updateRiddle->save()) {
             echo 1;

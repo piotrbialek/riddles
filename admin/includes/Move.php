@@ -68,4 +68,9 @@ class Move extends DbObject
         return static::findByQuery($query);
     }
 
+    public static function findByRiddleId($riddle_id)
+    {
+        $query = "SELECT * FROM " . self::$db_table . " WHERE riddle_id=".$riddle_id." LIMIT 1";
+        return static::findOneByQuery($query);
+    }
 }

@@ -35,3 +35,38 @@
   background-color: $lightGrayColor;
   color: darken($blueColor, 3);
 }
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  right: 100%;
+  margin-top: -1px;
+  background-color: darken($blueColor, 3);
+}
+
+.dropdown-submenu .dropdown-menu > li > a {
+  color: $lightGrayColor;
+  background-color: darken($blueColor, 3);
+}
+
+.dropdown-submenu .dropdown-menu > li > a:hover,
+.dropdown-submenu .dropdown-menu > li > a:focus {
+  background-color: $lightGrayColor;
+  color: darken($blueColor, 3);
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: $lightGrayColor;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-color: $lightGrayColor;
+    color: darken($blueColor, 3);
+  }
+
+}

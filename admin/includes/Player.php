@@ -5,13 +5,13 @@ include_once('DbObject.php');
 class Player extends DbObject
 {
     protected static $db_table = "players";
-    protected static $db_table_fields = array('user_id', 'game_id','score');
+    protected static $db_table_fields = array('user_id', 'game_id', 'score');
     public $id, $user_id, $game_id, $score;
 
 
     public static function findById($id)
     {
-        $query = "SELECT * FROM " . self::$db_table . " WHERE id=".$id." LIMIT 1";
+        $query = "SELECT * FROM " . self::$db_table . " WHERE id=" . $id . " LIMIT 1";
         return static::findOneByQuery($query);
     }
 
@@ -56,20 +56,44 @@ class Player extends DbObject
 
     public static function findMyGames($user_id)
     {
-        $query="SELECT * FROM ". static::$db_table ." WHERE user_id=".$user_id;
+        $query = "SELECT * FROM " . static::$db_table . " WHERE user_id=" . $user_id;
         return static::findByQuery($query);
     }
 
 
     public static function checkIfGameExists($user_id)
     {
-        $query="SELECT * FROM ". static::$db_table ." WHERE user_id=".$user_id;
+        $query = "SELECT * FROM " . static::$db_table . " WHERE user_id=" . $user_id;
         return static::findByQuery($query);
     }
 
     public static function checkGamePlayers($game_id)
     {
-        $query="SELECT * FROM ". static::$db_table ." WHERE game_id=".$game_id;
+        $query = "SELECT * FROM " . static::$db_table . " WHERE game_id=" . $game_id;
         return static::findByQuery($query);
     }
+
+    public static function findGamePlayerId($user_id, $game_id)
+    {
+        $query = "SELECT * FROM " . static::$db_table . " WHERE game_id=" . $game_id . " AND user_id=" . $user_id;
+        return static::findOneByQuery($query);
+    }
+
+    public static function getPlayerScore($user_id)
+    {
+        $query = "SELECT * FROM " . static::$db_table . " WHERE  user_id=" . $user_id;
+        $score=0;
+        $player_scores=self::findByQuery($query);
+        foreach ($player_scores as $player_score) :
+            $score += $player_score->score;
+        endforeach;
+        return $score;
+    }
+
+//    public static function getPlayerScore($user_id)
+//    {
+//        $player_games=self::getPlayerScore($user_id);
+//        $score=$player_games->
+//    }
+
 }
