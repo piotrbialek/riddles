@@ -9,14 +9,13 @@ $users = User::findAll();
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('../includes/base_head.php') ?>
+    <?php include('../includes/baseHead.php') ?>
     <script type="text/javascript" charset="utf8"
             src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="../js/setAdmin.js"></script>
     <script src="../js/dataTable.js"></script>
     <title>Riddles - All Users</title>
 </head>
-
 <body>
 <?php include('../../projekt/includes/navbar.php') ?>
 <div class="container">
@@ -49,7 +48,7 @@ $users = User::findAll();
                         <td class="text-center col-lg-1"><?php echo $user->level ?></td>
                         <td data-target="user_type" class="text-center">
                             <button id="<?php echo $user->id ?>" class="btn-primary set">
-                            <?php echo $user_type ?>
+                                <?php echo $user_type ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

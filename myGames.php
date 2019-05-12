@@ -15,12 +15,12 @@ $games = Player::findMyGames($_SESSION['id']);
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('includes/base_head.php') ?>
+    <?php include('includes/baseHead.php') ?>
     <script type="text/javascript" charset="utf8"
             src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/dataTable.js"></script>
-    <script src="js/play_game.js"></script>
-    <script src="js/create_game.js"></script>
+    <script src="js/playGame.js"></script>
+    <script src="js/createGame.js"></script>
     <title>Riddles - Multi player</title>
 </head>
 
@@ -77,6 +77,6 @@ $games = Player::findMyGames($_SESSION['id']);
         </table>
     </main>
 </div>
-<?php include('../projekt/includes/multiplayer_modal.php') ?>
+<?php include('../projekt/includes/multiplayerModal.php') ?>
 </body>
 </html>

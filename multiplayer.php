@@ -49,15 +49,15 @@ if ($_POST) {
         } else echo "problem with saving: " . $riddle->id;
 
 
-        header("Location: mygames.php");
+        header("Location: myGames.php");
     }
-} else header("Location: mygames.php");
+} else header("Location: myGames.php");
 ?>
 
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('includes/base_head.php') ?>
+    <?php include('includes/baseHead.php') ?>
     <script>
         window.onbeforeunload = function () {
 

@@ -2,10 +2,10 @@ $(document).on('click', '.accept', function () {
     let el = this;
     let id = el.id;
     let parent = el.parentNode;
-    let rowClass = parent.parentNode.className;
+    let row_class = parent.parentNode.className;
     let accepted;
 
-    if (rowClass.includes("notAccepted")) {
+    if (row_class.includes("notAccepted")) {
         accepted = 0;
     }
     else {
@@ -21,30 +21,28 @@ $(document).on('click', '.accept', function () {
             if (response < 3) {
                 $('#' + id).closest('tr').fadeOut(100).fadeIn(250);
 
-                let acceptedBtn;
-                let spanClass;
+                let accepted_btn;
+                let span_class;
 
                 if (response == 1) {
-                    // acceptedBtn = "<button id='" + response + "' class='btn-primary'>" +
-                    acceptedBtn = "<button id='" + id + "' class='btn-primary accept'>" +
+                    accepted_btn = "<button id='" + id + "' class='btn-primary accept'>" +
                         "<span class='glyphicon glyphicon-ban-circle'></span>" +
                         "</button>";
                     $('#' + id).removeClass("notAccepted");
-                    spanClass = "green";
+                    span_class = "green";
                 } else {
-                    // acceptedBtn = "<button id='" + response + "' class='btn-primary'>" +
-                    acceptedBtn = "<button id='" + id + "' class='btn-primary accept'>" +
+                    accepted_btn = "<button id='" + id + "' class='btn-primary accept'>" +
                         "<span class='glyphicon glyphicon-ok-circle'></span>" +
                         "</button>";
                     $('#' + id).addClass("notAccepted");
-                    spanClass = "red";
+                    span_class = "red";
                 }
 
-                $('#' + id).children('td[data-target=accepted]').html(acceptedBtn);
-                $('#' + id).children('td[data-target=accepted]').children().children().addClass(spanClass);
+                $('#' + id).children('td[data-target=accepted]').html(accepted_btn);
+                $('#' + id).children('td[data-target=accepted]').children().children().addClass(span_class);
 
                 setTimeout(function () {
-                    $('#' + id).children('td[data-target=accepted]').children().children().removeClass(spanClass).fadeIn("slow");
+                    $('#' + id).children('td[data-target=accepted]').children().children().removeClass(span_class).fadeIn("slow");
                 }, 600);
             } else {
                 alert('Problem: ' + response);

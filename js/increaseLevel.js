@@ -1,17 +1,15 @@
-let levelIncreased=false; // in case of double increase of the level
+let level_increased = false; // in case of double increase of the level
 
 function increaseLevel() {
-
-    let lvlCompleted = true;
-
+    let lvl_completed = true;
     document.getElementById("status").innerHTML = "processing...";
 
     $.ajax({
         url: '../../projekt/ajax/increaseLevel.php',
         type: 'POST',
-        data: {levelCompleted: lvlCompleted},
+        data: {levelCompleted: lvl_completed},
         success: function (response) {
-            levelIncreased=true;
+            level_increased = true;
             document.getElementById("status").innerHTML = response;
         }
     });

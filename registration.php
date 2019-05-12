@@ -103,7 +103,7 @@ if (isset($_POST['email'])) {
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('includes/base_head.php') ?>
+    <?php include('includes/baseHead.php') ?>
     <title>Riddles - registration</title>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>

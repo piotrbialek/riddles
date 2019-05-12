@@ -14,7 +14,7 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('includes/base_head.php') ?>
+    <?php include('includes/baseHead.php') ?>
     <title>Riddles - Log in!</title>
 </head>
 <body>

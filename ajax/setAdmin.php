@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 include("../../projekt/notLoggedRedirect.php");
@@ -16,11 +15,10 @@ if (!isset($_POST['adminId']) || !isset($_POST['admin'])) {
     $admin = $_POST['admin'];
 }
 
-
 if ($ifIamAdmin == 1) {
     if ($user != $adminId) {
         $setAdmin = User::findById($adminId);
-        $setAdmin->admin = 1-$admin;
+        $setAdmin->admin = 1 - $admin;
 
         if ($setAdmin->save()) {
             echo $setAdmin->admin;

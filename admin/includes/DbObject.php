@@ -4,7 +4,6 @@ class DbObject
 {
     protected function properties()
     {
-
 //        return get_object_vars($this);
         $properties = array();
         foreach (static::$db_table_fields as $db_field) {
@@ -12,14 +11,12 @@ class DbObject
                 $properties[$db_field] = $this->$db_field;
             }
         }
-
         return $properties;
     }
 
 
     protected function cleanProperties()
     {
-
         global $database;
 
         $cleanProperties = array();
@@ -27,9 +24,7 @@ class DbObject
         foreach ($this->properties() as $key => $value) {
             $cleanProperties[$key] = $database->escapeString($value);
         }
-
         return $cleanProperties;
-
     }
 
     public function save()
@@ -55,7 +50,6 @@ class DbObject
         }
     }
 
-
     public function update()
     {
         global $database;
@@ -67,19 +61,16 @@ class DbObject
             $properties_pairs[] = "{$key}='{$value}'";
         }
 
-
         $sql = "UPDATE " . static::$db_table . " SET ";
         $sql .= implode(", ", $properties_pairs);
         $sql .= " WHERE id= " . $database->escapeString($this->id);
 
         $database->query($sql);
-//        var_dump(mysqli_affected_rows($database->connection));
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 
     public function delete()
     {
-
         global $database;
 
         $sql = "DELETE FROM  " . static::$db_table;
@@ -91,10 +82,8 @@ class DbObject
         return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 
-
     public static function countAll()
     {
-
         global $database;
 
         $sql = "SELECT count(*) FROM " . static::$db_table;
@@ -102,6 +91,5 @@ class DbObject
         $row = mysqli_fetch_array($result_set);
 
         return array_shift($row);
-
     }
 }

@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('includes/base_head.php') ?>
+    <?php include('includes/baseHead.php') ?>
     <title>Riddle - add riddle</title>
 </head>
 <body>

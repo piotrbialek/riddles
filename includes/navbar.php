@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_SESSION['id'])) {
+if (isset($_SESSION['id'])) {
     $player_score = Player::getPlayerScore($_SESSION['id']);
     $player_wins = Player::getPlayerWins($_SESSION['id']);
     $player_loses = Player::getPlayerLoses($_SESSION['id']);
@@ -40,7 +40,8 @@ if(isset($_SESSION['id'])) {
                                                     class="glyphicon glyphicon-flash"></i> <?php echo $player_score; ?></span>
                                         <span class="pull-left"><i
                                                     class="glyphicon glyphicon-fire"></i> <?php echo $_SESSION['player_level']; ?></span>
-                                        <span class="pull-right"><i class="glyphicon glyphicon-stats"></i> <?php echo $player_wins."/".$player_loses?></span>
+                                        <span class="pull-right"><i
+                                                    class="glyphicon glyphicon-stats"></i> <?php echo $player_wins . "/" . $player_loses ?></span>
                                     </div>
                                 </li>
                                 <li><a href="../../projekt/singleplayer.php"><span><i
@@ -50,8 +51,8 @@ if(isset($_SESSION['id'])) {
                                         Multi-player <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="../../projekt/games.php">Avialable games</a></li>
-                                        <li><a href="../../projekt/mygames.php">My games</a></li>
-                                        <li><a href="../../projekt/playedgames.php">Played games</a></li>
+                                        <li><a href="../../projekt/myGames.php">My games</a></li>
+                                        <li><a href="../../projekt/playedGames.php">Played games</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="../../projekt/myRiddles.php"><i
@@ -59,7 +60,6 @@ if(isset($_SESSION['id'])) {
                                 <li><a href="../../projekt/add.php"><span><i
                                                     class="glyphicon glyphicon-plus-sign"></i></span>
                                         Add riddle</a></li>
-
                                 <?php
                                 $admin = $_SESSION['admin'];
                                 if ($admin == 1) { ?>

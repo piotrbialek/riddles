@@ -1,9 +1,7 @@
 $(document).on('click', '.set', function () {
     let el = this;
-    // let id = (el.parentNode).id;
     let id = el.id;
     let parent = el.parentNode;
-    // let rowClass = parent.className;
     let rowClass = parent.parentNode.className;
     let admin;
 
@@ -44,7 +42,6 @@ $(document).on('click', '.set', function () {
                 setTimeout(function () {
                     $('#' + id).removeClass("green").fadeIn("slow");
                 }, 300);
-
             } else {
                 alert('Problem: ' + response);
             }

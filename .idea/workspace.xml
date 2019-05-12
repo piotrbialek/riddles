@@ -4,36 +4,53 @@
     <list default="true" id="c834550d-2d45-463c-a35e-4d76583900a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addRiddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/addRiddle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/DbObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/DbObject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/Move.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Move.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/Riddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Riddle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/riddles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/riddles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/accept.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/accept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/create_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/createGame.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/create_riddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/createRiddle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/delete_player.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/deletePlayer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/increaseLevel.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/increaseLevel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/join_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/joinGame.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/leave_multiplayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/leaveMultiplayer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/play_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/playGame.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/riddleCompleted.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/riddleCompleted.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ajax/setAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/setAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/games.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/buttons.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/base_head.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/baseHead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/multiplayer_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/multiplayerModal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/accept.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/accept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/checkWinMultiplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/checkWinMultiplayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/checkWinSingleplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/checkWinSingleplayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/create_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/createGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/dropdown-dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dropdown-dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/gameWonMultiplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/gameWonMultiplayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/gameWonSingleplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/gameWonSingleplayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/increaseLevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/increaseLevel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/join_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/joinGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/play_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/playGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/sendRiddleResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sendRiddleResult.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/setAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/setAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/skryptRiddle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/skryptRiddle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multiplayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/multiplayer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myRiddles.php" beforeDir="false" afterPath="$PROJECT_DIR$/myRiddles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mygames.php" beforeDir="false" afterPath="$PROJECT_DIR$/mygames.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notLoggedGame.php" beforeDir="false" afterPath="$PROJECT_DIR$/notLoggedGame.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playedgames.php" beforeDir="false" afterPath="$PROJECT_DIR$/playedgames.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mygames.php" beforeDir="false" afterPath="$PROJECT_DIR$/myGames.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playedgames.php" beforeDir="false" afterPath="$PROJECT_DIR$/playedGames.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/singleplayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/singleplayer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validateRiddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/validateRiddle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +76,11 @@
     <session id="-1468659487">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="62" />
+          <entry key="project.closed" value="63" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="7" />
-          <entry key="project.open.time.12" value="10" />
+          <entry key="project.open.time.12" value="11" />
           <entry key="project.open.time.13" value="7" />
           <entry key="project.open.time.14" value="7" />
           <entry key="project.open.time.15" value="5" />
@@ -78,15 +95,15 @@
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="63" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="9" />
-          <entry key="js" value="203" />
-          <entry key="php" value="806" />
+          <entry key="js" value="247" />
+          <entry key="php" value="832" />
           <entry key="png" value="1" />
           <entry key="scss" value="47" />
           <entry key="sql" value="6" />
@@ -96,8 +113,8 @@
         <counts>
           <entry key="CSS" value="9" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="203" />
-          <entry key="PHP" value="806" />
+          <entry key="JavaScript" value="247" />
+          <entry key="PHP" value="832" />
           <entry key="SCSS" value="47" />
           <entry key="SQL" value="6" />
         </counts>
@@ -105,8 +122,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="52" />
-          <entry key="js" value="5667" />
-          <entry key="php" value="27765" />
+          <entry key="js" value="5738" />
+          <entry key="php" value="27782" />
           <entry key="scss" value="2117" />
           <entry key="sql" value="1" />
         </counts>
@@ -115,8 +132,8 @@
         <counts>
           <entry key="CSS" value="52" />
           <entry key="HTML" value="66" />
-          <entry key="JavaScript" value="5657" />
-          <entry key="PHP" value="27652" />
+          <entry key="JavaScript" value="5728" />
+          <entry key="PHP" value="27669" />
           <entry key="SCSS" value="2117" />
           <entry key="SQL" value="58" />
         </counts>
@@ -131,87 +148,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multiplayer.php">
+        <entry file="file://$PROJECT_DIR$/js/gameWonMultiplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mygames.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-466">
-              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/singleplayer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/validateRiddle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myRiddles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notLoggedGame.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notLoggedRedirect.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playedgames.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2727">
+            <state relative-caret-position="44">
               <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logout.php">
+        <entry file="file://$PROJECT_DIR$/js/gameWonSingleplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="272">
+              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/increaseLevel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/joinGame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/playGame.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/sendRiddleResult.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/setAdmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/skryptAddRiddle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/skryptRiddle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/navbar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="54" column="105" lean-forward="true" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -227,68 +248,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>response2</find>
-      <find>player_delete</find>
-      <find>riddle_created</find>
-      <find>join_game2</find>
-      <find>alert</find>
-      <find>edit.</find>
-      <find>riddle_idModal</find>
-      <find>validateRiddle</find>
-      <find>media</find>
-      <find>$db_table_fields</find>
-      <find>getUsernameById</find>
-      <find>setAdmin</find>
-      <find>setAdminAdmin</find>
-      <find>$results</find>
-      <find>$recommendationData</find>
-      <find>scalarProduct</find>
-      <find>$playerLevel</find>
-      <find>RECAPT</find>
-      <find>$matrix</find>
-      <find>findById</find>
-      <find>$game_id</find>
-      <find>_score</find>
-      <find>riddleCompleted</find>
-      <find>riddleComple</find>
       <find>_player</find>
       <find>$opponent_user_id</find>
       <find>$the_message</find>
-      <find>$opponent_player</find>
       <find>$opponent_riddle</find>
       <find>$player_riddle</find>
+      <find>create_game.js</find>
+      <find>createGame.js</find>
+      <find>mygames.php</find>
+      <find>createGa</find>
+      <find>multiplayer_modal</find>
+      <find>parent</find>
+      <find>info</find>
+      <find>displayedSentence</find>
+      <find>$game_id</find>
+      <find>$opponent_player</find>
+      <find>_score</find>
+      <find>$riddle_id</find>
+      <find>$player_id</find>
+      <find>$user_id</find>
+      <find>temporarySentence</find>
+      <find>wrongAttempts</find>
+      <find>#wrong_guesses</find>
+      <find>correctLetter</find>
+      <find>sentenceLetter</find>
+      <find>inputLetter</find>
+      <find>inputField</find>
+      <find>spanClass</find>
+      <find>inGuesses</find>
+      <find>levelCompleted</find>
+      <find>lvlCompleted</find>
     </findStrings>
     <replaceStrings>
-      <replace>$result</replace>
-      <replace>riddle_level</replace>
-      <replace>navbar-list</replace>
-      <replace>object</replace>
-      <replace>instantiation</replace>
-      <replace>riddle_id</replace>
-      <replace>$newRiddle</replace>
-      <replace>$user</replace>
-      <replace>$existingUser</replace>
-      <replace>$newUser</replace>
-      <replace>$match</replace>
-      <replace>challenge</replace>
-      <replace>$game</replace>
-      <replace>$createRiddle</replace>
-      <replace>$player</replace>
-      <replace>$numberOfPlayers</replace>
       <replace>$opponent_move</replace>
       <replace>initiator_id</replace>
       <replace>response</replace>
       <replace>admin</replace>
       <replace>dotProduct</replace>
       <replace>Player</replace>
-      <replace>$riddleId</replace>
-      <replace>$userId</replace>
-      <replace>$gameId</replace>
       <replace>$opponentUserId</replace>
-      <replace>Score</replace>
-      <replace>$opponentPlayer</replace>
       <replace>$opponentRiddle</replace>
       <replace>$playerRiddle</replace>
+      <replace>displayed_sentence</replace>
+      <replace>$gameId</replace>
+      <replace>$opponentPlayer</replace>
+      <replace>Score</replace>
+      <replace>$riddleId</replace>
+      <replace>$playerId</replace>
+      <replace>$userId</replace>
+      <replace>temporary_sentence</replace>
+      <replace>wrong_attempts</replace>
+      <replace>#wrongGuesses</replace>
+      <replace>correct_letter</replace>
+      <replace>sentence_letter</replace>
+      <replace>input_letter</replace>
+      <replace>input_field</replace>
+      <replace>row_class</replace>
+      <replace>accepted_btn</replace>
+      <replace>span_class</replace>
+      <replace>in_guesses</replace>
+      <replace>level_completed</replace>
+      <replace>level_increased</replace>
+      <replace>lvl_completed</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -297,44 +318,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ajax/create_game.php" />
-        <option value="$PROJECT_DIR$/js/checkWinMultiplayer.js" />
-        <option value="$PROJECT_DIR$/admin/includes/Riddle.php" />
-        <option value="$PROJECT_DIR$/js/play_game.js" />
-        <option value="$PROJECT_DIR$/js/sendRiddleResult.js" />
-        <option value="$PROJECT_DIR$/includes/game.php" />
-        <option value="$PROJECT_DIR$/js/gameWonMultiplayer.js" />
-        <option value="$PROJECT_DIR$/admin/includes/Move.php" />
-        <option value="$PROJECT_DIR$/ajax/play_game.php" />
-        <option value="$PROJECT_DIR$/ajax/leave_multiplayer.php" />
-        <option value="$PROJECT_DIR$/js/create_game.js" />
-        <option value="$PROJECT_DIR$/ajax/join_game.php" />
-        <option value="$PROJECT_DIR$/ajax/delete_player.php" />
-        <option value="$PROJECT_DIR$/js/join_game2.js" />
-        <option value="$PROJECT_DIR$/js/join_game.js" />
-        <option value="$PROJECT_DIR$/js/dataTable.js" />
-        <option value="$PROJECT_DIR$/js/edit.js" />
-        <option value="$PROJECT_DIR$/ajax/edit.php" />
-        <option value="$PROJECT_DIR$/ajax/create_riddle.php" />
-        <option value="$PROJECT_DIR$/js/dropdown-dropdown.js" />
-        <option value="$PROJECT_DIR$/includes/multiplayer_modal.php" />
-        <option value="$PROJECT_DIR$/css/_navbar.scss" />
-        <option value="$PROJECT_DIR$/includes/base_head.php" />
-        <option value="$PROJECT_DIR$/ajax/increaseLevel.php" />
-        <option value="$PROJECT_DIR$/admin/riddles.php" />
-        <option value="$PROJECT_DIR$/js/setAdmin.js" />
-        <option value="$PROJECT_DIR$/ajax/setAdmin.php" />
-        <option value="$PROJECT_DIR$/admin/users.php" />
-        <option value="$PROJECT_DIR$/includes/navbar.php" />
-        <option value="$PROJECT_DIR$/admin/includes/User.php" />
-        <option value="$PROJECT_DIR$/admin/includes/DbObject.php" />
-        <option value="$PROJECT_DIR$/js/delete.js" />
-        <option value="$PROJECT_DIR$/ajax/delete.php" />
-        <option value="$PROJECT_DIR$/admin/includes/Player.php" />
-        <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/ajax/riddleCompleted.php" />
-        <option value="$PROJECT_DIR$/add.php" />
-        <option value="$PROJECT_DIR$/addRiddle.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/games.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -348,6 +331,44 @@
         <option value="$PROJECT_DIR$/validateRiddle.php" />
         <option value="$PROJECT_DIR$/multiplayer.php" />
         <option value="$PROJECT_DIR$/playedgames.php" />
+        <option value="$PROJECT_DIR$/js/dropdown-dropdown.js" />
+        <option value="$PROJECT_DIR$/js/edit.js" />
+        <option value="$PROJECT_DIR$/js/gameWonMultiplayer.js" />
+        <option value="$PROJECT_DIR$/js/gameWonSingleplayer.js" />
+        <option value="$PROJECT_DIR$/js/joinGame.js" />
+        <option value="$PROJECT_DIR$/js/playGame.js" />
+        <option value="$PROJECT_DIR$/js/sendRiddleResult.js" />
+        <option value="$PROJECT_DIR$/js/setAdmin.js" />
+        <option value="$PROJECT_DIR$/includes/game.php" />
+        <option value="$PROJECT_DIR$/includes/multiplayerModal.php" />
+        <option value="$PROJECT_DIR$/ajax/setAdmin.php" />
+        <option value="$PROJECT_DIR$/ajax/riddleCompleted.php" />
+        <option value="$PROJECT_DIR$/ajax/playGame.php" />
+        <option value="$PROJECT_DIR$/ajax/leaveMultiplayer.php" />
+        <option value="$PROJECT_DIR$/ajax/joinGame.php" />
+        <option value="$PROJECT_DIR$/ajax/increaseLevel.php" />
+        <option value="$PROJECT_DIR$/ajax/edit.php" />
+        <option value="$PROJECT_DIR$/ajax/deletePlayer.php" />
+        <option value="$PROJECT_DIR$/ajax/delete.php" />
+        <option value="$PROJECT_DIR$/ajax/createRiddle.php" />
+        <option value="$PROJECT_DIR$/ajax/createGame.php" />
+        <option value="$PROJECT_DIR$/ajax/accept.php" />
+        <option value="$PROJECT_DIR$/admin/riddles.php" />
+        <option value="$PROJECT_DIR$/admin/users.php" />
+        <option value="$PROJECT_DIR$/admin/includes/Database.php" />
+        <option value="$PROJECT_DIR$/admin/includes/DbObject.php" />
+        <option value="$PROJECT_DIR$/admin/includes/Game.php" />
+        <option value="$PROJECT_DIR$/admin/includes/Move.php" />
+        <option value="$PROJECT_DIR$/admin/includes/Player.php" />
+        <option value="$PROJECT_DIR$/admin/includes/Riddle.php" />
+        <option value="$PROJECT_DIR$/admin/includes/User.php" />
+        <option value="$PROJECT_DIR$/js/accept.js" />
+        <option value="$PROJECT_DIR$/js/checkWinMultiplayer.js" />
+        <option value="$PROJECT_DIR$/js/checkWinSingleplayer.js" />
+        <option value="$PROJECT_DIR$/js/skryptRiddle.js" />
+        <option value="$PROJECT_DIR$/js/createGame.js" />
+        <option value="$PROJECT_DIR$/js/increaseLevel.js" />
+        <option value="$PROJECT_DIR$/includes/navbar.php" />
       </list>
     </option>
   </component>
@@ -400,6 +421,16 @@
             <path>
               <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="projekt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -519,18 +550,20 @@
       <workItem from="1557522269632" duration="462000" />
       <workItem from="1557575290452" duration="688000" />
       <workItem from="1557657176817" duration="3940000" />
+      <workItem from="1557690957650" duration="2277000" />
+      <workItem from="1557694625742" duration="1358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390924000" />
+    <option name="totallyTimeSpent" value="394559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1461318" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18696275" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32950193" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
@@ -578,274 +611,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/setAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/setAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="101" lean-forward="true" selection-start-line="41" selection-start-column="101" selection-end-line="41" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/base_head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/skryptRiddle.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/_table.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/_navbar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="19" lean-forward="true" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/_form.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gameWonSingleplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/play_game.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/join_game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/checkWinSingleplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gameWonMultiplayer.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/Database.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/Game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/Move.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/DbObject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="53" column="25" lean-forward="true" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/create_riddle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/accept.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/create_game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/dataTable.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/delete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/Riddle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="147" selection-start-line="147" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/Player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/riddleCompleted.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/increaseLevel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/checkWinMultiplayer.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sendRiddleResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/riddles.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="6" lean-forward="true" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addRiddle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/games.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="32" lean-forward="true" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multiplayer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mygames.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myRiddles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -863,7 +628,7 @@
     <entry file="file://$PROJECT_DIR$/notLoggedRedirect.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/playedgames.php">
+    <entry file="file://$PROJECT_DIR$/playedGames.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
@@ -872,22 +637,320 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/registration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2727">
+        <state relative-caret-position="17">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/singleplayer.php">
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/typed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/baseHead.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/multiplayerModal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/setAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validateRiddle.php">
+    <entry file="file://$PROJECT_DIR$/ajax/riddleCompleted.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/playGame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/leaveMultiplayer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/joinGame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/increaseLevel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/deletePlayer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/createRiddle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/createGame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/accept.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/riddles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="5" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/DbObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/Game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/Move.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/Player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="162" column="9" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/Riddle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/accept.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/checkWinMultiplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/checkWinSingleplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/createGame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dataTable.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/delete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dropdown-dropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gameWonMultiplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gameWonSingleplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/increaseLevel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/joinGame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/playGame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sendRiddleResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/setAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/skryptAddRiddle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/skryptRiddle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="54" column="105" lean-forward="true" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
         </state>
       </provider>
     </entry>

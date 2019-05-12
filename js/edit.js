@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('.edit').click(function () {
 
         var riddle_id = this.id;
@@ -15,7 +14,6 @@ $(document).ready(function () {
         $('#riddle_idModal').val(riddle_id);
         $('#myModal').modal('toggle');
     });
-
 
     $('#save').click(function () {
         var riddle_id = $('#riddle_idModal').val();
@@ -60,13 +58,12 @@ $(document).ready(function () {
                     setTimeout(function () {
                         $('#' + riddle_id).removeClass("green").fadeIn("slow");
                     }, 800);
-                } else if(response == 2) {
+                } else if (response == 2) {
                     alert('Record not updated');
-                } else{
+                } else {
                     alert('The data entered is not correct');
                 }
             }
         });
     });
-// });
 });

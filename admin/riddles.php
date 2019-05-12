@@ -11,27 +11,18 @@ $riddles = Riddle::findAll();
 <html lang="pl">
 <head>
 
-    <?php include('../includes/base_head.php') ?>
-
-    <!--    datatable styles-->
-    <!--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">-->
-    <!--    datatable styles-->
+    <?php include('../includes/baseHead.php') ?>
     <script type="text/javascript" charset="utf8"
             src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
     <title>Riddles - All riddles</title>
-
     <script src="../js/delete.js"></script>
     <script src="../js/accept.js"></script>
     <script src="../js/edit.js"></script>
-
     <script src="../js/dataTable.js"></script>
 </head>
-
 <body>
 <?php include('../../projekt/includes/navbar.php') ?>
 <div class="container">
-
     <main>
         <div class='subtitle text-center'>All riddles</div>
 
@@ -56,8 +47,8 @@ $riddles = Riddle::findAll();
                 <?php foreach ($riddles as $riddle) : ?>
                     <?php
 
-                    $author_user=User::findById($riddle->author_id);
-                    $author_login=$author_user->login;
+                    $author_user = User::findById($riddle->author_id);
+                    $author_login = $author_user->login;
 
                     if ($riddle->accepted == 1) {
                         $tr = "";
@@ -85,7 +76,8 @@ $riddles = Riddle::findAll();
                         </td>
                         <td class="text-center">
                             <button class="btn-danger">
-                                <span id="<?php echo $riddle->id ?>" class="glyphicon glyphicon-trash button-confirm delete"></span>
+                                <span id="<?php echo $riddle->id ?>"
+                                      class="glyphicon glyphicon-trash button-confirm delete"></span>
                             </button>
                         </td>
                         <td class="text-center">
@@ -98,13 +90,11 @@ $riddles = Riddle::findAll();
                 </tbody>
             </table>
         <?php } ?>
-
     </main>
 </div>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
@@ -126,7 +116,6 @@ $riddles = Riddle::findAll();
                     <label for="riddleModal">Riddle (3-60 characters)</label>
                     <input type="text" id="riddleModal" class="form-control">
                 </div>
-
                 <div class="form-group">
                     <label for="riddle_levelModal">Level (1-100)</label>
                     <input type="number" id="riddle_levelModal" class="form-control">

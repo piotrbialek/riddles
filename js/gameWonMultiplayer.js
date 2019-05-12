@@ -1,19 +1,17 @@
 function gameWonMultiplayer(result) {
-
     $(document).keypress(function (e) {
         if (e.which === 13) {
-            window.location.href = "mygames.php";
+            window.location.href = "myGames.php";
         }
     });
 
     $("#buttonPlay").val("Back");
 
     $("#buttonPlay").bind("click", function () {
-        window.location.href = "mygames.php";
+        window.location.href = "myGames.php";
     });
 
     $("#organize").fadeOut("slow", function () {
-        // $("#image").fadeOut("fast", function () {
         $(".game_space").fadeOut("fast", function () {
 
             $("#sentence").fadeOut();
@@ -40,10 +38,6 @@ function gameWonMultiplayer(result) {
                     $("#buttonPlay").fadeIn("slow");
                 }
             });
-
-
-
         });
-
     });
 }

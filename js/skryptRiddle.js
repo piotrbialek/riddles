@@ -1,11 +1,11 @@
 window.onload = start;
 
-var wrongAttempts = 0;
-var wrongGuesses = "";
-var rightGuesses = "";
-var levelCompleted = false;
-var temporarySentence = "";
-var displayedSentence = "";
+var wrong_attempts = 0;
+var wrong_guesses = "";
+var right_guesses = "";
+var temporary_sentence = "";
+var displayed_sentence = "";
+var level_completed = false;
 
 riddle = riddle.toUpperCase();
 description = description.toUpperCase();
@@ -14,54 +14,50 @@ category = category.toUpperCase();
 function drawLines() {
     for (let i = 0; i < riddle.length; i++) {
         if (riddle.charAt(i) === " ") {
-            temporarySentence = temporarySentence + " ";
+            temporary_sentence = temporary_sentence + " ";
         }
         else {
-            temporarySentence = temporarySentence + "_";
+            temporary_sentence = temporary_sentence + "_";
         }
     }
-    displayedSentence = temporarySentence;
+    displayed_sentence = temporary_sentence;
     showSentence();
 }
 
 function showSentence() {
-    $("#sentence").html(displayedSentence);
+    $("#sentence").html(displayed_sentence);
 }
-
 
 String.prototype.setLetter = function (place, sign) {
     if (place > this.length - 1) return this.toString();
     else return this.substr(0, place) + sign + this.substr(place + 1);
 }
 
-
-
-function checkLetterInSentence(inputLetter) {
-    let correctLetter = 0;
+function checkLetterInSentence(input_letter) {
+    let correct_letter = 0;
 
     for (let i = 0; i < riddle.length; i++) {
-        let sentenceLetter = riddle.charAt(i);
+        let sentence_letter = riddle.charAt(i);
 
-        if (sentenceLetter === inputLetter) {
-            temporarySentence = temporarySentence.setLetter(i, inputLetter);
-            displayedSentence = temporarySentence;
-            displayedSentence = displayedSentence.replace(
-                new RegExp(sentenceLetter, "g"),
-                '<span class="l green hideLetter correctLetter">' + sentenceLetter + '</span>'
+        if (sentence_letter === input_letter) {
+            temporary_sentence = temporary_sentence.setLetter(i, input_letter);
+            displayed_sentence = temporary_sentence;
+            displayed_sentence = displayed_sentence.replace(
+                new RegExp(sentence_letter, "g"),
+                '<span class="l green hideLetter correctLetter">' + sentence_letter + '</span>'
             );
             setTimeout(function () {
                 $(".l").fadeOut("fast", function () {
                     $(".l").removeClass("hideLetter").fadeIn("fast");
                 });
             }, 100);
-            correctLetter++;
+            correct_letter++;
         }
     }
 
-
-    if (correctLetter > 0) {
-        rightGuesses += inputLetter + " ";
-        $("#rightGuesses").text(rightGuesses);
+    if (correct_letter > 0) {
+        right_guesses += input_letter + " ";
+        $("#rightGuesses").text(right_guesses);
         $("#sentence").removeClass("red");
         $("#sentence").addClass("gray");
         showSentence();
@@ -72,8 +68,8 @@ function checkLetterInSentence(inputLetter) {
         }, 200);
     }
     else {
-        wrongGuesses += inputLetter + " ";
-        $("#wrongGuesses").text(wrongGuesses);
+        wrong_guesses += input_letter + " ";
+        $("#wrongGuesses").text(wrong_guesses);
         $(".correctLetter").removeClass("green");
         $("#sentence").removeClass("gray");
         $("#sentence").addClass("red");
@@ -83,64 +79,32 @@ function checkLetterInSentence(inputLetter) {
             $("#input").removeClass("redBlink").fadeIn("slow");
         }, 200);
 
-        wrongAttempts++;
-        let img = "image/szubienica_img/img" + wrongAttempts + ".png";
+        wrong_attempts++;
+        let img = "image/szubienica_img/img" + wrong_attempts + ".png";
         $("#image").fadeOut("fast", function () {
-            $("#image").html('<img src="' + img + '" alt="hangerMan' + wrongAttempts + '" />');
+            $("#image").html('<img src="' + img + '" alt="hangerMan' + wrong_attempts + '" />');
             $("#image").fadeIn();
         });
     }
-
-
-//        if(correctLetter>0)
-//        {
-//                $('#input').val('');
-//                rightGuesses+=letter+" ";
-//                $('#rightGuesses').html(rightGuesses);
-//                $('#sentence').addClass('green');
-//                write();
-//                guesses+=letter;
-//        }
-//        else
-//        {
-//            if(inGuesses==0)
-//            //if(checkGuesses(letter))
-//            {
-//                $('#input').val('');
-//                wrongGuesses+=letter+" ";
-//                $('#wrongGuesses').html(wrongGuesses);
-//                $('#sentence').addClass('red');
-//                guesses+=letter;
-//                gLength=guesses.length;
-//                count++;
-//                let img = "image/szubienica_img/img"+count+".png";
-//                $('#image').fadeOut('fast', function() {
-//                    $("#image").html('<img src="'+img+'" alt="hangerMan'+count+'" />');
-//                    $("#image").fadeIn();
-//                });
-//            }
-//        }
 }
 
 // checks if this particular letter has already been entered
 function checkGuesses(letter) {
-    let inGuesses = 0;
-    let guesses = rightGuesses.concat(wrongGuesses);
+    let in_guesses = 0;
+    let guesses = right_guesses.concat(wrong_guesses);
     for (let i = 0; i < guesses.length; i++) {
         if (guesses.charAt(i) === letter) {
-            inGuesses++;
+            in_guesses++;
         }
     }
-    return inGuesses;
+    return in_guesses;
 }
 
-
 function checkLetter() {
-
-    let inputField = $("#input");
-    if (inputField.val() === " "
-        || inputField.val().length > 1
-    || !isNaN(inputField.val())) // || $("#input").val() == "undefined"
+    let input_field = $("#input");
+    if (input_field.val() === " "
+        || input_field.val().length > 1
+        || !isNaN(input_field.val())) // || $("#input").val() == "undefined"
     {
         $("#info").text("incorrect input");
         $("#input").val("");
@@ -151,17 +115,16 @@ function checkLetter() {
         }, 200);
     }
     else {
-        let inputLetter = inputField.val().toUpperCase();
+        let input_letter = input_field.val().toUpperCase();
 
         $("#info").text("");
-        inputField.val("");
+        input_field.val("");
 
-
-        if (checkGuesses(inputLetter) === 0) {
-            checkLetterInSentence(inputLetter);
+        if (checkGuesses(input_letter) === 0) {
+            checkLetterInSentence(input_letter);
         }
         else {
-            $("#info").html("repeated letter " + inputLetter);
+            $("#info").html("repeated letter " + input_letter);
             $("#sentence").addClass("gray");
         }
         checkWin();
@@ -169,7 +132,6 @@ function checkLetter() {
 }
 
 function start() {
-
     $("#category, #description, #sentence, #image, #organize, #buttonNext, #buttonTryAgain").hide();
 
     $("#input").keypress(function (e) {
@@ -185,10 +147,9 @@ function start() {
     $("#sentence").html("");
     $("#sentence").addClass("gray");
     $("#info").text("");
-    $("#rightGuesses").text(rightGuesses);
-    $("#wrongGuesses").text(wrongGuesses);
+    $("#rightGuesses").text(right_guesses);
+    $("#wrongGuesses").text(wrong_guesses);
     $("#input").val("");
-
 
     var typed = new Typed("#category", {
         strings: ["CATEGORY", category],
@@ -200,29 +161,23 @@ function start() {
                 startDelay: 1000,
                 typeSpeed: 30,
                 onComplete: function (self) {
-
                     $("#image, #organize, #sentence").fadeIn();
                     $("#input").focus();
                 }
-
             });
         }
     });
 
-
     $("#category").fadeIn("slow");
     $("#description").fadeIn("slow");
     drawLines();
-
-//        var img = "image/transparent/wisielec0.png";
+//        let img = "image/transparent/wisielec0.png";
     let img = "image/szubienica_img/img0.png";
     $("#image").html('<img src="' + img + '" alt="hangerMan" />');
 
     $("#input").on("keyup", function (event) {
         checkLetter();
     });
-
-
 }
 
 

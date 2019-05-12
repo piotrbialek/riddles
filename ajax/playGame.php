@@ -8,20 +8,20 @@ include("../admin/includes/Game.php");
 include("../admin/includes/Player.php");
 include("../admin/includes/Riddle.php");
 
-$user_id = $_SESSION['id'];
+$userId = $_SESSION['id'];
 
 if (!isset($_POST['game_id'])) {
     header('Location: ../../projekt/games.php');
     exit();
-}else {
-    $game_id = $_POST['game_id'];
+} else {
+    $gameId = $_POST['game_id'];
 
-    $player=Player::findGamePlayerId($user_id,$game_id);
-    $move=Move::findOpponentsMove($game_id, $player->id);
+    $player = Player::findGamePlayerId($userId, $gameId);
+    $move = Move::findOpponentsMove($gameId, $player->id);
 
-    if($move){
+    if ($move) {
         echo $move->riddle_id;
-    }else echo 0;
+    } else echo 0;
 }
 
 

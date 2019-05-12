@@ -1,5 +1,5 @@
 function checkWin() {
-    if (riddle === temporarySentence) {
+    if (riddle === temporary_sentence) {
         $("#image").fadeOut("slow", function () {
             $("#organize").fadeOut();
             $("#sentence").fadeOut();
@@ -7,15 +7,14 @@ function checkWin() {
             $("#buttonPlay").hide();
 
             levelCompleted = true;
-            let result=1;
+            let result = 1;
 
             sendRiddleResult(result);
-
             gameWonMultiplayer(true);
         });
     }
-    else if (wrongAttempts > 2) {
-        let result=0;
+    else if (wrong_attempts > 2) {
+        let result = 0;
         $("#input").off("keyup");
         sendRiddleResult(result);
         gameWonMultiplayer(false);

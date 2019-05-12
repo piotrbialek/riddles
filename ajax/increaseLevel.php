@@ -1,8 +1,6 @@
 <?php
 session_start();
 include("../admin/includes/User.php");
-//include ("../../projekt/notLoggedRedirect.php");
-
 
 $currentLevel = $_SESSION["player_level"];
 if ((isset($_POST['levelCompleted'])) && (($_POST['levelCompleted']) == true)) {
@@ -20,9 +18,6 @@ if (isset($_SESSION['id'])) {
     $user = User::findById($id);
     $user->level = $newLevel;
 
-    if($user->save()) echo $messageSuccess;
+    if ($user->save()) echo $messageSuccess;
     else echo $messageProblem;
-} else $messageSuccess;
-
-
-
+} else echo $messageSuccess;

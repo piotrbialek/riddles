@@ -1,5 +1,4 @@
 function gameWonSingleplayer(result) {
-
     $(document).keypress(function (e) {
         if (e.which === 13) {
             window.location.href = "singleplayer.php";
@@ -16,7 +15,6 @@ function gameWonSingleplayer(result) {
         $("#info").fadeIn("slow");
 
         let info;
-
 
         if (result) {
             info = "<b>Congratulations!</b><br>Riddle correct:<br>" + riddle;

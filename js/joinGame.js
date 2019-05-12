@@ -3,18 +3,16 @@ $(document).on('click', '.join_game', function () {
     let initiator_id = el.id;
     let game_id = (el.parentNode.parentNode).id;
     let row = $(el).closest('tr');
-    let player_id=-1;
-
-
+    let player_id = -1;
 
     $.ajax({
-        url: '../../projekt/ajax/join_game.php',
+        url: '../../projekt/ajax/joinGame.php',
         type: 'POST',
         data: {initiator_id: initiator_id, game_id: game_id},
         success: function (response) {
             if (response > 0) {
                 $('#myModal').modal('show');
-                player_id=response;
+                player_id = response;
             } else if (response == 0) {
                 $('.form-control').val('');
                 $('#myModal').modal('hide');
@@ -29,11 +27,10 @@ $(document).on('click', '.join_game', function () {
         }
     });
 
-    var riddle_created=false;
+    var riddle_created = false;
 
     var loaded = false;
     $('#save').click(function () {
-
 
         var category = $('#categoryModal').val();
         var description = $('#descriptionModal').val();
@@ -42,9 +39,8 @@ $(document).on('click', '.join_game', function () {
 
         if (loaded) return;
 
-
         $.ajax({
-            url: '../../projekt/ajax/create_riddle.php',
+            url: '../../projekt/ajax/createRiddle.php',
             method: 'post',
             data: {
                 category: category,
@@ -59,8 +55,8 @@ $(document).on('click', '.join_game', function () {
                 loaded = true;
                 if (response1 == 1) {
                     $('.form-control').val('');
-                    riddle_created=true;
-                    player_id=-1;
+                    riddle_created = true;
+                    player_id = -1;
                     $('#myModal').modal('hide');
                     row.addClass("green");
                     row.fadeOut(800, function () {
@@ -75,26 +71,24 @@ $(document).on('click', '.join_game', function () {
         });
     });
 
+    var player_deleted = false;
 
-    var player_deleted=false;
-
-    if(riddle_created) {
+    if (riddle_created) {
         return;
-    } else{
-
+    } else {
         $("#myModal").on("hidden.bs.modal", function () {
 
-            loaded=true;
+            loaded = true;
 
             if (player_deleted) return;
             $.ajax({
-                url: '../../projekt/ajax/delete_player.php',
+                url: '../../projekt/ajax/deletePlayer.php',
                 type: 'POST',
                 data: {player_id: player_id},
                 success: function (response) {
-                    player_deleted=true;
+                    player_deleted = true;
 
-                    if (!((response == 1) || (response == -1)))  {
+                    if (!((response == 1) || (response == -1))) {
                         alert('Problem: ' + response);
                     }
                 }

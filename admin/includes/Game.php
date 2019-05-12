@@ -8,7 +8,6 @@ class Game extends DbObject
     protected static $db_table_fields = array('player_started_id', 'result_id');
     public $id, $player_started_id, $result_id;
 
-
     public static function findById($id)
     {
         $query = "SELECT * FROM " . self::$db_table . " WHERE id=" . $id . " LIMIT 1";
@@ -23,7 +22,6 @@ class Game extends DbObject
         $object = static::instantiation($row);
         return $object;
     }
-
 
     public static function findByQuery($sql)
     {
@@ -47,10 +45,8 @@ class Game extends DbObject
         return $object;
     }
 
-
     public static function findAll()
     {
         return static::findByQuery("SELECT * FROM " . static::$db_table);
     }
-
 }

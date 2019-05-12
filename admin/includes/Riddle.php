@@ -8,7 +8,6 @@ class Riddle extends DbObject
     protected static $db_table_fields = array('category', 'description', 'riddle', 'riddle_level', 'author_id', 'accepted', 'solved', 'in_match');
     public $id, $category, $description, $riddle, $riddle_level, $author_id, $accepted, $solved, $in_match;
 
-
     public static function drawRiddle($currentLevel)
     {
         $query = "SELECT * FROM " . Riddle::$db_table . " WHERE accepted=1 and riddle_level=" . $currentLevel . " ORDER BY RAND() LIMIT 1";
@@ -30,7 +29,6 @@ class Riddle extends DbObject
         return $object;
     }
 
-
     public static function findByQuery($sql)
     {
         global $database;
@@ -45,7 +43,6 @@ class Riddle extends DbObject
 
     public static function instantiation($the_record)
     {
-
         $calling_class = get_called_class();
         $object = new $calling_class;
 
@@ -88,7 +85,7 @@ class Riddle extends DbObject
 
     public function riddleCompleted($result)
     {
-        $this->in_match=0;
+        $this->in_match = 0;
         return $this->save();
     }
 
@@ -96,6 +93,4 @@ class Riddle extends DbObject
     {
         return static::findOneByQuery("SELECT * FROM " . static::$db_table . " WHERE author_id=" . $userID);
     }
-
-
 }

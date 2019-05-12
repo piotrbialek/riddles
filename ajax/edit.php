@@ -2,10 +2,6 @@
 include("../admin/includes/Riddle.php");
 session_start();
 if (isset($_POST['riddle'])) {
-
-
-
-
     include "../../projekt/validateRiddle.php";
 
     if (isset($_SESSION['category'])) unset($_SESSION['category']);
@@ -21,8 +17,8 @@ if (isset($_POST['riddle'])) {
     if (isset($_SESSION['temp_riddle_level'])) unset($_SESSION['temp_riddle_level']);
 
     if ($validation) {
-        $riddle_id = $_POST['riddle_id'];
-        $updateRiddle = Riddle::findById($riddle_id);
+        $riddleId = $_POST['riddle_id'];
+        $updateRiddle = Riddle::findById($riddleId);
         $updateRiddle->category = $category;
         $updateRiddle->description = $description;
         $updateRiddle->riddle = $riddle;
@@ -30,6 +26,6 @@ if (isset($_POST['riddle'])) {
 
         if ($updateRiddle->save()) {
             echo 1;
-        }else echo 2;
-    }else echo 0;
+        } else echo 2;
+    } else echo 0;
 }

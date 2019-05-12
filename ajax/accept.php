@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 include("../../projekt/notLoggedRedirect.php");

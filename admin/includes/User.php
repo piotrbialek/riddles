@@ -56,7 +56,6 @@ class User extends DbObject
         return static::findByQuery("SELECT * FROM " . static::$db_table);
     }
 
-
     public static function verifyUser($username, $password)
     {
         global $database;
@@ -88,7 +87,6 @@ class User extends DbObject
         return $row['pass'];
     }
 
-
     public static function checkExist($column, $value)
     {
         global $database;
@@ -103,5 +101,4 @@ class User extends DbObject
         $user_count = mysqli_num_rows($result);
         return (($user_count > 0)) ? true : false;
     }
-
 }

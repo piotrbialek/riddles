@@ -20,7 +20,7 @@ $riddle = Riddle::drawRiddle($_SESSION['player_level']);
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('includes/base_head.php') ?>
+    <?php include('includes/baseHead.php') ?>
     <!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script type="text/javascript">
         var category = '<?php echo $riddle->category;?>';

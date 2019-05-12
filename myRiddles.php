@@ -10,7 +10,7 @@ if (!$riddles) $_SESSION['riddle_problem'] = '<span class="red">You have not add
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <?php include('includes/base_head.php') ?>
+    <?php include('includes/baseHead.php') ?>
     <script type="text/javascript" charset="utf8"
             src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/dataTable.js"></script>

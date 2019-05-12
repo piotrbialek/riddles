@@ -1,6 +1,6 @@
 <?php
 
-require_once ($_SERVER['DOCUMENT_ROOT']."/projekt/config.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/projekt/config.php");
 
 class Database
 {
@@ -14,11 +14,11 @@ class Database
 
     public function openDbConnection()
     {
-        $this->connection = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+        $this->connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         mysqli_query($this->connection, "SET NAMES 'utf8'");
 
         if ($this->connection->connect_errno) {
-            die("conn problem: ".$this->connection->connect_error);
+            die("conn problem: " . $this->connection->connect_error);
         }
         return $this->connection;
     }
@@ -33,7 +33,7 @@ class Database
     private function confirmQuery($result)
     {
         if (!$result) {
-            die("query failed: ".$this->db->error);
+            die("query failed: " . $this->db->error);
         }
     }
 

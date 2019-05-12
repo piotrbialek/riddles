@@ -1,9 +1,7 @@
-let loaded=false; // in case of double increase of the level
+let loaded = false; // in case of double increase of the level
 
 function sendRiddleResult(result) {
-
-    let userResult=result;
-
+    let userResult = result;
     document.getElementById("status").innerHTML = "processing...";
 
     if (loaded) return;
@@ -15,5 +13,5 @@ function sendRiddleResult(result) {
             document.getElementById("status").innerHTML = response;
         }
     });
-    loaded=true;
+    loaded = true;
 }

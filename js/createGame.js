@@ -2,7 +2,6 @@ $(document).on('click', '.create_game', function () {
     $('.form-control').val('');
     let el = this;
     var user_id = el.id;
-    let parent = el.parentNode;
     let game_id;
     let create = true;
     $('#myModal').modal('show');
@@ -10,28 +9,20 @@ $(document).on('click', '.create_game', function () {
     var loaded = false;
     var loaded2 = false;
 
-    // $('#myModal').modal({
-    //     backdrop: 'static',
-    //     keyboard: false
-    // });
-
     $("#myModal").on("hidden.bs.modal", function () {
-        loaded=true;
-        loaded2=true;
+        loaded = true;
+        loaded2 = true;
     });
-    // $('#save').click(function () {
-    $('#save').on('click',function () {
+    $('#save').on('click', function () {
 
         var category = $('#categoryModal').val();
         var description = $('#descriptionModal').val();
         var riddle = $('#riddleModal').val();
         var riddle_level = $('#riddle_levelModal').val();
 
-
         if (loaded) return;
-        // if (loaded2) return;
         $.ajax({
-            url: '../../projekt/ajax/create_game.php',
+            url: '../../projekt/ajax/createGame.php',
             type: 'POST',
             data: {create: create},
             success: function (response) {
@@ -41,7 +32,7 @@ $(document).on('click', '.create_game', function () {
                     if (loaded2) return;
 
                     $.ajax({
-                        url: '../../projekt/ajax/create_riddle.php',
+                        url: '../../projekt/ajax/createRiddle.php',
                         method: 'post',
                         data: {
                             category: category,
@@ -56,16 +47,13 @@ $(document).on('click', '.create_game', function () {
                             if (response == 1) {
                                 $('.form-control').val('');
                                 $('#myModal').modal('hide');
-                                loaded=true;
-                                // loaded2 = true;
+                                loaded = true;
                             } else {
                                 alert('Problem: ' + response);
-                                // loaded2 = false;
-                                loaded=false;
+                                loaded = false;
                             }
                         }
                     });
-
                 } else {
                     alert('Problem: ' + response);
                 }

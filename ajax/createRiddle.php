@@ -5,8 +5,6 @@ include("../admin/includes/Player.php");
 include("../admin/includes/Game.php");
 session_start();
 if (isset($_POST['riddle'])) {
-
-
     include "../../projekt/validateRiddle.php";
 
     $author_id = $_SESSION['id'];
@@ -23,12 +21,10 @@ if (isset($_POST['riddle'])) {
     if (isset($_SESSION['temp_riddle'])) unset($_SESSION['temp_riddle']);
     if (isset($_SESSION['temp_riddle_level'])) unset($_SESSION['temp_riddle_level']);
 
-
     $game = Game::findById($_POST['game_id']);
     $player = Player::findGamePlayerId($author_id, $_POST['game_id']);
 
     if ($validation) {
-
         $createRiddle = new Riddle();
         $createRiddle->category = $category;
         $createRiddle->description = $description;
@@ -47,11 +43,9 @@ if (isset($_POST['riddle'])) {
             $move->riddle_id = $createRiddle->id;
             if ($move->save()) echo 1;
             else echo "There was a problem with saving riddle.";
-
-
         } else echo "There was a problem with creating riddle.";
     } else {
-        if($game->delete() && $player->delete()) echo "The data entered is not correct.";
+        if ($game->delete() && $player->delete()) echo "The data entered is not correct.";
         else echo "deleting game and player problem";
     }
 }

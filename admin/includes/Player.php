@@ -8,7 +8,6 @@ class Player extends DbObject
     protected static $db_table_fields = array('user_id', 'game_id', 'score');
     public $id, $user_id, $game_id, $score;
 
-
     public static function findById($id)
     {
         $query = "SELECT * FROM " . self::$db_table . " WHERE id=" . $id . " LIMIT 1";
@@ -47,7 +46,6 @@ class Player extends DbObject
         return $object;
     }
 
-
     public static function findAll()
     {
         return static::findByQuery("SELECT * FROM " . static::$db_table);
@@ -58,7 +56,6 @@ class Player extends DbObject
         $query = "SELECT * FROM " . static::$db_table . " WHERE user_id=" . $user_id;
         return static::findByQuery($query);
     }
-
 
     public static function checkIfGameExists($user_id)
     {
