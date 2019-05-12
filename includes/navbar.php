@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_SESSION['id'])) {
+    $player_score = Player::getPlayerScore($_SESSION['id']);
+    $player_wins = Player::getPlayerWins($_SESSION['id']);
+    $player_loses = Player::getPlayerLoses($_SESSION['id']);
+}
+?>
 <header>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -15,16 +23,31 @@
                     echo '<span class="pull-right"><a href="../../projekt/index.php">Log in</a> or <a href="../../projekt/registration.php">Sign up</a></span>';
                 } else { ?>
                     <ul class="nav navbar-nav navbar-right navbar-user">
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <span><i class="glyphicon glyphicon-user"></i></span>
-                                <?php echo $_SESSION['login'] ?>(<?php echo $_SESSION['player_level'] ?>) <span
-                                        class="caret"></span></a>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <?php if ($_SESSION['admin'] == 1) { ?>
+                                    <span><i class="glyphicon glyphicon-star"></i></span>
+                                <?php } else { ?>
+                                    <span><i class="glyphicon glyphicon-user"></i></span>
+                                <?php } ?>
+                                <?php echo $_SESSION['login'] ?> <span class="caret"></span>
+                            </a>
 
                             <ul class="dropdown-menu">
+                                <li>
+                                    <div class="text-center nav-stats">
+                                        <span class=""><i
+                                                    class="glyphicon glyphicon-flash"></i> <?php echo $player_score; ?></span>
+                                        <span class="pull-left"><i
+                                                    class="glyphicon glyphicon-fire"></i> <?php echo $_SESSION['player_level']; ?></span>
+                                        <span class="pull-right"><i class="glyphicon glyphicon-stats"></i> <?php echo $player_wins."/".$player_loses?></span>
+                                    </div>
+                                </li>
                                 <li><a href="../../projekt/singleplayer.php"><span><i
                                                     class="glyphicon glyphicon-play"></i></span> Single-player</a></li>
                                 <li class="dropdown-submenu">
-                                    <a class="drop-drop" href="#"><span><i class="glyphicon glyphicon-globe"></i></span> Multi-player <span class="caret"></span></a>
+                                    <a class="drop-drop" href="#"><span><i class="glyphicon glyphicon-globe"></i></span>
+                                        Multi-player <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="../../projekt/games.php">Avialable games</a></li>
                                         <li><a href="../../projekt/mygames.php">My games</a></li>
@@ -33,7 +56,8 @@
                                 </li>
                                 <li><a href="../../projekt/myRiddles.php"><i
                                                 class="glyphicon glyphicon-home"></i></span> My riddles</a></li>
-                                <li><a href="../../projekt/add.php"><span><i class="glyphicon glyphicon-plus-sign"></i></span>
+                                <li><a href="../../projekt/add.php"><span><i
+                                                    class="glyphicon glyphicon-plus-sign"></i></span>
                                         Add riddle</a></li>
 
                                 <?php
@@ -48,7 +72,8 @@
                                 <?php } ?>
 
                                 <li class="divider"></li>
-                                <li><a href="../../projekt/logout.php"><span><i class="glyphicon glyphicon-log-out"></i></span>
+                                <li><a href="../../projekt/logout.php"><span><i
+                                                    class="glyphicon glyphicon-log-out"></i></span>
                                         Log Out</a></li>
                             </ul>
                         </li>

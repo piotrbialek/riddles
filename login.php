@@ -1,5 +1,6 @@
 <?php
 include_once('../projekt/admin/includes/User.php');
+include_once('../projekt/admin/includes/Player.php');
 session_start();
 if ((!isset($_POST['login'])) || (!isset($_POST['pass']))) {
     header('Location: index.php');
@@ -8,7 +9,6 @@ if ((!isset($_POST['login'])) || (!isset($_POST['pass']))) {
 } else {
     $login = trim($_POST['login']);
     $pass = trim($_POST['pass']);
-
 
     $login = htmlentities($login, ENT_QUOTES, "UTF-8");
     $pass = htmlentities($pass, ENT_QUOTES, "UTF-8");
@@ -21,13 +21,11 @@ if ((!isset($_POST['login'])) || (!isset($_POST['pass']))) {
     if (ctype_alnum($login) == false) {
         $validation = false;
         header('Location: index.php');
-
     }
     if (ctype_alnum($pass) == false) {
         $validation = false;
         header('Location: index.php');
     }
-
 
     if ($validation == true) {
 
@@ -47,15 +45,12 @@ if ((!isset($_POST['login'])) || (!isset($_POST['pass']))) {
             if (isset($_SESSION['temp_login'])) unset($_SESSION['temp_login']);
             if (isset($_SESSION['pass'])) unset($_SESSION['pass']);
             if (isset($_SESSION['email'])) unset($_SESSION['email']);
-//            header('Location: singleplayer.php');
             header('Location: games.php');
         } else {
             $_SESSION['login_error'] = "Incorrect password or username";
             header('Location: index.php');
         }
-        echo $the_message;
     } else {
         $_SESSION['login_error'] = 'Incorrect login or password!';
     }
-
 }

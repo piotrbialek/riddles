@@ -9,7 +9,6 @@ include_once("admin/includes/Riddle.php");
 include_once("admin/includes/User.php");
 
 $games = Player::findMyGames($_SESSION['id']);
-$player_score = Player::getPlayerScore($_SESSION['id']);
 
 ?>
 
@@ -24,22 +23,21 @@ $player_score = Player::getPlayerScore($_SESSION['id']);
     <script src="js/create_game.js"></script>
     <title>Riddles - Multi player</title>
 </head>
-
 <body>
 <?php include('../projekt/includes/navbar.php') ?>
 <div class="container">
-
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation"><a href="../../projekt/games.php">Available games</a></li>
+        <li role="presentation"><a href="../../projekt/mygames.php">My games</a></li>
+        <li role="presentation" class="active"><a href="../../projekt/playedgames.php">Played games</a></li>
+        <li role="presentation" class="create_game" id="<?php echo $_SESSION['id']; ?>"><a href="#">Create game</a></li>
+    </ul>
     <main>
-        <div class="subtitle text-center">Played Games</div>
-        <div class="text-center">score: <?php echo $player_score; ?></div>
-        <button onclick="window.location.href='../../projekt/games.php';">available games</button>
-        <button onclick="window.location.href='../../projekt/mygames.php';">my games</button>
         <table id='sorted-table' class='table table-bordered'>
             <thead class='table_header'>
-            <th>game ID</th>
-            <!--            <th class="col-lg-2">initiator</th>-->
-            <th class="col-lg-2">opp</th>
-            <th class="col-lg-2">score</th>
+            <th class="col-lg-3">ID</th>
+            <th class="col-lg-3">Opponent</th>
+            <th class="col-lg-3">Result</th>
             </thead>
             <tbody>
             <?php foreach ($games as $game) : ?>
@@ -52,14 +50,13 @@ $player_score = Player::getPlayerScore($_SESSION['id']);
                     $opponentMove = Move::findOpponentsMove($game->game_id, $player->id);
                     $playerMove = Move::findOpponentsMove($game->game_id, $opponentMove->player_id);
 
-                    $opponent_riddle = Riddle::findById($opponentMove->riddle_id);
-                    $player_riddle = Riddle::findById($playerMove->riddle_id);
+                    $opponentRiddle = Riddle::findById($opponentMove->riddle_id);
+                    $playerRiddle = Riddle::findById($playerMove->riddle_id);
 
                     $opponent = Player::findById($opponentMove->player_id);
                     $opponentUser = User::findById($opponent->user_id);
 
-
-                    if (($opponent_riddle->solved == 1) && ($player_riddle->solved == 1)) {
+                    if (($opponentRiddle->solved == 1) && ($playerRiddle->solved == 1)) {
                         ?>
 
                         <tr id="<?php echo $game->game_id ?>">
@@ -70,10 +67,10 @@ $player_score = Player::getPlayerScore($_SESSION['id']);
                     <?php }
                 } ?>
             <?php endforeach; ?>
-
             </tbody>
         </table>
     </main>
 </div>
+<?php include('../projekt/includes/multiplayer_modal.php') ?>
 </body>
 </html>

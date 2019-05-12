@@ -4,14 +4,12 @@ $validation = true;
 $id = $_SESSION['id'];
 $login = $_SESSION['login'];
 
-
-$category = mb_strtoupper($_POST['category'],'UTF-8');
-$description = mb_strtoupper($_POST['description'],'UTF-8');
-$riddle = mb_strtoupper($_POST['riddle'],'UTF-8');
+$category = mb_strtoupper($_POST['category'], 'UTF-8');
+$description = mb_strtoupper($_POST['description'], 'UTF-8');
+$riddle = mb_strtoupper($_POST['riddle'], 'UTF-8');
 $riddle_level = $_POST['riddle_level'];
-if(isset($_POST['author_id']))$author_id = $_POST['author_id']; // multiplayer
 
-
+if (isset($_POST['author_id'])) $author_id = $_POST['author_id']; // multiplayer
 
 if ((strlen($category) < 3) || (strlen($category) > 20)) {
     $validation = false;
@@ -43,9 +41,9 @@ if (!preg_match("/^[a-zA-ZżźćńółęąśŻŹĆŃÓŁĘĄŚ ]+$/", $riddle) =
     $_SESSION['info_riddle'] = "Riddle can only consist of letters!";
 }
 
-if ($riddle_level > 100 || $riddle_level < 0) {
+if ($riddle_level > 100 || $riddle_level < 1) {
     $validation = false;
-    $_SESSION['info_riddle_level'] = "Level must be between 0 and 100!";
+    $_SESSION['info_riddle_level'] = "Level must be between 1 and 100!";
 }
 
 if ($riddle_level == '' || $riddle_level == ' ') {

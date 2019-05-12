@@ -1,5 +1,5 @@
 <?php
-
+include_once('../projekt/admin/includes/Player.php');
 include("admin/includes/Riddle.php");
 session_start();
 
@@ -20,24 +20,12 @@ $riddle = Riddle::drawRiddle($_SESSION['player_level']);
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
-
     <?php include('includes/base_head.php') ?>
     <!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script type="text/javascript">
-        //var category = '<?php //echo $category;?>//';
-        //var description = <?php //echo json_encode($description); ?>//;
-        //var riddle = <?php //echo json_encode($riddle); ?>//;
-
-
-        //var category = '<?php //echo $riddle->getCategory();?>//';
-        //var description = <?php //echo json_encode($riddle->getDescription()); ?>//;
-        //var riddle = <?php //echo json_encode($riddle->getRiddle()); ?>//;
-
         var category = '<?php echo $riddle->category;?>';
         var description = <?php echo json_encode($riddle->description); ?>;
         var riddle = <?php echo json_encode($riddle->riddle); ?>;
-
-
     </script>
     <script src="js/skryptRiddle.js"></script>
     <script src="js/checkWinSingleplayer.js"></script>

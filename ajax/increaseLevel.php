@@ -17,11 +17,10 @@ $messageProblem = "</br>Some problem occurred.";
 
 if (isset($_SESSION['id'])) {
     $id = $_SESSION["id"];
-    $user = new User();
-    $user->id = $id;
-    $user->level = $currentLevel;
+    $user = User::findById($id);
+    $user->level = $newLevel;
 
-    if($user->increaseLevel()) echo $messageSuccess;
+    if($user->save()) echo $messageSuccess;
     else echo $messageProblem;
 } else $messageSuccess;
 

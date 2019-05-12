@@ -45,6 +45,7 @@
   right: 100%;
   margin-top: -1px;
   background-color: darken($blueColor, 3);
+  border: 1px solid $lightGrayColor;
 }
 
 .dropdown-submenu .dropdown-menu > li > a {
@@ -63,10 +64,21 @@
     color: $lightGrayColor;
   }
 
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: $lightGrayColor;
-    color: darken($blueColor, 3);
-  }
+}
 
+.nav-tabs > li > a {
+  background-color: darken($blueColor, 3);
+  color: $lightGrayColor;
+  border: 1px solid $lightGrayColor;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  background-color: $lightGrayColor;
+  color: darken($blueColor, 3);
+  font-weight: bold;
+}
+
+.nav-stats{
+  margin: 5px 10px;
 }

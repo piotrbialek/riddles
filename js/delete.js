@@ -10,12 +10,10 @@ $(document).ready(function () {
             data: {id: id},
             success: function (response) {
                 if (response == 1) {
-                    // Remove row from HTML Table
                     row.addClass("red");
                     row.fadeOut(800, function () {
                         $(this).remove();
                     });
-
                 } else {
                     alert('Problem: ' + response);
                 }
@@ -23,3 +21,5 @@ $(document).ready(function () {
         });
     });
 });
+
+

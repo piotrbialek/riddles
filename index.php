@@ -1,11 +1,12 @@
 <?php
+include_once('../projekt/admin/includes/Player.php');
 session_start();
 
 if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
     header('Location: myRiddles.php');
     exit();
 } else {
-    $_SESSION['player_level'] = 0;
+    $_SESSION['player_level'] = 1;
 }
 
 ?>
@@ -16,7 +17,6 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
     <?php include('includes/base_head.php') ?>
     <title>Riddles - Log in!</title>
 </head>
-
 <body>
 <?php include('includes/navbar.php') ?>
 <div class="container text-center">
@@ -34,14 +34,10 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
                        unset($_SESSION['temp_login']);
                    }
                    ?>" autofocus/>
-
-            <br>
-            <br>
-
+            <br><br>
             <span><i class="glyphicon glyphicon-lock"></i></span>
             <input required class="input" type="password" name="pass" placeholder="Password"
                    onfocus="this.placeholder=''" onblur="this.placeholder='Password'"/>
-
             <br><br>
             <span class="red">
                 <?php
@@ -61,10 +57,8 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
             <button type="submit" name="submit" class="btn btn-primary button">Log in <span
                         class="glyphicon glyphicon-log-in"></span>
             </button>
-            <br>
-            <br>
+            <br><br>
             <a href="notLoggedGame.php">Continue without account</a>
-
         </form>
     </main>
 </div>

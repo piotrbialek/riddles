@@ -3,6 +3,7 @@ session_start();
 include("../../projekt/notLoggedRedirect.php");
 include_once("includes/Riddle.php");
 include_once("includes/User.php");
+include_once("includes/Player.php");
 $riddles = Riddle::findAll();
 ?>
 
@@ -54,6 +55,10 @@ $riddles = Riddle::findAll();
                 <tbody>
                 <?php foreach ($riddles as $riddle) : ?>
                     <?php
+
+                    $author_user=User::findById($riddle->author_id);
+                    $author_login=$author_user->login;
+
                     if ($riddle->accepted == 1) {
                         $tr = "";
                         $if_accept = "<span class='glyphicon glyphicon-ban-circle'></span>";
@@ -69,7 +74,7 @@ $riddles = Riddle::findAll();
                         <td data-target="riddle"><?php echo $riddle->riddle ?></td>
                         <td data-target="riddle_level" class="text-center"><?php echo $riddle->riddle_level ?></td>
                         <td data-target="author_id">
-                            <?php echo $login = User::getUsernameById($riddle->author_id) ?>(<?php echo $riddle->author_id ?>)
+                            <?php echo $author_login ?>(<?php echo $riddle->author_id ?>)
                         </td>
                         <td><?php echo $riddle->solved ?></td>
                         <td><?php echo $riddle->in_match ?></td>

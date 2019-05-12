@@ -8,11 +8,7 @@ include_once("admin/includes/Riddle.php");
 include_once("admin/includes/Game.php");
 include_once("admin/includes/Move.php");
 
-
-
 if (isset($_POST['riddle'])) {
-
-
     include "validateRiddle.php";
     if ($validation) {
         $category = mb_strtoupper($category, 'UTF-8');

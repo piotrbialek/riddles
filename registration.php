@@ -1,7 +1,7 @@
 <?php
 include_once('../projekt/admin/includes/User.php');
+include_once('../projekt/admin/includes/Player.php');
 session_start();
-
 
 if (isset($_POST['email'])) {
 
@@ -47,7 +47,9 @@ if (isset($_POST['email'])) {
 
 //        ------------------------------------------------------------------------reCAPTCHA
     $secret = "6LcTpmQUAAAAANqO3aGJdZ7_IJM2mp1UgcjC4VsB";
-    $checkSecret = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+    $checkSecret = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret
+        . '&response='
+        . $_POST['g-recaptcha-response']);
 
     $recaptcha = json_decode($checkSecret);
 
@@ -68,7 +70,7 @@ if (isset($_POST['email'])) {
         $newUser->login = $login;
         $newUser->pass = $pass_hash;
         $newUser->email = $email;
-        $newUser->level = 0;
+        $newUser->level = 1;
         $newUser->admin = 0;
 
         $usernameExist = User::checkExist('login', $newUser->login);
@@ -96,8 +98,6 @@ if (isset($_POST['email'])) {
         } else $_SESSION['info_recaptcha'] = "There was a problem with creating account.";
     }
 }
-
-
 ?>
 
 <!DOCTYPE HTML>
@@ -110,20 +110,17 @@ if (isset($_POST['email'])) {
 <?php include('includes/navbar.php') ?>
 <body>
 <div class="container text-center">
-			<span class="red">
-				<?php
-                if (isset($_SESSION['info_server'])) {
-                    echo $_SESSION['info_server'];
-                    unset($_SESSION['info_server']);
-                }
-                ?>
-			</span>
+    <span class="red">
+        <?php
+        if (isset($_SESSION['info_server'])) {
+            echo $_SESSION['info_server'];
+            unset($_SESSION['info_server']);
+        }
+        ?>
+    </span>
     <main>
         <div class="formHeader">Registration</div>
-
         <form class="sendForm" method="post">
-            <!--                        nie ma action to plik POSTem wysle do samego siebie?-->
-
             <br>
             <span><i class="glyphicon glyphicon-user"></i></span>
             <input required class="input" type="text" name="login" placeholder="Login" onfocus="this.placeholder=''"
@@ -144,7 +141,6 @@ if (isset($_POST['email'])) {
                             ?>
 						</span>
             <br>
-
             <span><i class="glyphicon glyphicon-envelope"></i></span>
             <input required class="input" type="email" name="email" placeholder="E-mail" onfocus="this.placeholder=''"
                    onblur="this.placeholder='E-mail'"
@@ -164,7 +160,6 @@ if (isset($_POST['email'])) {
                             ?>
 						</span>
             <br>
-
             <span><i class="glyphicon glyphicon-lock"></i></span>
             <input required class="input" type="password" name="pass1" placeholder="Password"
                    onfocus="this.placeholder=''"
@@ -172,7 +167,6 @@ if (isset($_POST['email'])) {
                    value=""/>
             <br>
             <br>
-
             <span><i class="glyphicon glyphicon-lock"></i></span>
             <input required class="input" type="password" name="pass2" placeholder="Repeat password"
                    onfocus="this.placeholder=''" onblur="this.placeholder='Repeat password'"
@@ -187,11 +181,9 @@ if (isset($_POST['email'])) {
                             ?>
 						</span>
             <br>
-
             <div class="text-center">
                 <div class="g-recaptcha" data-sitekey="6LcTpmQUAAAAAD4zaNCr8luA_JabqWKlWAN-0KTL"></div>
             </div>
-
             <span class="red">
 							<?php
                             if (isset($_SESSION['info_recaptcha'])) {
@@ -201,18 +193,14 @@ if (isset($_POST['email'])) {
                             ?>
 						</span>
             <br>
-
-
             <button type="submit" class="btn btn-success button">Sign up! <span
                         class="glyphicon glyphicon-log-in"></span>
             </button>
-
         </form>
     </main>
     <button class="btn btn-primary button" onclick="window.location.href='index.php';"><span
                 class="glyphicon glyphicon-hand-left"></span> Log in!
     </button>
 </div>
-
 </body>
 </html>

@@ -17,7 +17,7 @@ $(document).on('click', '.set', function () {
     $.ajax({
         url: '../../projekt/ajax/setAdmin.php',
         type: 'POST',
-        data: {setAdminId: id, setAdminAdmin: admin},
+        data: {adminId: id, admin: admin},
         success: function (response) {
 
             if (response < 3) {

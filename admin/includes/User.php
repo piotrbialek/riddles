@@ -22,7 +22,7 @@ class User extends DbObject
 
     public static function findById($id)
     {
-        $query = "SELECT * FROM " . self::$db_table . " WHERE id=".$id." LIMIT 1";
+        $query = "SELECT * FROM " . self::$db_table . " WHERE id=" . $id . " LIMIT 1";
         return static::findOneByQuery($query);
     }
 
@@ -51,48 +51,11 @@ class User extends DbObject
         return $object;
     }
 
-    public function setAdmin()
-    {
-        global $database;
-
-        $sql = "UPDATE " . self::$db_table . " SET admin=" . $this->toggleAdmin() . " WHERE id=" . $this->id;
-
-        return ($database->query($sql)) ? true : false;
-    }
-
-    public function toggleAdmin()
-    {
-        return $this->admin = 1 - $this->admin;
-    }
-
     public static function findAll()
     {
         return static::findByQuery("SELECT * FROM " . static::$db_table);
     }
 
-    public static function getUsernameById($userID)
-    {
-        global $database;
-        $result_set = $database->query("SELECT login FROM " . static::$db_table . " WHERE id=" . $userID);
-
-        $row = mysqli_fetch_assoc($result_set);
-
-        return $row['login'];
-    }
-
-    public function increaseLevel()
-    {
-        global $database;
-
-        $sql = "UPDATE " . self::$db_table . " SET level=" . $this->levelUp() . " WHERE id=" . $this->id;
-
-        return ($database->query($sql)) ? true : false;
-    }
-
-    public function levelUp()
-    {
-        return $this->level = $this->level++;
-    }
 
     public static function verifyUser($username, $password)
     {
@@ -131,14 +94,14 @@ class User extends DbObject
         global $database;
         $value = $database->escapeString($value);
 
-        $sql = "SELECT ".$column." FROM " . self::$db_table . " WHERE ";
-        $sql .= $column."='{$value}' ";
+        $sql = "SELECT " . $column . " FROM " . self::$db_table . " WHERE ";
+        $sql .= $column . "='{$value}' ";
         $sql .= "LIMIT 1";
 
         $result = $database->query($sql);
 
         $user_count = mysqli_num_rows($result);
-        return (($user_count>0)) ? true : false;
+        return (($user_count > 0)) ? true : false;
     }
 
 }

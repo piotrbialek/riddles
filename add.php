@@ -1,5 +1,5 @@
 <?php include "addRiddle.php"; ?>
-
+<?php include_once('../projekt/admin/includes/Player.php'); ?>
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -77,7 +77,7 @@ if (isset($_SESSION['temp_riddle'])) {
                 ?>
 				</span>
             <br>
-            <input class="input" type="number" name="riddle_level" min="0" max="100" placeholder="Level (0-100)"
+            <input class="input" type="number" name="riddle_level" min="1" max="100" placeholder="Level (1-100)"
                    onfocus="this.placeholder=''" onblur="this.placeholder='Level (0-100)'"
                    value="<?php
                    if (isset($_SESSION['temp_riddle_level'])) {

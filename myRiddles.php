@@ -1,10 +1,10 @@
 <?php
 session_start();
-
+include_once('../projekt/admin/includes/Player.php');
 include("../projekt/notLoggedRedirect.php");
 include("admin/includes/Riddle.php");
 $riddles = Riddle::findMyRiddles($_SESSION["id"]);
-if(!$riddles) $_SESSION['riddle_problem'] = '<span class="red">You have not added any riddles yet.</span>';
+if (!$riddles) $_SESSION['riddle_problem'] = '<span class="red">You have not added any riddles yet.</span>';
 ?>
 
 <!DOCTYPE HTML>
@@ -27,7 +27,6 @@ if(!$riddles) $_SESSION['riddle_problem'] = '<span class="red">You have not adde
     } ?>
     <main>
         <div class='subtitle text-center'>My riddles</div>
-
         <table id='sorted-table' class='table table-bordered table-condensed'>
             <thead class='table_header'>
             <th>Category</th>
@@ -39,7 +38,6 @@ if(!$riddles) $_SESSION['riddle_problem'] = '<span class="red">You have not adde
             <?php foreach ($riddles as $riddle) : ?>
                 <tr>
                     <td><?php echo $riddle->category; ?></td>
-
                     <td><?php echo $riddle->description; ?></td>
                     <td><?php echo $riddle->riddle; ?></td>
                     <td><?php echo $riddle->riddle_level; ?></td>
@@ -49,6 +47,5 @@ if(!$riddles) $_SESSION['riddle_problem'] = '<span class="red">You have not adde
         </table>
     </main>
 </div>
-
 </body>
 </html>

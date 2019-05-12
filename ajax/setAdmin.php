@@ -6,24 +6,23 @@ include("../../projekt/notLoggedRedirect.php");
 include("../admin/includes/User.php");
 
 $user = $_SESSION['id'];
-$admin = $_SESSION['admin'];
+$ifIamAdmin = $_SESSION['admin'];
 
-if (!isset($_POST['setAdminId']) || !isset($_POST['setAdminAdmin'])) {
+if (!isset($_POST['adminId']) || !isset($_POST['admin'])) {
     header('Location: ../../projekt/singleplayer.php');
     exit();
 } else {
-    $setAdminId = $_POST['setAdminId'];
-    $setAdminAdmin = $_POST['setAdminAdmin'];
+    $adminId = $_POST['adminId'];
+    $admin = $_POST['admin'];
 }
 
 
-if ($admin == 1) {
-    if ($user != $setAdminId) {
-        $setAdmin = new User();
-        $setAdmin->id = $setAdminId;
-        $setAdmin->admin = $setAdminAdmin;
+if ($ifIamAdmin == 1) {
+    if ($user != $adminId) {
+        $setAdmin = User::findById($adminId);
+        $setAdmin->admin = 1-$admin;
 
-        if ($setAdmin->setAdmin()) {
+        if ($setAdmin->save()) {
             echo $setAdmin->admin;
             exit;
         } else {

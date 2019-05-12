@@ -12,7 +12,7 @@ if (!isset($_POST['userResult']) || !isset($_POST['riddleId'])) {
     exit();
 } else {
 
-    $user_id = $_SESSION['id'];
+    $userId = $_SESSION['id'];
     $riddleId = $_POST['riddleId'];
     $userResult = $_POST['userResult'];
 
@@ -21,32 +21,27 @@ if (!isset($_POST['userResult']) || !isset($_POST['riddleId'])) {
 
     $opponent=Player::findById($move->player_id);
 
-    $opponent_user_id = $opponent->user_id;
-    $game_id = $move->game_id;
+    $opponentUserId = $opponent->user_id;
+    $gameId = $move->game_id;
 
-    $player = Player::findGamePlayerId($user_id, $game_id);
-    $opponent_player = Player::findGamePlayerId($opponent_user_id, $game_id);
+    $player = Player::findGamePlayerId($userId, $gameId);
+    $opponentPlayer = Player::findGamePlayerId($opponentUserId, $gameId);
 
-    $player_score=$player->score;
-    $opponent_score=$opponent_player->score;
+    $playerScore=$player->score;
+    $opponentScore=$opponentPlayer->score;
 
     if ($userResult == 1) {
-        $player_score++;
-        $opponent_score--;
+        $playerScore++;
+        $opponentScore--;
     } else {
-        $player_score--;
-        $opponent_score++;
+        $playerScore--;
+        $opponentScore++;
     }
 
-    $player->score=$player_score;
-    $opponent_player->score=$opponent_score;
+    $player->score=$playerScore;
+    $opponentPlayer->score=$opponentScore;
 
-//    var_dump($player);
-//    var_dump("<br>");
-//    var_dump("<br>");
-//    var_dump($opponent_player);
-
-    if (($opponent_player->save()) &&($player->save())) {
+    if (($opponentPlayer->save()) &&($player->save())) {
         echo "result saved";
     } else echo "problem with saving: " . $riddle->id;
 

@@ -5,7 +5,6 @@ session_start();
 include("../../projekt/notLoggedRedirect.php");
 include("../admin/includes/Riddle.php");
 
-
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
 } else {
@@ -23,3 +22,4 @@ if ($riddle->in_match==0) {
     } else echo "There was a problem with deleting riddle.";
 }else echo "You can't delete riddle that takes or took part in the game.";
 exit;
+

@@ -40,7 +40,6 @@ class DbObject
 
     public function create()
     {
-
         global $database;
 
         $properties = $this->cleanProperties();
@@ -54,7 +53,6 @@ class DbObject
         } else {
             return false;
         }
-
     }
 
 

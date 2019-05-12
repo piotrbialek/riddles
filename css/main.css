@@ -124,6 +124,7 @@ textarea {
   right: 100%;
   margin-top: -1px;
   background-color: #001625;
+  border: 1px solid #AAA;
 }
 
 .dropdown-submenu .dropdown-menu > li > a {
@@ -141,13 +142,24 @@ textarea {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #AAA;
   }
-
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    background-color: #AAA;
-    color: #001625;
-  }
 }
+.nav-tabs > li > a {
+  background-color: #001625;
+  color: #AAA;
+  border: 1px solid #AAA;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  background-color: #AAA;
+  color: #001625;
+  font-weight: bold;
+}
+
+.nav-stats {
+  margin: 5px 10px;
+}
+
 html, body {
   background-color: #001f34 !important;
   color: #AAA !important;

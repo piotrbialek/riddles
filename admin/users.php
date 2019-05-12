@@ -2,6 +2,7 @@
 session_start();
 include("../../projekt/notLoggedRedirect.php");
 include("includes/User.php");
+include("includes/Player.php");
 $users = User::findAll();
 ?>
 
@@ -29,7 +30,6 @@ $users = User::findAll();
                 <th>E-mail</th>
                 <th>Level</th>
                 <th>Type</th>
-                <th>Riddles</th>
                 </thead>
                 <tbody>
                 <?php foreach ($users as $user) : ?>
@@ -49,9 +49,7 @@ $users = User::findAll();
                         <td class="text-center col-lg-1"><?php echo $user->level ?></td>
                         <td data-target="user_type" class="text-center">
                             <button id="<?php echo $user->id ?>" class="btn-primary set">
-                            <?php echo $user_type ?></td>
-                        <td class="text-right">
-                            <?php echo count($user->id) . "*"; ?>
+                            <?php echo $user_type ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>
