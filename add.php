@@ -97,10 +97,7 @@ if (isset($_SESSION['temp_riddle'])) {
 				</span>
             <br>
             <br>
-            <button class="btn btn-danger button" id="resetBtn">Clear the form
-                <span class="glyphicon glyphicon-remove-circle"></span>
-            </button>
-            <button type="submit" class="btn btn-success button">Add riddle
+            <button type="submit" class="btn btn-success button button-add">Add riddle
                 <span class="glyphicon glyphicon-plus-sign"></span>
             </button>
         </form>

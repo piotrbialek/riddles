@@ -40,6 +40,10 @@ textarea {
   display: inline-block;
 }
 
+.button-add {
+  width: 266.6666666667px;
+}
+
 .buttons_group {
   margin-bottom: 10px;
 }

@@ -2,55 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c834550d-2d45-463c-a35e-4d76583900a7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/DbObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/DbObject.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/Move.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Move.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Player.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/Riddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/Riddle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/riddles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/riddles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/accept.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/accept.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/create_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/createGame.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/create_riddle.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/createRiddle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/delete_player.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/deletePlayer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/increaseLevel.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/increaseLevel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/join_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/joinGame.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/leave_multiplayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/leaveMultiplayer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/play_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/playGame.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/riddleCompleted.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/riddleCompleted.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/setAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/setAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/games.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/base_head.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/baseHead.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/multiplayer_modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/multiplayerModal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/accept.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/accept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/checkWinMultiplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/checkWinMultiplayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/checkWinSingleplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/checkWinSingleplayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/create_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/createGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/dropdown-dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dropdown-dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/gameWonMultiplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/gameWonMultiplayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/gameWonSingleplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/gameWonSingleplayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/increaseLevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/increaseLevel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/join_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/joinGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/play_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/playGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sendRiddleResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sendRiddleResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/setAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/setAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/skryptRiddle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/skryptRiddle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiplayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/multiplayer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myRiddles.php" beforeDir="false" afterPath="$PROJECT_DIR$/myRiddles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mygames.php" beforeDir="false" afterPath="$PROJECT_DIR$/myGames.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playedgames.php" beforeDir="false" afterPath="$PROJECT_DIR$/playedGames.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/singleplayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/singleplayer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/skryptAddRiddle.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +60,7 @@
           <entry key="js" value="247" />
           <entry key="php" value="832" />
           <entry key="png" value="1" />
-          <entry key="scss" value="47" />
+          <entry key="scss" value="49" />
           <entry key="sql" value="6" />
         </counts>
       </usages-collector>
@@ -115,7 +70,7 @@
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="247" />
           <entry key="PHP" value="832" />
-          <entry key="SCSS" value="47" />
+          <entry key="SCSS" value="49" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
@@ -123,8 +78,8 @@
         <counts>
           <entry key="css" value="52" />
           <entry key="js" value="5738" />
-          <entry key="php" value="27782" />
-          <entry key="scss" value="2117" />
+          <entry key="php" value="27793" />
+          <entry key="scss" value="2133" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
@@ -133,8 +88,8 @@
           <entry key="CSS" value="52" />
           <entry key="HTML" value="66" />
           <entry key="JavaScript" value="5728" />
-          <entry key="PHP" value="27669" />
-          <entry key="SCSS" value="2117" />
+          <entry key="PHP" value="27680" />
+          <entry key="SCSS" value="2133" />
           <entry key="SQL" value="58" />
         </counts>
       </usages-collector>
@@ -148,91 +103,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/gameWonMultiplayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/gameWonSingleplayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/increaseLevel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/joinGame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="25" lean-forward="true" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/playGame.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/sendRiddleResult.js">
+        <entry file="file://$PROJECT_DIR$/includes/baseHead.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/setAdmin.js">
+        <entry file="file://$PROJECT_DIR$/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="554">
+              <caret line="100" column="67" lean-forward="true" selection-start-line="100" selection-start-column="67" selection-end-line="100" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/skryptAddRiddle.js">
+        <entry file="file://$PROJECT_DIR$/css/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/skryptRiddle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state relative-caret-position="286">
+              <caret line="150" column="1" lean-forward="true" selection-start-line="150" selection-start-column="1" selection-end-line="150" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/navbar.php">
+        <entry file="file://$PROJECT_DIR$/css/_form.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="54" column="105" lean-forward="true" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
+            <state relative-caret-position="639">
+              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -318,8 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/games.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/logout.php" />
@@ -369,6 +268,8 @@
         <option value="$PROJECT_DIR$/js/createGame.js" />
         <option value="$PROJECT_DIR$/js/increaseLevel.js" />
         <option value="$PROJECT_DIR$/includes/navbar.php" />
+        <option value="$PROJECT_DIR$/add.php" />
+        <option value="$PROJECT_DIR$/css/_form.scss" />
       </list>
     </option>
   </component>
@@ -415,6 +316,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -425,7 +327,7 @@
             <path>
               <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projekt" type="b2602c69:ProjectViewProjectNode" />
@@ -436,7 +338,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,14 +457,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394559000" />
+    <option name="totallyTimeSpent" value="394687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1456" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18696275" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19269341" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32950193" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
@@ -611,30 +512,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myRiddles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notLoggedGame.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notLoggedRedirect.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playedGames.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -656,20 +533,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/typed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/baseHead.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/game.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -933,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/skryptAddRiddle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/skryptRiddle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -951,6 +808,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
           <caret line="54" column="105" lean-forward="true" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/skryptAddRiddle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="10" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addRiddle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/baseHead.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="100" column="67" lean-forward="true" selection-start-line="100" selection-start-column="67" selection-end-line="100" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="150" column="1" lean-forward="true" selection-start-line="150" selection-start-column="1" selection-end-line="150" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/_form.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
         </state>
       </provider>
     </entry>

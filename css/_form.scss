@@ -34,12 +34,14 @@ textarea {
 }
 
 .input, textarea {
-
   background-color: #000a21;
   color: #fff;
-
 }
 
 .g-recaptcha {
   display: inline-block;
+}
+
+.button-add {
+  width: 2*$formWidth/3;
 }
